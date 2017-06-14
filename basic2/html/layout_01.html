@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <!-- meta:compat
+  비표준(익스플로어 하위버전)브라우저들을 가장 최신버전으로 실행 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+
+
+
+  <Style>
+  /* 
+  *단위표현 px, pt, em, rem, %
+  * body도 html의 요소로 포함되기 떄문에 css로 선택이 가능하다.
+  * 태그를 선택 할 때에는 태그명
+  * id이름을 선택할때는 #id명{} 
+  * class이름을 선택시에는 .class명{}
+  * css는 속성의 기능에 속성명:속성값; 으로 표기한다. */
+
+    /* 스타일 안에서 주석쓰는 방법 */
+
+    *{margin: 0; padding: 0; border:0;
+      --fontColor:#fff;}
+    * {margin: 0;
+      padding: 0;
+      border: 0;} /* *은 전체를 의미:실제로 많이 사용하는건 지양. 간단하게 처리 할 수 있는 기능을 모든 곳에 사용하면 무거워짐*/
+    body{background-color:#057; margin:0 auto;} /*margin:0은 위아래 값, margin:auto는 좌우 값 auto하면 가운데로 옴*/
+    #box {
+          width:600px; height:500px;
+          margin:0 auto;
+          }      
+          /*
+          margin: 50px은 위아래를 50px만큼 떨어트린다. auto는 좌우를 auto로해서 좌우로 정렬하겠다는 의미. 웹은 좌우는 자동이 되는데 아래위는 자동으로 지정이 안됨*/
+    /* div{} 해도 먹고 div#box{}해도 먹음 . div #box라면 div안의 자식태크의 아이디가 box인 것에 효과를 주라는 말*/
+
+        .out_box{width:inherit; height: 100px;} /*만약 class를 주고 inherit을 썼다면 클래스의 부모도 div박스이기때문에 밑에 아이디 값에 일일이 width를 inherit을 안줘도 된다.*/
+        #headbox{background-color:#f0a;
+          color:var(--fontColor);}
+        #contentbox{width:inherit; height:300px; background-color:#fa0;} /*if content박스의 width를 auto로 뒀다면 부모의 width값을 따라간다. inherit도 하면 상속받다라는 뜻으로 box의 width값인 600을 따라간다*/
+        #footbox{background-color:#0af;}
+
+        
+
+/*style은 원래 가장 나중에 쓴게 적용되지만 또 다른 위의 태그>ID>CLASS>일반태그 순으로 STYLE이 적용된다.*/
+
+  </Style>
+
+  <script>
+    /* 자바 스크립트 주석 */
+    // 슬러쉬 뒤쪽에 오는 것들은 다 주석
+  </script>
+</head>
+
+
+
+<body>
+  <div id="box"> <!--#박스-->
+  <header id="headbox" class="out_box">
+  headbox
+  </header><!--// #headbox -->
+  <section id="contentbox" class="out_box">
+  sectionbox  
+  </section><!--// #contentbox-->
+  <footer id="footbox" class="out_box">
+  footbox  
+  </footer><!--// #footbox -->
+  </div>
+</body>
+
+
+
+</html>
