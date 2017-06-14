@@ -1,0 +1,2 @@
+﻿git remote add origin https://github.com/hyebinJeon/test2.git
+  git push -u origin master
