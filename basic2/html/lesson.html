@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+<meta charset="uft-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<title>
+css박스만들기 연습
+</title>
+  <style>
+  
+   *{border:0; padding:0; margin:0 auto;}
+   body{padding:0; border:0; margin:0 auto; background-color:#F99;}
+   #box{width:600px; height:500px; background-color:#CFC; margin:0 auto;} 
+   .out_box{width:inherit; height:auto;}
+   #headerBox{height:100px; background-color:#F0C;}
+   #contentBox{height:auto; background-color:#F70;}
+        #asideBox{width:200px; height:300px; float:left; background-color:#025;}
+        #articleBox{width:400px; height:150px; float:left; background-color:#f40;}
+        #containerBox{width:400px; height:150px; float:left; background-color:#888;}
+            .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
+   #footerBox{height:100px; background-color:#ccc;}
+
+
+
+  </style>
+</head>
+
+
+<body>
+<div id="box">
+<header id="headerBox" class="out_box">
+</header>
+<section id="contentBox" class="out_box clearfix">
+    <aside id="asideBox"></aside>
+    <article id="articleBox"></article>
+    <article id="containerBox"></article>
+    <div class="clearfix"></div>
+</section>
+<footer id="footerBox" class="out_box">
+</footer>
+</div>
+</body>
+</html>

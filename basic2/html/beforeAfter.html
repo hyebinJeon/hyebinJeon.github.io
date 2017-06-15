@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <title>가상선택자</title>
+  <style>
+    .before_test {color:#0af; font-size:1.2em;}
+    .before_test:before{content:"before"; color:#f06;}
+    p>a::before{content:"점심후라 졸리지만 그래도 고!";}
+    p>span:hover::after{content:"당신의 바람이"; color:#fa0;} /* "이후"라는 span태그의 뒤에 나타난다.*/ /*hover 기능은 마우스를 올리면 없던 글씨가 나타난다 */
+  </style>
+</head>
+<body>
+<h1>가상선택자</h1>
+<h2 class="before_test">이전(before)선택자</h2>
+    <p>실제로 존재하지 않고(코드로), css효과로 보이게 처리 하는 것이다.</p>
+    <p><a href="#">링크</a></p>
+<h2>이후(after)선택자</h2>
+    <p>before와 같은 기능이며 이후(뒤에) 구현됨</p>
+    <p><span>이후</span>어딘가에 나타나게 하기</p>
+</body>
+</html>
+
+<!--가상 선택자
+1. ::before, ::after
+2. :hover : 마우스 올릴 때 일어나는 효과
+3. :linked : 링크의 기능 (잘안씀)
+4. visited : 링크를 타고 방문한 후의 효과(링크가 보라색 되는거)
+5. active : 마우스를 누르고 있는 상태의 효과(마우스 떼면 원래대로 돌아감
+6. selected, checked : home에서 사용
+7. root : 최초의 세팅 상태-->
+
+<!--display 이해 : http://blog.naver.com/imakeweb/221010143947-->

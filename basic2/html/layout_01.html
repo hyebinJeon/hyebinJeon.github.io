@@ -10,8 +10,8 @@
 
 
   <Style>
-  /* 
-  *단위표현 px, pt, em, rem, %
+/* 
+*단위표현 px, pt, em, rem, %
   * body도 html의 요소로 포함되기 떄문에 css로 선택이 가능하다.
   * 태그를 선택 할 때에는 태그명
   * id이름을 선택할때는 #id명{} 
@@ -30,15 +30,46 @@
           width:600px; height:500px;
           margin:0 auto;
           }      
-          /*
-          margin: 50px은 위아래를 50px만큼 떨어트린다. auto는 좌우를 auto로해서 좌우로 정렬하겠다는 의미. 웹은 좌우는 자동이 되는데 아래위는 자동으로 지정이 안됨*/
-    /* div{} 해도 먹고 div#box{}해도 먹음 . div #box라면 div안의 자식태크의 아이디가 box인 것에 효과를 주라는 말*/
+/*
+margin: 50px은 위아래를 50px만큼 떨어트린다. auto는 좌우를 auto로해서 좌우로 정렬하겠다는 의미. 웹은 좌우는 자동이 되는데 아래위는 자동으로 지정이 안됨*/
+ /* div{} 해도 먹고 div#box{}해도 먹음 . div #box라면 div안의 자식태크의 아이디가 box인 것에 효과를 주라는 말*/
+ /*width사이즈가 안맞으면소숫점 6자까리 써준다.(%, em, rem...- px 수치 제외) calc는 계산기기능 연산과 띄어쓰기 필수. 그러나 calc는 최신이라 표준이x*/
+ /*기술은 구현이 되지만 표준으로 사용할 수 없다 calc같은 경우에, 이러한 경우에 미래에 사용할 수 있는 기능을 강제로 끌어쓰는 방법을 쓰는데
+ 벤더프리픽스라고 한다. 앞뒤 벤더(-)를 달고, 해당하는 브라우저의 방식 작성하여 구현한다.
+ 차후 표준으로 등재시 밴더프리픽스 기능은 삭제처리 된다. */
+  
+  /*
+  #sideBox {
+  width:-webkit-calc(100% / 3);     -> workit:chrome, safari, swing; 
+  width:-moz-calc(100% / 3);        -> mozilla(fire fox)
+  width:-ms-calc(100% / 3);         -> ms (microsoft) IE, edge
+  width:-o-calc(100% / 3);          -> opera
+  width: calc(100% / 3);}           -> 표준(미래에 표준으로 등재시 사용 */
 
         .out_box{width:inherit; height: 100px;} /*만약 class를 주고 inherit을 썼다면 클래스의 부모도 div박스이기때문에 밑에 아이디 값에 일일이 width를 inherit을 안줘도 된다.*/
         #headbox{background-color:#f0a;
           color:var(--fontColor);}
-        #contentbox{width:inherit; height:300px; background-color:#fa0;} /*if content박스의 width를 auto로 뒀다면 부모의 width값을 따라간다. inherit도 하면 상속받다라는 뜻으로 box의 width값인 600을 따라간다*/
+        #contentbox{width:inherit; height:auto;} /* heigh를 auto로 준이유는 안의 내용이 늘어갈수록 컨텐트 박스도 늘어나게 하려는 이유임.
+        if content박스의 width를 auto로 뒀다면 부모의 width값을 따라간다. inherit도 하면 상속받다라는 뜻으로 #box의 width값인 600을 따라간다*/
+           #sideBox{width:calc(100% / 3); height:300px; float:left; background-color:#ccc;} 
+           #dataBox{width:calc(100% / 3); height:300px; float:left; background-color:#333;} 
+           #dataBox2{width:calc(100% / 3); height:300px; float:left; background-color:#fff;}
+              div.clearfix{width:100%; background-color: #fd0; clear:both;}  /*clear는 flaat의 마지막에 뒤에 써준다.*/
+              br.clearfix{clear: both;}
+              .clearfix::after{content:" "; display:block; width:0; height:0; clear: both;}  /*clearfix::after{clear:both;}를 쓰는 이유는 나중에 리스트 사용시 마지막에 들어가는 요소 ul에는 li밖에 못들어 가기 때문에 div나 br을 사용 할 수 없다. 그렇기 때문에 가상의 clearfix선을 만들어 주는데 그게 after이다.*/
         #footbox{background-color:#0af;}
+
+/* 플롯을 쓰려면 형제 태그들 모두에게 같이 써야한다. 이 때, 모두 공중으로 뜨기 때문에
+content박스의 높이가 0이되는 것이고, 밑에 있던 footer가 빈공간인 줄알고 위로 올라가 버린다.*/
+/* 블록요소를 옆으로 나열하기 위해 float기능을 사용한다.
+        왼쪽을 기준으로 나열하기 위해서는 float-left
+        오른쪽을 기준으로 나열하기 위해서는 float-right
+        문제점1:부모요소에 높이값을 설정하면 - 넘어가는 사이즈를 설정시 매번 변경해야 한다.
+        문제점2: 부모요소에 높이값을 auto로 설정하면 - 부모의 높이는 0처리 (float의 의미)
+        해결하기 위한 용어1 : clear속성
+        해결하기 위한 용어2 : 정의된 이름은 아니지만 보편적으로 clearfix의 기법
+        해결하기 위한 용어3 : css의 추가기능(선택자기능) - before, after
+          */
 
         
 
@@ -59,8 +90,22 @@
   <header id="headbox" class="out_box">
   headbox
   </header><!--// #headbox -->
-  <section id="contentbox" class="out_box">
-  sectionbox  
+  <section id="contentbox" class="out_box clearfix"> <!--부모에 클래스 clearfix를 삽입-->
+    <aside id="sideBox"></aside><!--// #sideBox -->
+    <article id="dataBox"></article>
+    <article id="dataBox2"></article><!--// #articleBox -->
+    <div></div>
+
+<!--clearfix의 이해
+*div 코드로 눈에 보이게 만들어서 사용
+*br 코드로 변형시켜 사용
+*가상선택자(:after)를 사용 -->
+
+<!--1. div.clearfix를 사용-->
+<!-- <div class="clearfix"></div>-->
+<!--2. br.clearfix를 사용-->
+<!--<br class="clearfix" />--> <!--줄바꿈 태그인 br을 이용해서 clearfix를 해보겠다 -->
+<!--3. 가상선택자 ::after를 사용(부모에 class="clearfix" 삽입)-->
   </section><!--// #contentbox-->
   <footer id="footbox" class="out_box">
   footbox  
