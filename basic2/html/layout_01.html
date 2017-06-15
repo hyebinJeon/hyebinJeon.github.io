@@ -54,9 +54,9 @@ margin: 50px은 위아래를 50px만큼 떨어트린다. auto는 좌우를 auto�
            #sideBox{width:calc(100% / 3); height:300px; float:left; background-color:#ccc;} 
            #dataBox{width:calc(100% / 3); height:300px; float:left; background-color:#333;} 
            #dataBox2{width:calc(100% / 3); height:300px; float:left; background-color:#fff;}
-              div.clearfix{width:100%; background-color: #fd0; clear:both;}  /*clear는 flaat의 마지막에 뒤에 써준다.*/
+              div.clearfix{width:100%; background-color: #fd0; clear:both;}  /*clear는 float의 마지막에 뒤에 써준다.*/
               br.clearfix{clear: both;}
-              .clearfix::after{content:" "; display:block; width:0; height:0; clear: both;}  /*clearfix::after{clear:both;}를 쓰는 이유는 나중에 리스트 사용시 마지막에 들어가는 요소 ul에는 li밖에 못들어 가기 때문에 div나 br을 사용 할 수 없다. 그렇기 때문에 가상의 clearfix선을 만들어 주는데 그게 after이다.*/
+              .clearfix::after{content:" "; display:block; width:0; height:0; clear: both;}  /*clearfix::after{clear:both;}를 쓰는 이유는 나중에 리스트 사용시 마지막에 들어가는 요소 ul에는 li밖에 못들어 가기 때문에 div나 br을 사용 할 수 없다. 그렇기 때문에 가상의 clearfix선을 만들어 주는데 그게 after이다. clearfix의 class는 상위태그에 쓴다*/
         #footbox{background-color:#0af;}
 
 /* 플롯을 쓰려면 형제 태그들 모두에게 같이 써야한다. 이 때, 모두 공중으로 뜨기 때문에

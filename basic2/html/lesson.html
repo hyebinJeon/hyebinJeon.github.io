@@ -14,10 +14,15 @@ css박스만들기 연습
    #box{width:600px; height:500px; background-color:#CFC; margin:0 auto;} 
    .out_box{width:inherit; height:auto;}
    #headerBox{height:100px; background-color:#F0C;}
+        header>h1{width:200px; height:inherit; float:left; background-color:#02f;}
+        #gnb{width:400px; height:50px; float:left; background-color:#935;}
+        #snb{width:400px; height:50px; float:left; background-color:#ccc;}
+            #gnb>div{color:white; width:calc(100% / 6); hegith:50px; float:left;}
+            #snb>div{color:white; width:calc(100% / 6); hegith:50px; float:left;}
    #contentBox{height:auto; background-color:#F70;}
-        #asideBox{width:200px; height:300px; float:left; background-color:#025;}
-        #articleBox{width:400px; height:150px; float:left; background-color:#f40;}
-        #containerBox{width:400px; height:150px; float:left; background-color:#888;}
+        #articleBox{width:400px; height:150px; float:right; background-color:#f40;}
+        #containerBox{width:400px; height:150px; float:right; background-color:#888;}
+        #asideBox{width:200px; height:300px; float:right; background-color:#025;}
             .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
    #footerBox{height:100px; background-color:#ccc;}
 
@@ -29,12 +34,29 @@ css박스만들기 연습
 
 <body>
 <div id="box">
-<header id="headerBox" class="out_box">
+<header id="headerBox" class="clearfix">
+<h1>h1</h1>
+<div id="gnb">
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+</div>
+<div id="snb">
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+</div>
 </header>
 <section id="contentBox" class="out_box clearfix">
-    <aside id="asideBox"></aside>
-    <article id="articleBox"></article>
-    <article id="containerBox"></article>
+    <aside id="asideBox">asideBox</aside>
+    <article id="articleBox">articleBox</article>
+    <article id="containerBox">containerBox</article>
     <div class="clearfix"></div>
 </section>
 <footer id="footerBox" class="out_box">
