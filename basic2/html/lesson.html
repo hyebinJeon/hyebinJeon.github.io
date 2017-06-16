@@ -9,16 +9,19 @@ css박스만들기 연습
 </title>
   <style>
   
+ /*margin:0 padding:0 
+  list-style:none; 리스트에 있는 점들을 안보이게 하는 처리 */
+
    *{border:0; padding:0; margin:0 auto;}
    body{padding:0; border:0; margin:0 auto; background-color:#F99;}
-   #box{width:600px; height:500px; background-color:#CFC; margin:0 auto;} 
+   #box{width:600px; height:500px; margin:0 auto;} 
    .out_box{width:inherit; height:auto;}
-   #headerBox{height:100px; background-color:#F0C;}
+   #headerBox{height:100px;}
         header>h1{width:200px; height:inherit; float:left; background-color:#02f;}
-        #gnb{width:400px; height:50px; float:left; background-color:#935;}
-        #snb{width:400px; height:50px; float:left; background-color:#ccc;}
-            #gnb>div{color:white; width:calc(100% / 6); hegith:50px; float:left;}
-            #snb>div{color:white; width:calc(100% / 6); hegith:50px; float:left;}
+        #gnb{width:400px; height:50px; float:left;}
+        #snb{width:400px; height:50px; float:left;}
+            #gnb>div{color:white; width:calc(100% / 6); height:50px; float:left; background-color:#45F;}
+            #snb>div{color:white; width:calc(100% / 6); height:50px; float:left; background-color:#c2c;}
    #contentBox{height:auto; background-color:#F70;}
         #articleBox{width:400px; height:150px; float:right; background-color:#f40;}
         #containerBox{width:400px; height:150px; float:right; background-color:#888;}
@@ -26,7 +29,17 @@ css박스만들기 연습
             .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
    #footerBox{height:100px; background-color:#ccc;}
 
+/*리스트 이용해서 gnb만들기
+gnb>h2{width: 0; height: 0; overflow:hidden;} h2는 네비게이터
+#gnb>ul{width:100% height:100%;}
+gnb>ul>1i{ width:calc(100% / 6); height:inherit; background-color:#ccc;
+border-right:1px solid #333; list-style:none;
+box-sizing: border-box;} 외곽선을 바깥으로 주기
 
+
+/*구형 브라우저에서는 header, section, aside, footer의 기능을 인지할 수 없다.
+ 그래서 강제로 블럭처리 한다.*
+ header, section, aside, footer{display:block;} */
 
   </style>
 </head>
@@ -36,22 +49,22 @@ css박스만들기 연습
 <div id="box">
 <header id="headerBox" class="clearfix">
 <h1>h1</h1>
-<div id="gnb">
+<nav id="gnb">
 <div>1</div>
 <div>2</div>
 <div>3</div>
 <div>4</div>
 <div>5</div>
 <div>6</div>
-</div>
-<div id="snb">
+</nav>
+<nav id="snb">
 <div>1</div>
 <div>2</div>
 <div>3</div>
 <div>4</div>
 <div>5</div>
 <div>6</div>
-</div>
+</nav>
 </header>
 <section id="contentBox" class="out_box clearfix">
     <aside id="asideBox">asideBox</aside>
