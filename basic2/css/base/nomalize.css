@@ -1,0 +1,7 @@
+/*! nomalize.css */
+@charset:"utf-8";
+
+/*namalize 일반적으로 자주 사용하는 기법을 내가 필요할 때 꺼내쓰는거*/
+  .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
+  .hidden{display:block; width:0; height:0; overflow:hidden;}
+  #wrap .first_li{margin-left:0;}

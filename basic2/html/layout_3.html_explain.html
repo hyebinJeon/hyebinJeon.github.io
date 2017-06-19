@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <title>layout sample3</title>
+  <!--[if let IE 9]>
+
+  <![endif]-->
+  <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <style>
+  /*reset 브라우저 초기화 */
+  html,body{width:100%; height:100%;}
+  html, body, h1, h2, h3, h4, h5, h6
+  p, div, pre, form, fieldset, hr,
+  ul,ol,li,dl,dt,dd{margin: 0px; padding: 0px;}
+  ul,ol,li{list-style:none;}
+
+  /*html5 reset*/
+  header,nav,aside,article,section,footer,main,figure{display:block; margin:0px; padding:0px;}
+
+  /*namalize 일반적으로 자주 사용하는 기법을 내가 필요할 때 꺼내쓰는거*/
+  .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
+  .hidden{display:block; width:0; height:0; overflow:hidden;}
+  #wrap .first_li{margin-left:0;}
+
+  /*design*/
+    #wrap{width:960px; height:740px; background-color: #ccc;
+      margin:0 auto;}
+      #headBox{width:100%; height:140px; background-color:#832; padding:20px 30px 0; 
+        box-sizing:border-box;} /* 하는방법2 : headbox에 padding주고 크기 줄이는 방법 공통요소인 부모태그니까 한꺼번에 처리가 가능하고 전체 코드양이 줄고 통일성을 잡을 수 있다.*/ 
+      /*padding또는 border를 사용할때 해당하는 크기를 조절한다면 
+      box-sizing:border-box;속성을 사용하면 height의 크기를 굳이 건들일 필요가 없다.
+      box-sizing은 padidng,border에 대한 선의 위치를 설정하는 속성
+      속성 : content-box(지정상자의 바깥쪽), border-box(지정상자의 안쪽)*/
+          h1{width:150px; height:60px; float:left; background-color:#f06; margin-bottom:20px;}  /* 하는방법1 : margin을 하나씩 간격을 설정하는 방법. 모든 요소에 매번 사용해야 하는 불편함이 발생
+          margin-top:20px; 
+          margin-left:30px; 
+          margin-bottom:20px; */ 
+          #unb{width:500px; height:50px; float:right; background-color:rgba(250,250,250,0.5);} /*  margin-top:20px; 
+          margin-right:30px; 하는방법1*/
+          #unb>ul{width:100%; height: 100%;}
+          #unb>ul>li{width:24%; height:100%; float:left; background-color:#acd; margin-left:1.3%;}
+              /* #unb>h2{width:0; height:0; overflow:hidden;}* hidden이라는 nomalize있으니까 지운거임/
+         /*unb------------------*/
+          #gnb{width:960px; height:40px; background-color:#ccc; float:left; margin-left:-30px; padding:5px 30px; box-sizing:border-box;}
+             /*#gnb>h2{width:0; height:0; overflow:hidden;}*/
+             #gnb>ul{width:100%; height:100%;}
+             #gnb>ul>li{width:12%; height:100%;float:left; margin-left:0.57%; background-color:#fff;}
+              /*#gnb>ul>li.first_li{margin-left:0;} li의 간격을 조정하기 위해 각각의 li에 margin-left설정
+              *전체 8개의 리스트 100% / 8, 이중에 사이간격은 7개만큼 띄워야 함 4% / 7 -> 12*8 = 96이기 때문에 남은 4%에서 7을 나눔
+              *처음 li에서 margin-left가 적용하지 않으므로 첫 li에 margin-left:0; 처리(별도의 class이름을 할당)
+          /*gnb----------------*/
+      /*hedeBox----------------*/
+   
+      #contentBox{width:100%; height:520px; background-color:#506;}
+      /*contenBox----------------*/
+      #footBox{width:100%; height:80px; background-color:#3a3;}
+      /*footBox----------------*/
+
+/*overflow:일정한크기의 값을 가진 태그에 내용이 넘쳤을 경우 처리하는 속성기법
+*overflow종류: overflow(전체), overflow-X(가로로 넘쳤을 때), overflow-Y(세로로 넘쳤을 때)
+*overflow속성: normal(아예 없는상태), auto(글자에 따라스크롤 만들어 줌), scroll(글자 적어도 스크롤 있음), hidden(넘친거 숨겨줌)
+*/
+  </style>
+</head>
+
+
+<body>
+  <div id="wrap">
+     <div id="headBox">
+        <h1>logo</h1>
+          <nav id="unb">
+          <h2 class="hidden">utility navigation</h2>
+          <ul>
+            <li class="first_li">unb_01</li>
+            <li>unb_02</li>
+            <li>unb_03</li>
+            <li>unb_04</li>
+          </ul>
+          </nav>
+        <nav id="gnb">
+          <h2 class="hidden">global navigation</h2>
+          <ul>
+            <li class="first_li">navi_01</li>
+            <li>navi_02</li>
+            <li>navi_03</li>
+            <li>navi_04</li>
+            <li>navi_05</li>
+            <li>navi_06</li>
+            <li>navi_07</li>
+            <li>navi_08</li>
+          </ul>
+           </nav><!--//gnb-->
+     </div><!--//headBox-->
+     <section id="contentBox">contentBox</section><!--//contentBox-->
+     <div id="footBox">footBox</div><!--//footBox-->
+  </div><!--//wrap-->
+</body>
+</html>
