@@ -9,13 +9,28 @@
   <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
   <![endif]-->
 <style>
-  #wrap{width:960px; height:1360px; margin:0 auto; background-color:#ccc;}
+  #wrap{width:960px; height:auto; margin:0 auto; background-color:#ccc;}
     #headerBox{width:960px; height:100px; padding:10px; box-sizing:border-box; background-color: #526;}
-      h1{width:150px; height:40px; float:left; background-color: #52f;}
-      #gnb{width:500px; height:40px; float:left;  background-color: #f58;}
-      #unb{width:200px; height:40px; float:left; background-color: #58f;}
-    #contentBox{width:960px; height:1060px; background-color: #174;}
-    #footerBox{width:960px; height:200px; background-color: #f58;}
+      h1{width:150px; height:40px; 
+       margin:20px 15px; float:left; background-color: #52f;}
+      #gnb{width:500px; height:40px; margin:20px 15px; float:left;  background-color: #f58;}
+      #unb{width:200px; height:40px; margin:20px 15px; float:right; background-color: #58f;}
+
+    #contentBox{width:960px; height:auto; background-color: #174;}
+      #top_ad_banner{width:960px; height:300px; background-color: #ff2;}
+      #asideBox{width:960px; height:250px; background-color: #f9f;}
+      #articleBox{width:960px; height:800px; padding:20px; box-sizing:border-box; background-color: #f2f;}
+        #articleBox>ul{width:860px; height:680px; margin:0 auto;}
+          #articleBox>ul>li{width:266.6px; height:320px; float:left; background-color: #285;
+                            margin:10px;}
+        button{width:842px; height:20px; margin-top:30px; margin-left:38px; background-color: #fff;}
+      #bottom_ad_banner{width:960px; height:300px; background-color: #ff9;}
+
+    #footerBox{width:960px; height:auto; background-color: #1ff;}
+      #top_footerBox{width:960px; height:180px; background-color: #29f;}
+        #top_footerBox>ul{width:960px; height:180px; background-color: #fdf;}
+        #top_footerBox>ul>li{width:240px; height:180px; float:left; background-color: #dff;}
+      address{border-top:0.3px solid; width:960px; height:130px; background-color: #2d5;}
 </style>
 </head>
 
@@ -25,23 +40,49 @@
 
 <header id="headerBox">
   <h1>logo</h1>
+    <h2 class="hidden">headerBox</h2>
     <nav id="gnb">
-    <h2 class="hidden">gnb</h2>
     gnb
     </nav>
     <nav id="unb">
-    <h2 class="hidden">unb</h2>
     unb
     </nav>
-</header>
+</header><!--header-->
 
 <section id="contentBox">
-section
-</section>
+  <section id="top_ad_banner">
+  topAd
+  </section><!--adbanner-->
+  <aside id="asideBox">
+  aside
+  </aside><!--sectionBox-->
+  <article id="articleBox">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+    <button>더보기</button>
+  </article><!--articleBox-->
+  <section id="bottom_ad_banner">
+  bottomAd
+  </section><!--adbanner-->
+</section><!--contentBox-->
 
 <footer id="footerBox">
-footer
-</footer>
+<div id="top_footerBox">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+   </ul>
+</div>
+<address>address</address>
+</footer><!--footer-->
 
 </div> 
 </body>
