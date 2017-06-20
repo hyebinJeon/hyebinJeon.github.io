@@ -5,3 +5,5 @@
   .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
   .hidden{display:block; width:0; height:0; overflow:hidden;}
   #wrap .first_li{margin-left:0;}
+  #wrap .last_li{margin-bottom:0;}
+  #wrap .last_li_right{margin-right:0;}

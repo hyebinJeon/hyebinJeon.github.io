@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif]-->
+  <title>layertest0620_02</title>
+<style>
+  #wrap{width:960px; height:1340px; margin:0 auto; background-color: #484;}
+    #headerBox{width:960px; height:60px; padding:10px; box-sizing:border-box; background-color: #812;}
+      #headerBox>h1{width:120px; height:40px; display:block; padding-left:30px; background-color: #ccc;}
+
+    #contentBox{width:960px; height:1200px; background-color: #d8f;}
+      #articleBox{width:710px; height:1200px; float:left;}
+        #articleBox>ul{width:710px; height:1200px; display:block; padding:100px; box-sizing:border-box; background-color: #fff;}
+        #articleBox>ul>li{width:509.2px; height:250px; display:block; background-color: #358;}
+          #articleBox .pink{background-color:pink;}
+      #gnbBox{width:250px; height:1200px; float:left; padding:75px; box-sizing:border-box; background-color: #18f;}
+        .gnb_top{width:100px; height:250px; margin-bottom:250px; background-color: #fff;}
+        .gnb_bottom{width:100px; height:500px; background-color: #fff;}
+
+    #footerBox{width:960px; height:80px; padding:20px; box-sizing:border-box; background-color: #729;}
+      #footerBox h2{width:150px; height:40px; float:left; background-color: #f71;}
+      #footerBox address{width:500px; height:40px; float:right; background-color: #f71;}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+  <header id="headerBox">
+    <h1>logo</h1>
+  </header>
+
+  <section id="contentBox">
+    <h2 class="hidden">contentBox</h2>
+      <aside id="gnbBox">
+      <h3 class="hidden">gnb</h3>
+        <div class="gnb_top">
+        1
+        </div>
+        <div class="gnb_bottom">
+        2
+        </div>
+      </aside><!--gnbBox-->
+
+
+      <article id="articleBox">
+      <h3 class="hidden">article</h3>
+      <ul>
+        <li class="pink">1</li>
+        <li>2</li>
+        <li class="pink">3</li>
+        <li>4</li>
+      </ul>
+    </article><!--articleBox-->
+  </section>
+
+  <footer id="footerBox">
+    <h2>logo2</h2>
+    <address>address ...</address>
+  </footer>
+</div><!---wrap-->
+</body>
+</html>
