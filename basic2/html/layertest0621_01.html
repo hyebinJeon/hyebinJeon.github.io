@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>layertest0621_01</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif]-->
+  <style>
+    #wrap{width:978px; height:auto; margin:0 auto;}
+
+      #headBox{width:978px; height:150px; margin-bottom:20px; background-color: #17f;}
+        #headBox>h1{width:125px; height:125px; margin-top:13px; margin-left:15px; float:left; background-color: #c23;}
+          .gnb{width:650px; height:60px; margin-top:45px; margin-left:20px; float:left;}
+            .gnb>ul{width:650px; height:60px; background-color: #558;}
+              .gnb>ul>li{width:80px; height:30px; float:left; margin:15px 40px; background-color: #fff;}
+          .unb{width:110px; height:auto; float:right;}
+            .unb>ul{width:110px; height:auto;}
+              .unb>ul>li{width:40px; height:40px; margin-top:15px; margin-right:15px; float:left; background-color: #525;}
+
+      #contentBox{width:978px; height:auto; margin-bottom:20px;}
+        #adBox{width:978px; height:200px; box-sizing:border-box; margin-bottom:20px; background-color: #fcf;}
+          .lbutton{width:40px; height:50px; margin-right:35px; margin-top:75px; float:left; background-color:#888;}
+          .rbutton{width:40px; height:50px; float:right; margin-top:75px; margin-bottom:45px; background-color: #888;}
+          #adBox>ul{width:830px; height:150px; margin-left:18px; margin-top:23px; float:left;}
+            #adBox>ul>li{width:150px; height:150px; float:left; margin-left:10px; background-color: #fff;}
+        #topArticle{width:978px; height:300px; margin-bottom:20px; background-color: #1f7;}
+         .sub{width:175px; height:300px; float:left; background-color: #d58;}
+            .sub_box{width:100px; height:100px; margin-top:30px; margin-left:35px; background-color: #fff;}
+          #topArticle .articlecontent{width:570px; height:auto; margin-top:6px; float:left; margin-left:50px;}
+            #topArticle .articlecontent>li{width:140px; height:140px; margin:2px 25px; float:left; background-color: #fdf;}
+          #topArticle .sub_button{width:65px; height:180px; float:right;}
+            #topArticle .sub_button>li{width:65px; height:50px; margin-top:10px; background-color: #155;}
+        #asideBox{width:978px; height:140px; margin-bottom:20px; background-color: #08f;}
+          .subaside{width:215px; height:140px; float:left; padding:15px 10px; box-sizing:border-box;}
+          .subasideul{width:190px; height:100px; background-color: #58f;}
+            .subasideul>li{width:190px; height:50px; margin-bottom:10px; background-color: #8c3;}
+             .button1{width:40px; height:40px; margin:5px; float:right; background-color: #ccc;}
+          .trueaside{width:763px; height:140px; float:left; padding:15px 15px; box-sizing:border-box; background-color: #ccc;}
+          .trueasideul{width:736px; height:auto; float:left;}
+            .trueasideul>.one{width:165px; height:50px; float:left; margin-left:10px; background-color: #fff;}
+            .trueasideul>.two{width:300px; height:50px; float:left; margin-left:10px; background-color: #fff;}
+            .trueasideul>.three{width:250px; height:50px; float:left; margin-left:10px; background-color: #fff;}
+            .trueasideul>.four{width:600px; height:50px; float:left; margin-left:10px; margin-top:10px; background-color: #fff;}
+            .trueasideul>.five{width:125px; height:50px; float:left; margin-left:10px; margin-top:10px; background-color: #fff;}
+          .trueaside>li{margin:10px;}
+        #bottomArticleBox{width:978px; height:700px; padding:10px; box-sizing:border-box; background-color: #55f;}
+          #bottomArticleBox .left_1{width:100px; height:45px; float:left; margin-right:10px; background-color: #758;}
+          #bottomArticleBox .left_2{width:250px; height:30px; float:left; background-color: #758;}
+          #bottomArticleBox .rightbox{width:140px; height:30px; float:right;}
+          #bottomArticleBox .right{width:60px; height:30px; float:left; margin-left:10px; background-color:#7cc;}
+           .b_a_content ul{width:740px; height:auto; float:left; margin-top:50px;}
+           .b_a_content ul>li{width:150px; height:150px; float:left; margin:40px 17px; background-color: #fff;}
+              .b_a_contex ul{width:300px; height:40px; float:left; margin-top:25px; margin-left:335px;}
+              .b_a_contex ul>li{width:40px; height:40px; float:left; margin-left:5px; background-color: #fff;}
+
+      #footBox{width:978px; height:150px; padding:25px 132px; box-sizing:border-box; background-color: #978;}
+        #footBox h2{width:100px; height:100px; float:left; background-color: #fff;}
+        #footBox address{width:600px; height:100px; margin-left:10px; float:left; background-color: #fdf;}
+
+  </style>
+</head>
+
+
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>logo</h1>
+        <nav class="gnb">
+        <h2 class="hidden">gnb</h2>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </nav>
+        <nav class="unb"> 
+        <h2 class="hidden">unb</h2>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+          </ul>
+        </nav>
+    </header> <!---header-->
+
+    <section id="contentBox">
+    <h2 class="hidden">contentBox</h2>
+
+      <section id="adBox">
+        <h3 class="hidden">ad_box</h3>
+        <div class="lbutton">le</div>
+        <div class="rbutton">ri</div>
+          <ul>
+           <li class="first_li">1</li>
+           <li>2</li>
+           <li>3</li>
+           <li>4</li>
+           <li>5</li>
+          </ul>
+      </section>
+
+      <article id="topArticle">
+        <h3 class="hidden">top_article</h3>
+        <nav class="sub">
+              <h3 class="hidden">서브아티클내용</h3>
+              <div class="sub_box">subbox</div>
+            </nav>
+        <section>
+        <h3 class="hidden">아티클내용</h3>
+        <ul class="articlecontent">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+        </ul>
+        </section>
+        <ul class="sub_button">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </article>
+
+      <aside id="asideBox">
+        <h3 class="hidden">asideBox</h3>
+        <div class="subaside">
+          <ul class="subasideul">
+          <li></li>
+          <li>
+          <div class="button1">버튼 </div>
+          </li>
+          </ul>
+        </div>
+        <div class="trueaside">
+          <ul class="trueasideul">
+            <li class="one first_li">1
+            <div class="button1">버튼 </div>
+            </li>
+            <li class="two">2
+            <div class="button1">버튼 </div>
+            </li>
+            <li class="three">3
+            <div class="button1">버튼 </div>
+            </li>
+            <li class="four first_li">4</li>
+            <li class="five">5</li>
+          </ul>
+        </div>
+      </aside>
+
+      <article id="bottomArticleBox">
+        <h3 class="hidden">bottomAticle</h3>
+          <div class="left_1">1</div>
+          <div class="left_2">2</div>
+          <div class="rightbox">
+          <div class="right">3</div>
+          <div class="right">4</div>
+          </div>
+          <section class="b_a_content">
+          <h3 class="hidden">아티클내용</h3>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+          </ul>
+          </section>
+          <nav class="b_a_contex">
+          <h3 class="hidden">목차</h3>
+            <ul>
+            <li class="first_li">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            </ul>
+          </nav>
+      </article>
+      </section> <!--section-->
+
+    <footer id="footBox">
+      <h2>footBox</h2>
+        <address> 
+        address
+        </address>
+
+    </footer> <!--footer-->
+  </div><!--wrap-->
+</body>
+</html>
