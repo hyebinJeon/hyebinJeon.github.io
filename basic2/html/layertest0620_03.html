@@ -13,23 +13,47 @@
     #headerBox{width:960px; height:100px; padding:10px; box-sizing:border-box; background-color: #526;}
       h1{width:150px; height:40px; 
        margin:20px 15px; float:left; background-color: #52f;}
-      #gnb{width:500px; height:40px; margin:20px 15px; float:left;  background-color: #f58;}
-      #unb{width:200px; height:40px; margin:20px 15px; float:right; background-color: #58f;}
+      #headerGnb{width:500px; height:40px; margin:20px 15px; float:left;}
+        #headerGnb>ul{width:500px; height:40px; float:left; }
+          #headerGnb>ul>li{width:125px; height:40px; float:left; text-align:center; background-color: #f84;}
+
+      #headerUnb{width:200px; height:40px; margin:20px 15px; float:right;}
+        #headerUnb>ul{width:200px; height:40px; float:right;}
+          #headerUnb>ul>li{width:66.667px; text-align:center; height:40px; float:left; background-color: #15f;}
+
+
 
     #contentBox{width:960px; height:auto; background-color: #174;}
       #top_ad_banner{width:960px; height:300px; background-color: #ff2;}
-      #asideBox{width:960px; height:250px; background-color: #f9f;}
+
+      #asideBox{width:960px; height:250px; padding:30px 20px; box-sizing:border-box; background-color: #f9f;}
+        #search{width:230px; height:60px; margin:0 auto; padding:5px; box-sizing:border-box; text-align:center; background-color: #ccc;}
+          #search span{width:200px; height:20px; background-color: #288;}
+         #asideBox>ul{width:920px; height:80px; margin-top:5px; margin-bottom:8px;}
+          #asideBox>ul>li{width:300px; height:80px; margin-right:10px; float:left; background-color: #fd5;}
+            #asideBox>.search_button{width:150px; height:30px; text-align:center;  margin:0 auto; background-color: #ccc;}
       #articleBox{width:960px; height:auto; padding:20px; box-sizing:border-box; background-color: #f2f;}
         #articleBox>ul{width:860px; height:680px; margin:0 auto;}
           #articleBox>ul>li{width:266.6px; height:320px; float:left; background-color: #285;
                             margin:10px;}
         button{width:842px; height:20px; margin-top:30px; margin-left:38px; background-color: #fff;}
+
       #bottom_ad_banner{width:960px; height:300px; background-color: #ff9;}
+
+
 
     #footerBox{width:960px; height:auto; background-color: #1ff;}
       #top_footerBox{width:960px; height:180px; background-color: #29f;}
-        #top_footerBox>ul{width:960px; height:180px; background-color: #fdf;}
-        #top_footerBox>ul>li{width:240px; height:180px; float:left; background-color: #dff;}
+        #top_footerBox ul{width:960px; height:180px; background-color: #fdf;}
+        #top_footerBox ul li{width:240px; height:180px; padding:45px 7px; box-sizing:border-box; float:left; background-color: #dff;}
+          .top_footerBox_1 dt{width:68px; height:auto; margin-bottom:10px; background-color: #fff;}
+            .top_footerBox_1 dd{font-size:28px; width:140px; height:auto; background-color: #7ff;}
+          .top_footerBox_2 dt{width:130px; height:auto; margin-bottom:10px; background-color: #fff;}
+            .top_footerBox_2 dd{font-size:18px; width:165px; height:40px; background-color: #7ff;}
+          .top_footerBox_3 dt{width:148px; height:auto; margin-bottom:10px; background-color: #fff;}
+            .top_footerBox_3 dd{font-size:15px; text-align:center; width:165px; height:50px; background-color: #7ff;}
+          .top_footerBox_4 dt{width:225px; height:auto; margin-bottom:10px; background-color: #fff;}
+            .top_footerBox_4 dd{font-size:15px; text-align:center; margin-left:13px; float:left; width:100px; height:auto; background-color: #7ff;}
       address{border-top:0.3px solid; width:960px; height:130px; background-color: #2d5;}
 </style>
 </head>
@@ -40,30 +64,51 @@
 
 <header id="headerBox">
   <h1>logo</h1>
-    <h2 class="hidden">headerBox</h2>
-    <nav id="gnb">
-    gnb
+      <section>
+       <h2 class="hidden">headerBox</h2>
+        <nav id="headerGnb">
+        <h3 class="hidden">headerGnb</h3>
+        <ul>
+        <li>내차살때</li>
+        <li>내차팔때</li>
+        <li>테마검색</li>
+        <li>이용안내</li>
+        </ul>
+       </nav>
+    <nav id="headerUnb">
+      <h3 class="hidden">headerunb</h3>
+      <ul>
+        <li>로그인</li>
+        <li>회원가입</li>
+        <li>사이트</li>
+      </ul>
     </nav>
-    <nav id="unb">
-    unb
-    </nav>
+    </section>
 </header><!--header-->
 
 <section id="contentBox">
+<h2 class="hidden">contentBox</h2>
   <section id="top_ad_banner">
+  <h3 class="hidden">top_ad_banner</h3>
   topAd
   </section><!--adbanner-->
+
   <aside id="asideBox">
-    <div id="search"><p>kb차차차 중고차 검색</p></div>
-    <ul>
-      <li>제조사</li>
-      <li>모델</li>
-      <li>세부모델</li>
-    </ul>
-    <div class="search_button">검색하기</div>
+    <h3 class="hidden">asideBox</h3>
+      <div id="search">
+      <p>kb차차차 중고차 검색</p>
+      <span>신뢰할 수 있는</span>
+      </div>
+      <ul>
+        <li>제조사</li>
+        <li>모델</li>
+        <li class="last_li_right">세부모델</li>
+      </ul>
+      <div class="search_button">검색하기</div>
 
   </aside><!--sectionBox-->
   <article id="articleBox">
+    <h3 class="hidden">article</h3>
     <ul>
       <li>1</li>
       <li>2</li>
@@ -81,19 +126,46 @@
     <button>더보기</button>
   </article><!--articleBox-->
   <section id="bottom_ad_banner">
+   <h3 class="hidden">bottom_ad</h3>
   bottomAd
   </section><!--adbanner-->
 </section><!--contentBox-->
 
 <footer id="footerBox">
-<div id="top_footerBox">
-  <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-   </ul>
-</div>
+  <section>
+  <h2 class="hidden">footerBox</h2>
+  <section id="top_footerBox">
+    <h3 class="hidden">top_footerBox</h3>
+      <ul>
+      <li>
+        <dl class="top_footerBox_1">
+          <dt>대표전화</dt>
+          <dd>1670-4777</dd>
+        </dl>
+      </li>
+      <li>
+        <dl class="top_footerBox_2">
+          <dt>중고차거래가이드</dt>
+          <dd>중고차거래전한번더</dd>
+        </dl>
+      </li>
+      <li>
+        <dl class="top_footerBox_3">
+          <dt>연장보증서비스신청</dt>
+          <dd>6개월/1만km<br>
+          연장보증서비스신청</dd>
+        </dl>
+      </li>
+      <li>
+        <dl class="top_footerBox_4">
+          <dt>차차차 APP을 지금 설치하세요</dt>
+          <dd>appstore</dd>
+          <dd>Google Play</dd>
+        </dl>
+      </li>
+      </ul>
+   </section>
+   </section>
 <address>address</address>
 </footer><!--footer-->
 
