@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <![endif]-->
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+  <title>login_sample_1</title>
+  <style>
+    fieldset{border:none;}
+    #wrap {width:750px; height:300px; margin:0 auto; border:solid 1px #ccc;padding-top:70px; padding-left:50px; box-sizing:border-box;}
+      #id{width:550px; height:20px; margin-bottom:15px;}
+      #password{width:550px; height:20px;}
+      #remeber_button{margin:15px 65px;}
+      button{width:70px; height:40px; background-color: #fff; border-radius:0.2em; box-sizing:border-box; margin-left:70px; border:solid 1px #ccc;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+  <h1 class="hidden">log in</h1>
+    <form action "#" method="post">
+      <fieldset>
+        <legend class="hidden">log in 화면</legend>
+        <div class="userName"> 사용자명
+          <input type="text" name="#" id="id" value="" placeholder="사용자명" />
+          <label for="id" class="hidden"> 사용자명을 입력하세요 </label>
+        </div>
+        <div class="pwd"> 비밀번호
+          <input type="text" name="#" id="password" value="" placeholder="비밀번호 " />
+          <label for="id" class="hidden"> 비밀번호 입력하세요 </label>
+        </div>
+        <div id="remeber_button">
+          <input type="checkbox" name="#" id="#" value="기억하기" />
+          기억하기
+        </div>
+        <div id="get_login">
+          <button>로그인</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

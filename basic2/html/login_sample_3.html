@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <![endif]-->
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+  <title>login_sample_3</title>
+  <style>
+    fieldset{border:none; }
+    body{background-color: #ccc;}
+    h1{font-weight:lighter; margin:18px 0px;}
+    #wrap{width:470px; height:400px; margin:0 auto; padding:28px; #ccc; background-color: #fff; box-sizing:border-box;}
+      #username{width:400px; height:48px; border-top-left-radius:0.5em; border-top-right-radius:0.5em; border:1px solid #ccc; background-color: #fff;}
+      #password{width:400px; height:48px; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border:1px solid #ccc; background-color: #fff;}
+      #remeber_button{width:auto; height:20px; margin:20px 0;}
+      button{width:400px; height:50px; color:#fff; border-radius:0.5em; background-color: #35f; border:none;}
+        
+  </style>
+      
+</head>
+<body>
+  <div id="wrap">
+  <h1>Please login</h1>
+    <form action="#" method="post">
+      <fieldset>
+        <legend class="hidden">login 화면</legend>
+        <div id="id">
+          <input type="text" name="username" id="username" value="" />
+          <label for="username" class="hidden"> 사용자명을 입력하세요 </label>
+        </div>
+        <div id="pwd"> 
+          <input type="password" name="password" id="password" value="" placeholder="password" />
+          <label for="password" class="hidden"> 비밀번호 입력하세요 </label>
+        </div>
+        <div id="remeber_button">
+          <input type="checkbox" name="#" id="#" value="기억하기" />
+          Remember me
+        </div>
+        <div id="get_login">
+          <button>LOGIN</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

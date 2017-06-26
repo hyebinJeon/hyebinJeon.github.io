@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <![endif]-->
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+  <title>login_sample_5</title>
+  <style>
+    fieldset{border:none; }
+    body{background-color: #ccc;}
+    #wrap{width:400px; height:550px; margin:0 auto; padding:25px 60px; #ccc; background-color: #c5c; box-sizing:border-box;}
+      header{width:270px; height:20px; margin:30px 0;}
+      header>button{background-color: transparent; cursor:pointer;}
+      .signedIn{font-size:15pt; border-bottom:1px solid #f55; color:#fff; float:left; margin-right:30px;}
+      .joinUs{font-size:15pt; color:#fff; float:left;}
+
+      #username{width:270px; height:35px; border:1px solid #ccc; margin-bottom:10px; background-color: transparent;}
+        #id p{color:#fff; margin-bottom:3px;}
+        #pwd p{color:#fff; margin-bottom:3px;}
+      #password{width:270px; height:35px; border:1px solid #ccc; background-color: transparent;}
+      #remeber_button{margin:20px 0; color:#fff;}
+      #get_login button{width:270px; height:50px; font-size:15pt; margin:40px 0; color:#fff; background-color: #3c3; border:none; cursor:pointer;}
+        .forgot{float:left; color:#ccc; font-size:11pt; margin-right:30px; border-bottom:1px solid #ccc;}
+        .create{float:left; color:#ccc; font-size:11pt; border-bottom:1px solid #ccc;}
+        
+  </style>
+      
+</head>
+<body>
+  <div id="wrap">
+    <form action="#" method="post">
+      <fieldset>
+        <legend class="hidden">login 화면</legend>
+        <header>
+        <button>
+        <h2 class="signedIn">
+        Sined in
+        </h2>
+        </button>
+        <button>
+        <h2 class="joinUs">
+        Join us
+        </h2>
+        </button>
+        </header>
+        <div id="id">
+          <p>Username<p>
+          <input type="text" name="username" id="username" value="" />
+          <label for="username" class="hidden"> 사용자명을 입력하세요 </label>
+        </div>
+        <div id="pwd">
+          <p>Password</p>
+          <input type="password" name="password" id="password" value="" />
+          <label for="password" class="hidden"> 비밀번호 입력하세요 </label>
+        </div>
+        <div id="remeber_button">
+          <input type="checkbox" name="#" id="#" value="기억하기" />
+          Keep me signed in
+        </div>
+        <div id="get_login">
+          <button>Sign in</button>
+        </div>
+        <div class="forgot">
+        Forgot password?
+        </div>
+        <div class="create">
+        Create an account
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

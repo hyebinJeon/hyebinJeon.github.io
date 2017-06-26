@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <!--[if let IE 9]>
+  <![endif]-->
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+  <title>login_sample_4</title>
+  <style>
+    fieldset{border:none; padding:0px 15px;}
+    body{background-color: #ccc;}
+    #wrap{width:400px; height:auto; margin:20px auto; background-color: #fff;}
+    h1{width:400px; height:70px; padding:10px 20px; box-sizing:border-box; font-weight:lighter; color:#fff; background-color: #15f;}
+      #username{width:370px; height:48px; font-size:15pt; padding:5px 0; box-sizing:border-box; border-bottom:1px solid #ccc; margin-top:30px; background-color: #fff;}
+      #password{width:370px; height:48px; font-size:15pt; padding:5px 0; box-sizing:border-box; border-bottom:1px solid #ccc; margin-top:30px; background-color: #fff;}
+      #remeber_button{margin:20px 0;}
+      button{width:100px; height:50px; float:right; margin-right:5px; font-size:15pt;
+      color:#fff; border-radius:0.3em; margin-bottom:18px; background-color: #f15; border:none;}
+      #checkbox:checked+label{color:#71a; font-weight:bold;}
+      /*checkbox에 checked가 되면 label에 무슨 효과를 줘라*/
+     footer{width:400px; height:40px; padding:5px 5px; box-sizing:border-box; border-top:1px solid #ccc;}   
+      #register{font-size:11pt; padding:3px; box-sizing:border-box; color:#ccc;}
+       .register{float:right;}
+  </style>
+      
+</head>
+<body>
+  <div id="wrap">
+  <h1>Login</h1>
+    <form action="#" method="post">
+      <fieldset>
+        <legend class="hidden">login 화면</legend>
+        <div id="id">
+          <input type="text" name="username" id="username" value="" placeholder="username" />
+          <label for="username" class="hidden"> 사용자명을 입력하세요 </label>
+        </div>
+        <div id="pwd"> 
+          <input type="password" name="password" id="password" value="" placeholder="password" />
+          <label for="password" class="hidden"> 비밀번호 입력하세요 </label>
+        </div>
+        <div id="remeber_button">
+          <input type="checkbox" name="#" id="checkbox" value="기억하기" />
+          <label for="checkbox">Remember me</label>
+        </div>
+        <div id="get_login" class="clearfix">
+          <button>LOGIN</button>
+        </div>
+      </fieldset>
+       <footer>
+        <div id="register">
+        <span>LOST YOUR PASSWORD?</span>
+        <span class="register">REGISTER</span>
+        </div>
+        </footer>
+    </form>
+  </div>
+</body>
+</html>
