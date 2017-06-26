@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <![endif]-->
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<title>Login_sample_6</title>
+	
+	<style>
+
+		body{width:100%; height:100%; background:linear-gradient(180deg,#F9D3AF,#5C3F44);}
+		#wrap{width: 480px; height: 400px; background-color: #ccc;}
+		fieldset{border:none;}
+		legend{width: 480px; height: 70px; padding:0; background-color: #fff;}
+		#name{width: 380px; height: 70px; border-top-left-radius:0.7em; 
+			  border-top-right-radius:0.7em; background-color: #333;}
+		#pwd{width: 380px; height: 70px; border-bottom:1px solid #000; border-bottom-left-radius:0.7em; 
+		     border-bottom-right-radius:0.7em; border-top:1px solid #000; background-color: #333;}
+		#forgot{width:auto; height:auto; margin:20px;}
+			#radio{float:left;}
+			#forgotdetail{float:left;}
+		#sign{width: 380px; height: 70px; 
+			 font-size:25pt; color:#fff; background-color: #319B8D;}	
+	</style>
+
+</head>
+
+<body>
+<div id="wrap">
+<form action="#" method="post" />
+<fieldset>
+<legend>User Login</legend>
+<div id="username">
+	<input type="text" name="#" id="name" value="" placeholder="username"/>
+	<label for="name"></label>
+</div>
+<div id="password">
+	<input type="password" name="#" id="pwd" value="" placeholder="password"/>
+	<label for="pwd"></label>
+</div>
+<div id="forgot" class="clearfix">
+	<div id="radio"><input type="radio" name="#" id="ABC" value="ABC" />
+		<label for="ABC">ABC</label>
+		<input type="radio" name="#" id="DFG" value="DFG" />
+		<label for="DFG">DFG</label>
+	</div>
+	<div id="forgotdetail">forgot details?</div>
+</div>
+<div id="sign">
+Sing in
+</div>
+</fieldset>	
+</div>
+</body>
+</html>

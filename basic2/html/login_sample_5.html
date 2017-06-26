@@ -12,7 +12,7 @@
   <style>
     fieldset{border:none; }
     body{background-color: #ccc;}
-    #wrap{width:400px; height:550px; margin:0 auto; padding:25px 60px; #ccc; background-color: #c5c; box-sizing:border-box;}
+    #wrap{width:400px; height:550px; margin:0 auto; padding:25px 60px; #ccc; background:linear-gradient(180deg,#D36FE9,#2D1EC1); box-sizing:border-box;}
       header{width:270px; height:20px; margin:30px 0;}
       header>button{background-color: transparent; cursor:pointer;}
       .signedIn{font-size:15pt; border-bottom:1px solid #f55; color:#fff; float:left; margin-right:30px;}
@@ -23,7 +23,8 @@
         #pwd p{color:#fff; margin-bottom:3px;}
       #password{width:270px; height:35px; border:1px solid #ccc; background-color: transparent;}
       #remeber_button{margin:20px 0; color:#fff;}
-      #get_login button{width:270px; height:50px; font-size:15pt; margin:40px 0; color:#fff; background-color: #3c3; border:none; cursor:pointer;}
+        input[id="checkbox"] + label{background-color:#36B29A; cursor:pointer;}
+      #get_login button{width:270px; height:50px; font-size:15pt; margin:40px 0; color:#fff; background-color: #36B29A; border:none; cursor:pointer;}
         .forgot{float:left; color:#ccc; font-size:11pt; margin-right:30px; border-bottom:1px solid #ccc;}
         .create{float:left; color:#ccc; font-size:11pt; border-bottom:1px solid #ccc;}
         
@@ -58,7 +59,8 @@
           <label for="password" class="hidden"> 비밀번호 입력하세요 </label>
         </div>
         <div id="remeber_button">
-          <input type="checkbox" name="#" id="#" value="기억하기" />
+          <input type="checkbox" name="#" id="checkbox" value="기억하기" />
+          <label for="checkbox"></label>
           Keep me signed in
         </div>
         <div id="get_login">

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<!--[if let IE 9]>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<title>position해보기</title>
+<style>
+	body{width:100%; height:3000px; background-color: #fff;}
+	#content{width:500px; height:900px; margin:0 auto; background-color: #ccc;}
+		#button{width:50px; height:50px; position:fixed; top:50%; left:50%; 
+		margin-left:-25px; margin-top:-25px; background-color: #777;}
+		#modal_1{width:150px; height:400px; position:fixed; top:0px; left:0px; background-color: #f75;}
+		#modal_2{width:100px; height:350px; position:fixed; top:1px; left:50%; 
+		margin-left:270px; background-color: #f77;}
+		/*content안에서 밖으로 밀어내기 위해서는, left로 퍼센트로 밀어 낼수도 있지만 그러면 화면 축소시 모달바가 콘텐츠와 고정해서 
+		움직이지 않는다. 그래서 마진으로 콘텐츠를 묶어 낸다. 맨처음 left로 50%하고, 마진으로 밀어낸다.
+		마진 값=콘텐츠의 반의 값+더 띄어줄 양*/
+</style>
+</head>
+
+<body>
+<div id="wrap">
+<div id="content">
+<div id="button">버튼</div>
+<div id="modal_1">modal_1
+	<ul>
+	<li>상의</li>
+	<li>하의</li>
+	<li>치마</li>
+	<li>원피스</li>
+	<li>신발</li>
+	</ul>
+	</div>
+<div id="modal_2">modal_2</div>
+</div>
+</div>
+</body>
+</html>
