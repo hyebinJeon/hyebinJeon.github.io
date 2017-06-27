@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <![endif]-->
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../ie/fontAwesome/css/font-awesome.min.css" />
+  <title>my fontAwesome</title>  
+  <style>
+    #wrap{width: 960px; height:auto; margin:0 auto;}
+    h1{text-align: center; padding:1em; background-color: #acf; }
+    ul{width: 80%; margin:0 auto;}
+    li{width: 100%; height:auto; margin-bottom:0.5em; border-bottom:1px solid #777;}      
+    li:hover{border-bottom-color:#f06;}
+      .blue-man{font-size:2em; color:#0af;}
+      .red-woman{font-size:2em; color:#faf;}
+      .logIN button{background-color: #f07; color:#fff; padding:0.5em; transition: all 500ms ease-out;}
+      .logIN button:hover{box-shadow:0.2em 0.2em 0.2em #751; color:#f07; background-color: #ddd;}
+      .link button{background-color: #5df; color:#fff; padding:0.5em; transition: all 500ms ease-out;}
+      .link button:hover{color:#777; background-color: #f93;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+  <h1>fontawesome</h1>
+  <ul>
+    <li><i class="fa fa-users" aria-hidden="true"></i>people</li>
+    <li> sns link icon
+      <a href="#"><i class="fa fa-facebook-square"></i>
+      <span class="hidden">facebook</span></a> <!--class=fa는 fa fontawesome을 쓰겠습니다라는 말-->
+      <a href="#"><i class="fa fa-instagram"></i>
+      <span class="hidden">instagram</span></a>
+      <a href="#"><i class="fa fa-pinterest-square fa-3x"></i>
+      <span class="hidden">pinterest</a>
+    </li>
+    <li>
+      <span class="blue-man"><i class="fa fa-male"></i>man</span> 
+      <span class="red-woman"><i class="fa fa-female"></i>woman</span>
+    </li>
+    <li class="logIN"><button type="button"><span class="fa fa-sign-in"></span>log in</button></li>
+    <li class="link">
+      <button type="button"><i class="fa fa-link"></i>link</button>
+    </li>
+    <li>
+      <span><i class="fa fa-mobile call"></i>call</span>
+    </li>
+    <li>
+      <span><i class="fa fa-info-circle">info</i></span>
+    </li>
+    <li>good</li>
+    <li>email</li>
+    <li>random</li>
+  </ul>
+  </div>
+</body>
+</html>

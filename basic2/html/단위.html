@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <![endif]-->
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/src/" />
+  <title>my title</title>  
+<style>
+  :root{font-size:16px;}
+  html,body{font-size:100%;}
+  #wrap{width: 600px; margin:0 auto; font-size:1em;}/*16px*/ /*100%*/
+  .box_01{font-size:2em;}/*32px*/ /*200%*/
+  .box_02{font-size:0.5em;}/*16px rem em은 상대값이다. 대상은 부모다.*/ 
+  .box_03{font-size:1em;}/*16px*/
+</style>
+</head>
+<body>
+base font size 처음의 설정값
+  <div id=#wrap>
+  첫번째 font size
+    <div class="box_01">
+      두번째 font size
+      <div class="box_02">
+        세번재 font size
+        <div class="box_03">
+          네번째 font size
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
