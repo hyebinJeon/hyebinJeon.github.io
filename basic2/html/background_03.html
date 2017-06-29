@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/font-awesome.min.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>my title</title>  
+  <style>
+  #wrap{width: 960px; height: auto; margin:0 auto;}
+    #headerBox{width: 960px; height: 92px; float:left; padding:17px 2px; box-sizing:border-box;}
+      #headerBox>h1{width:103px; height: 92px; float:left; 
+                    background-image: url("../img/kwater/img/header/logo.jpg");
+                    background-repeat:no-repeat; cursor:pointer;}
+        .unb{width: 232px; height: 18px; float:right;}
+          .unb ul{width:100%; height:18px; float:left;}
+          .unb li{width:100%; height:18px; float:left; margin-right:3.5px; 
+                  cursor:pointer; display:block; background-repeat: no-repeat;}
+            .unb li:nth-child(1){width:39px; background-image: url("../img/kwater/img/header/unb/unb_1.jpg");}
+            .unb li:nth-child(2){width:49px; background-image: url("../img/kwater/img/header/unb/unb_2.jpg");}
+            .unb li:nth-child(3){width:56px; background-image: url("../img/kwater/img/header/unb/unb_3.jpg");}
+            .unb li:nth-child(4){width:73px; background-image: url("../img/kwater/img/header/unb/unb_4.jpg");}
+
+        .gnb{width:772px; height:34px; float:right;}
+        .gnb:after{content:" "; display:block; width:0; height:0; clear:both;}
+          .gnb ul{width:100%; height:34px; float:left;}
+          .gnb li{width:100%; height:34px; float:left;
+                  cursor:pointer; display:block; margin-right:25px;
+                  background-repeat: no-repeat;}
+            .gnb li:nth-child(1){width:135px; background-image: url("../img/kwater/img/gnb/gnb_01.jpg");}
+            .gnb li:nth-child(2){width:78px; background-image: url("../img/kwater/img/gnb/gnb_02.jpg");}
+            .gnb li:nth-child(3){width:80px; background-image: url("../img/kwater/img/gnb/gnb_03.jpg");}
+            .gnb li:nth-child(4){width:80px; background-image: url("../img/kwater/img/gnb/gnb_04.jpg");}
+            .gnb li:nth-child(5){width:58px; background-image: url("../img/kwater/img/gnb/gnb_05.jpg");}
+            .gnb li:nth-child(6){width:78px; background-image: url("../img/kwater/img/gnb/gnb_06.jpg");}
+            .gnb li:nth-child(7){width:109px; background-image: url("../img/kwater/img/gnb/gnb_07.jpg");}
+
+
+    #contentBox{width:100%; height: auto; float:left;}
+      .adbannerBox{width: 100%; height: 496px; float:left; background-image: url(../img/kwater/img/banner.jpg);}
+      .asideBox{width: 100%; height: 101px; float:left;}
+      .asideBox:after{content:" "; display:block; width:0; height:0; clear:both;}
+        .asideBox ul{width:100%; height:101px; float:left; padding-top:3px; box-sizing:border-box; background-repeat:no-repeat;}
+        .asideBox ul>li{width:96px; height:96px; display:block; float:left; cursor:pointer;
+                        background-image: url("../img/kwater/img/lnb/lnb.png");
+                         background-repeat:no-repeat;}
+          .asideBox ul>li:nth-child(1){background-position: -5px -5px;}
+          .asideBox ul>li:nth-child(2){background-position: -110px -5px;}
+          .asideBox ul>li:nth-child(3){background-position: -215px -5px;}
+          .asideBox ul>li:nth-child(4){background-position: -320px -5px;}
+          .asideBox ul>li:nth-child(5){background-position: -425px -5px;}
+          .asideBox ul>li:nth-child(6){background-position: -530px -5px;}
+          .asideBox ul>li:nth-child(7){background-position: -635px -5px;}
+          .asideBox ul>li:nth-child(8){background-position: -740px -5px;}
+          .asideBox ul>li:nth-child(9){background-position: -844px -5px;}
+          .asideBox ul>li:nth-child(10){background-position: -950px -5px;}
+
+      .articleBox{width: 100%; height: auto; float:left;}
+        .top_aticle{width: 100%; height: 440px;}
+          .top_aticle ul{width:100%; height:auto; padding-top:25px; padding-left:4.5px; box-sizing:border-box;}
+          .top_aticle ul>li{width:100%; background-image: url("../img/kwater/img/article.jpg");
+            display:block; float:left; margin-right:10px; background-repeat:no-repeat;}
+            .top_aticle ul>li:nth-child(1){width:230px; height:170px; margin-bottom:45px; background-position:-5px -25px;}
+            .top_aticle ul>li:nth-child(2){width:230px; height:170px; margin-bottom:45px; background-position:-245px -25px;}
+            .top_aticle ul>li:nth-child(3){width:230px; height:170px; margin-bottom:45px; background-position:-485px -25px;}
+            .top_aticle ul>li:nth-child(4){width:230px; height:170px; margin-bottom:45px; background-position:-725px -25px;}
+            .top_aticle ul>li:nth-child(5){width:230px; height:200px; background-position:-5px -240px;}
+            .top_aticle ul>li:nth-child(6){width:230px; height:200px; background-position:-245px -240px;}
+            .top_aticle ul>li:nth-child(7){width:230px; height:200px; background-position:-485px -240px;}
+            .top_aticle ul>li:nth-child(8){width:230px; height:200px; background-position:-725px -240px;}
+        .bottom_aticle{width: 100%; height: 264px;}
+          .bottom_aticle ul{width:100%; height:auto; padding-left:4.5px; box-sizing:border-box;}
+          .bottom_aticle ul>li{width: 100%; height:220px; background-image: url("../img/kwater/img/article.jpg");
+            display:block; float:left; margin-right:18px; background-repeat: no-repeat;}
+            .bottom_aticle ul>li:nth-child(1){width:220px; background-position:-5px -440px;}
+            .bottom_aticle ul>li:nth-child(2){width:220px; background-position:-242px -440px;}
+            .bottom_aticle ul>li:nth-child(3){width:220px; background-position:-480px -440px;}
+            .bottom_aticle ul>li:nth-child(4){width:220px; background-position:-725px -440px;}
+    #footerBox{width: 100%; height: 210px; padding-top:22px; box-sizing:border-box; float:left; background-color: #f7f7f7;}
+      #footerBox h2{width:102px; height: 65px; float:left;
+                    background-image: url("../img/kwater/img/footer/h2.jpg");
+                    background-repeat:no-repeat; cursor:pointer;}
+        .centerBox{width: 507px; height:66px; float:left; margin-left:22px;}
+        .centerBox ul{width:100%; height:auto;}
+        .centerBox ul>li{width:100%; display:block; height:19px; float:left;}
+            .centerBox ul>li:nth-child(1){width:90px; background-image: url("../img/kwater/img/footer/f_map.jpg");}
+            .centerBox ul>li:nth-child(2){width:77px; background-image: url("../img/kwater/img/footer/f_map-2.jpg");}
+            .centerBox ul>li:nth-child(3){width:68px; background-image: url("../img/kwater/img/footer/f_map-3.jpg");}
+            .centerBox address{width:500px; height: 28px; float:left; background-image: url("../img/kwater/img/footer/address.jpg");}
+        .codebox{width: 188px; height: 95px; float:right;}
+          .code{width:89px; height: 94px; float:left; margin-right:17px; background-image: url("../img/kwater/img/footer/mark_01.jpg");}
+          .urlcode{width:81px; height: 94px; float:left; background-image: url("../img/kwater/img/footer/mark_02.jpg");}
+
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="headerBox">
+      <h1><a href="#"><span class="hidden">k-water</span></a></h1>
+      <div>
+       <nav class="unb">
+          <ul class="hidden_wrap">
+            <li><a href="#"><span>1</span></a></li>
+            <li><a href="#"><span>2</span></a></li>
+            <li><a href="#"><span>3</span></a></li>
+            <li class="last_li_right"><a href="#"><span>4</span></a></li>  
+          </ul>
+          </nav>
+        <nav class="gnb">
+          <ul class="hidden_wrap clearfix">
+          <li><a href="#"><span>1</span></a></li>
+          <li><a href="#"><span>2</span></a></li>
+          <li><a href="#"><span>3</span></a></li>
+          <li><a href="#"><span>4</span></a></li>
+          <li><a href="#"><span>5</span></a></li>
+          <li><a href="#"><span>6</span></a></li>
+          <li class="last_li_right"><a href="#"><span>7</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="contentBox" class="clearfix">
+      <h2 class="hidden">content Box</h2>
+        <h3 class="hidden">adbannerBox</h3>
+        <section class="adbannerBox">
+        </section>
+        <h3 class="hidden">asideBox</h3>
+
+        <aside class="asideBox">
+          <ul class="hidden_wrap clearfix">
+          <li><a href="#"><span>1</span></a></li>
+          <li><a href="#"><span>2</span></a></li>
+          <li><a href="#"><span>3</span></a></li>
+          <li><a href="#"><span>4</span></a></li>
+          <li><a href="#"><span>5</span></a></li>
+          <li><a href="#"><span>6</span></a></li>
+          <li><a href="#"><span>7</span></a></li>
+          <li><a href="#"><span>8</span></a></li>
+          <li><a href="#"><span>9</span></a></li>
+          <li><a href="#"><span>10</span></a></li>
+          </ul>     
+        </aside>
+        <h3 class="hidden">articleBox</h3>
+
+        <article class="articleBox">
+          <section class="top_aticle">
+            <ul class="hidden_wrap">
+            <li><a href="#"><span>1</span></a></li>
+            <li><a href="#"><span>2</span></a></li>
+            <li><a href="#"><span>3</span></a></li>
+            <li class=last_li_right><a hreft="#"><span>4</span></a></li>
+            <li><a href="#"><span>5</span></a></li>
+            <li><a href="#"><span>6</span></a></li>
+            <li><a href="#"><span>7</span></a></li>
+            <li class=last_li_right>8</li>
+            </ul>
+          </section>
+          <section class="bottom_aticle">
+            <ul class="hidden_wrap">
+            <li><a href="#"><span>1</span></a></li>
+            <li><a href="#"><span>2</span></a></li>
+            <li><a href="#"><span>3</span></a></li>
+            <li class="last_li_right"><a href="#"><span>4</span></a></li>
+            </ul>
+          </section>
+        </article>
+    </section>
+
+    <footer id="footerBox">
+      <h2><span class="hidden">footer Box</span></h2>
+      <div class="centerBox">
+      <ul class="hidden_wrap">
+        <li><a href="#"><span>1</span></a></li>
+        <li><a href="#"><span>2</span></a></li>
+        <li><a href="#"><span>3</span></a></li>
+      </ul>
+      <address> 
+      </address>
+     </div>
+      <div class="codebox">
+      <div class="code"><a href="#"></a></div>
+      <div class="urlcode"><a href="#"></a></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
