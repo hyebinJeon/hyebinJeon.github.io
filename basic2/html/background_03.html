@@ -51,6 +51,7 @@
       .asideBox{width: 100%; height: 101px; float:left;}
       .asideBox:after{content:" "; display:block; width:0; height:0; clear:both;}
         .asideBox ul{width:100%; height:101px; float:left; padding-top:3px; box-sizing:border-box; background-repeat:no-repeat;}
+        .asideBox ul>li>a{width:96px; height: 96px; display:block;}
         .asideBox ul>li{width:96px; height:96px; display:block; float:left; cursor:pointer;
                         background-image: url("../img/kwater/img/lnb/lnb.png");
                          background-repeat:no-repeat;}
@@ -68,6 +69,7 @@
       .articleBox{width: 100%; height: auto; float:left;}
         .top_aticle{width: 100%; height: 440px;}
           .top_aticle ul{width:100%; height:auto; padding-top:25px; padding-left:4.5px; box-sizing:border-box;}
+          .top_aticle ul>li{width:230px; height:200px; display:block;}
           .top_aticle ul>li{width:100%; background-image: url("../img/kwater/img/article.jpg");
             display:block; float:left; margin-right:10px; background-repeat:no-repeat;}
             .top_aticle ul>li:nth-child(1){width:230px; height:170px; margin-bottom:45px; background-position:-5px -25px;}
@@ -78,29 +80,37 @@
             .top_aticle ul>li:nth-child(6){width:230px; height:200px; background-position:-245px -240px;}
             .top_aticle ul>li:nth-child(7){width:230px; height:200px; background-position:-485px -240px;}
             .top_aticle ul>li:nth-child(8){width:230px; height:200px; background-position:-725px -240px;}
-        .bottom_aticle{width: 100%; height: 264px;}
+        .bottom_aticle{width: 100%; height: 264px; display:block;}
           .bottom_aticle ul{width:100%; height:auto; padding-left:4.5px; box-sizing:border-box;}
+          .bottom_aticle ul>li>a{width: 220px; height: 220px; display:block;}
           .bottom_aticle ul>li{width: 100%; height:220px; background-image: url("../img/kwater/img/article.jpg");
             display:block; float:left; margin-right:18px; background-repeat: no-repeat;}
             .bottom_aticle ul>li:nth-child(1){width:220px; background-position:-5px -440px;}
             .bottom_aticle ul>li:nth-child(2){width:220px; background-position:-242px -440px;}
             .bottom_aticle ul>li:nth-child(3){width:220px; background-position:-480px -440px;}
             .bottom_aticle ul>li:nth-child(4){width:220px; background-position:-725px -440px;}
+
+
     #footerBox{width: 100%; height: 210px; padding-top:22px; box-sizing:border-box; float:left; background-color: #f7f7f7;}
       #footerBox h2{width:102px; height: 65px; float:left;
                     background-image: url("../img/kwater/img/footer/h2.jpg");
-                    background-repeat:no-repeat; cursor:pointer;}
+                    background-repeat:no-repeat;}
+            #footerBox h2>a{width:102px; height: 65px; display: block;}
         .centerBox{width: 507px; height:66px; float:left; margin-left:22px;}
         .centerBox ul{width:100%; height:auto;}
         .centerBox ul>li{width:100%; display:block; height:19px; float:left;}
             .centerBox ul>li:nth-child(1){width:90px; background-image: url("../img/kwater/img/footer/f_map.jpg");}
+              .centerBox ul>li>a:nth-child(1){width:90px; height: 94px; display:block;}
             .centerBox ul>li:nth-child(2){width:77px; background-image: url("../img/kwater/img/footer/f_map-2.jpg");}
+              .centerBox ul>li>a:nth-child(2){width:77px; height: 94px; display:block;}
             .centerBox ul>li:nth-child(3){width:68px; background-image: url("../img/kwater/img/footer/f_map-3.jpg");}
+              .centerBox ul>li>a:nth-child(3){width:68px; height: 94px; display:block;}
             .centerBox address{width:500px; height: 28px; float:left; background-image: url("../img/kwater/img/footer/address.jpg");}
         .codebox{width: 188px; height: 95px; float:right;}
           .code{width:89px; height: 94px; float:left; margin-right:17px; background-image: url("../img/kwater/img/footer/mark_01.jpg");}
+           .code>a{width:89px; height: 94px; display:block;}
           .urlcode{width:81px; height: 94px; float:left; background-image: url("../img/kwater/img/footer/mark_02.jpg");}
-
+            .urlcode>a{width:89px; height: 94px; display:block;}
   </style>
 </head>
 
@@ -110,6 +120,7 @@
       <h1><a href="#"><span class="hidden">k-water</span></a></h1>
       <div>
        <nav class="unb">
+        <h2 class="hidden">unb</h2>
           <ul class="hidden_wrap">
             <li><a href="#"><span>1</span></a></li>
             <li><a href="#"><span>2</span></a></li>
@@ -118,6 +129,7 @@
           </ul>
           </nav>
         <nav class="gnb">
+          <h2 class="hidden">gnb</h2>
           <ul class="hidden_wrap clearfix">
           <li><a href="#"><span>1</span></a></li>
           <li><a href="#"><span>2</span></a></li>
@@ -159,7 +171,7 @@
             <li><a href="#"><span>1</span></a></li>
             <li><a href="#"><span>2</span></a></li>
             <li><a href="#"><span>3</span></a></li>
-            <li class=last_li_right><a hreft="#"><span>4</span></a></li>
+            <li class=last_li_right><a href="#"><span>4</span></a></li>
             <li><a href="#"><span>5</span></a></li>
             <li><a href="#"><span>6</span></a></li>
             <li><a href="#"><span>7</span></a></li>
@@ -178,7 +190,7 @@
     </section>
 
     <footer id="footerBox">
-      <h2><span class="hidden">footer Box</span></h2>
+      <h2><a href="#"><span class="hidden">footer Box</span></a></h2>
       <div class="centerBox">
       <ul class="hidden_wrap">
         <li><a href="#"><span>1</span></a></li>

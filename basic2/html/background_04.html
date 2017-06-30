@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>my title</title>  
+  <style>
+  body{width: 100%; height: 3000px;}
+    #wrap{width:960px; height: auto; margin: 0 auto;}
+      #header{width:100%; height: auto;}
+      h1{padding:1em; background-color: #09f; color:#fff; font-size:1.5em; border-bottom: 2px solid #fa0;}
+      #adBox{width:100vw; height:800px; position:relative; left:50%; top:0; margin-left:-50vw; /*vw:view width:*/
+            background-image: url("../img/background/city.jpg");
+            background-repeat:no-repeat; background-position:center; background-size:cover; 
+            background-attachment:scroll;}
+      #adBox2{width:100vw; height:600px; position:relative; left:50%; top:0; margin-left:-50vw; 
+            background-image: url("../img/background/forest.jpg");
+            background-repeat:no-repeat; background-position:center; background-size:cover; 
+            background-attachment:fixed;}
+      #adBox3{width:100vw; height:1200px; position:relative; left:50%; top:0; margin-left:-50vw; 
+            background-image: url("../img/background/coffeemini_.jpg");
+            background-repeat:no-repeat; background-position:center; background-size:cover; 
+            background-attachment:fixed;}
+
+      #imgTag{width:100%; height:500px; margin-top:50px; background-color: #ddd;}
+        #imgTag>div{width:300px; height:100%; float:left; overflow:hidden; margin-right:30px; background-color: #daa;}
+        #imgTag>div:nth-of-type(2){overflow-x:scroll;}
+        #imgTag>div:nth-of-type(3){margin-right:0;}
+        #imgTag>div:nth-of-type(1)>img{width:100%; float:left; margin-right:30px; background-color: #daa;}
+        #imgTag>div:nth-of-type(2)>img{height: 100%; width:auto;}
+        #imgTag>div:nth-of-type(3)>img{width:auto; height: 100%; transition:all 1000ms linear;}
+        #imgTag>div:nth-of-type(3)>img:hover{margin-left: -170%;}
+
+      #imgSize{width:100%; height:500px; margin-top:50px; background-color: #ddd;}
+        #imgSize>div{width:23%; height: 100%; margin-right:2.65%; float:left; 
+                    background-repeat:no-repeat;background-color: #cca;}
+        #imgSize>div:nth-of-type(1){background-image: url("../img/background/coffeemini_.jpg");
+                                    background-size:100%; /*기준은 가로*/}
+        #imgSize>div:nth-of-type(2){background-image: url("../img/background/colorful.jpg");
+                                    background-size:contain; /*기준은 배경이미지 전체를 보여주는것*/}
+        #imgSize>div:nth-of-type(3){background-image: url("../img/background/coffee_beans.jpg");
+                                    background-size:cover; /*개체의 빈공간없이 이미지를 꽉채워 만드는 것*/}
+        #imgSize>div:nth-of-type(4){background-image: url("../img/sujin/charactor_03.jpg");margin-right: 0;
+                                    /*-webkit-background-size:;
+                                    -moz-background-size:;
+                                    -ms-background-size:;
+                                    -o-background-size:;*/
+                                    background-size:auto 100%;
+                                    transition:all 1000ms ease-out;}
+        #imgSize>div:nth-of-type(4):hover{background-position:right;}                                    
+  
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1>background image</h1>
+    </div>
+    <section id="adBox"><!--스크롤 이미지--></section>
+    <section id="adBox2"><!--고정이미지-->  </section> 
+    <section id="adBox3"><!--고정이미지-->  </section> 
+    <article id="imgTag">
+      <div class="img_01"> <!--width-->
+        <img src="../img/sujin/charactor_01.jpg" alt="image설명작성">
+      </div>
+      <div class="img_02"> <!--height--> 
+        <img src="../img/sujin/charactor_02.jpg" alt="image설명작성">
+      </div>
+      <div class="img_03"> <!--width, height-->
+        <img src="../img/sujin/charactor_03.jpg" alt="image설명작성">
+      </div>
+    </article>
+    <article id="imgSize">
+      <div class="img_01"> <!--cover--></div>
+      <div class="img_02"> <!--content--></div>
+      <div class="img_03"> <!--%--></div>
+      <div class="img_04"> <!--% %--></div>
+    </article>
+  </div>
+</body>
+</html>
