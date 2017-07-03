@@ -23,7 +23,9 @@
       h1{padding:1em; background-color: #09f; color:#fff; font-size:1.5em; border-bottom: 2px solid #fa0;}
       #adBox{width:100vw; height:800px; position:relative; left:50%; top:0; margin-left:-50vw; /*vw:view width:*/
             background-image: url("../img/background/city.jpg");
-            background-repeat:no-repeat; background-position:center; background-size:cover; 
+            background-repeat:no-repeat; 
+            background-position:center; 
+           background-size:cover; 
             background-attachment:scroll;}
       #adBox2{width:100vw; height:600px; position:relative; left:50%; top:0; margin-left:-50vw; 
             background-image: url("../img/background/forest.jpg");
@@ -36,16 +38,16 @@
 
       #imgTag{width:100%; height:500px; margin-top:50px; background-color: #ddd;}
         #imgTag>div{width:300px; height:100%; float:left; overflow:hidden; margin-right:30px; background-color: #daa;}
-        #imgTag>div:nth-of-type(2){overflow-x:scroll;}
-        #imgTag>div:nth-of-type(3){margin-right:0;}
         #imgTag>div:nth-of-type(1)>img{width:100%; float:left; margin-right:30px; background-color: #daa;}
         #imgTag>div:nth-of-type(2)>img{height: 100%; width:auto;}
+        #imgTag>div:nth-of-type(2){overflow-x:scroll;}
+        #imgTag>div:nth-of-type(3){margin-right:0;}
         #imgTag>div:nth-of-type(3)>img{width:auto; height: 100%; transition:all 1000ms linear;}
         #imgTag>div:nth-of-type(3)>img:hover{margin-left: -170%;}
 
       #imgSize{width:100%; height:500px; margin-top:50px; background-color: #ddd;}
         #imgSize>div{width:23%; height: 100%; margin-right:2.65%; float:left; 
-                    background-repeat:no-repeat;background-color: #cca;}
+                    background-repeat:no-repeat; background-color: #cca;}
         #imgSize>div:nth-of-type(1){background-image: url("../img/background/coffeemini_.jpg");
                                     background-size:100%; /*기준은 가로*/}
         #imgSize>div:nth-of-type(2){background-image: url("../img/background/colorful.jpg");
