@@ -1,0 +1,13 @@
+/*test.scss*/
+// 요것도 주석
+// 한줄주석은 css로 변환되지 않는다.\
+
+$test : #a06;
+
+body{background-color: #ccd; 
+      margin: 0;
+      padding:0;}
+
+  h1{padding:1em;
+      color:#fff;
+      background-color: $test;}
