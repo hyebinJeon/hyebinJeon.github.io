@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*step_01.scss*/
+/*기본 변수 설정*/
+#wrap { width: 100%; min-width: 960px; height: auto; min-height: 1000px; margin: 0 auto; min-height: 1000px; margin: 0 auto; background-color: #cc3; }
+
+#headerBox { width: 100%; height: 150px; background-color: #d6d65c; }
+
+#headerBox h1 { color: #cc3; }
+
+#headerBox h1:hover { color: #525214; }
+
+#adBox { width: 100%; height: 450px; background-color: rgba(192, 223, 129, 0.5); }
+
+#adBox h2 { width: 100%; height: auto; background-color: #0af; }
+
+#adBox h2:hover { color: #a3a329; }
+
+#content { width: 100%; height: 500px; background-color: #ebebad; }
+
+#footBox { width: 100%; height: 50px; background-color: #f5f5d6; }

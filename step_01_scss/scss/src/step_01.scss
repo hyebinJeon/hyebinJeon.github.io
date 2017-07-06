@@ -1,0 +1,19 @@
+/*step_01.scss*/
+
+
+@import "../_setting/_base.scss"; //@import:"경로" -> 따로 저장된 변수값을 가져온다.
+
+#wrap{width:100%; min-width:960px; height: auto; min-height:1000px; margin:0 auto;
+      min-height: 1000px; margin: 0 auto; background-color:$primaryColor;}
+  #headerBox{width: 100%; height: 150px; background-color:lighten($primaryColor, 10%); //어두운건darken
+    h1{color:$primaryColor;} //nesting기법 {}안에 태그를 또 넣음
+    h1:hover{color:darken($primaryColor,30%);} //1. hover를 원래 쓰는법
+  } //headBox
+
+  #adBox{width: 100%; height: 450px; background-color:lighten($basicColor, 20%);
+    h2{width:100%; height: auto; background-color:$blue;
+      &:hover{color:darken($primaryColor,10%);} //2. nesting하여 hover주는 방법. &는 여기라는 의미
+    }//h2
+  } //adBox
+  #content{width: 100%; height: 500px; background-color:lighten($primaryColor, 30%);}
+  #footBox{width: 100%; height: 50px; background-color:lighten($primaryColor, 40%);} 
