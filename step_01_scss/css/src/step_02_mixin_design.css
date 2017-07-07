@@ -1,0 +1,20 @@
+/*step_02_mixin_ex.css*/
+h1 > span { display: block; width: 0; height: 0; position: absolute; z-index: -100; overflow: hidden; }
+
+#wrap { width: 960px; height: auto; background-color: transparent; margin: 0 auto; }
+
+#headBox { width: 100%; height: 100px; background-color: #9999ff; }
+
+h1 { width: 150px; height: 50px; margin: 0 auto; }
+
+h1 a { width: 100%; height: 100%; display: block; background-image: url("../../img/zicoandhy.jpg"); background-size: cover; background-position: center; transition: all 700ms lenear; background-repeat: no-repeat; }
+
+h1 a > span { display: block; width: 0; height: 0; z-index: -100; position: absolute; overflow: hidden; }
+
+#gnb { width: 100%; height: 50px; margin-top: 10px; border-top: 1px solid #0f6; }
+
+#adBox { width: 100%; height: 400px; background-color: #b3b3ff; }
+
+#contentBox { width: 100%; height: 800px; background-color: #ccccff; }
+
+#footBox { width: 100%; height: 150px; background-color: #66f; }

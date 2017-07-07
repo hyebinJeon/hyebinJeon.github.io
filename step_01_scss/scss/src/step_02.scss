@@ -1,0 +1,40 @@
+/*step_02.css*/
+@import "../_setting/_base.scss";
+// 1. 영역 구분(nesting처리)
+// 2. @mixin test1 
+// 3. @mixin link 마우스 올렸을 경우 처리
+//&:는 자기자신
+
+@mixin border(){
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+}    
+@mixin link(){
+  &:hover{background-color: #0af;}
+  >a{width: 100%; height: 100%; display: block;}
+}
+
+@mixin change($color:#afc,$font:#111){ //$color:#___는 내가 아무것도 안쓰면 저 색을 입힌다는 뜻
+  & > a{transition:all 0.3s ease-out;}
+  &:hover>a{background-color:$color; color:$font; font-size:2em;} //li에 커서를 두면 a가 바뀐다
+}
+.
+#wrap{
+  >h1{float:left;}
+  #gnb{width: 600px; height: 70px; float: right;
+    >h2{width:0; height:0; position: absolute; z-index:-100;
+        overflow:hidden;}//#gnb>h2
+    >ul{width: 100%; height: 100%;
+      >li{height: 100%; float: left; margin-left:10px;
+         @include border;
+         @include link;
+         &:first-child{margin-left:0;}
+         }//gnb>li
+      >li:nth-child(1){@include change(#fd2,#d48);}
+      >li:nth-child(2){@include change(#d53,#d44);}
+      >li:nth-child(3){@include change(#f82,#d4f);}
+      >li:nth-child(4){@include change(#63f,#d41);}
+      >li:nth-child(5){@include change($font:#855);} //폰트와 컬러 둘중에 하나만 쓰고싶으면 앞에 속성을 써준다
+    }//#gnb>ul
+  }//#gnb
+}//#wrap 

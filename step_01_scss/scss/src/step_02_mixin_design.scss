@@ -1,0 +1,35 @@
+/*step_02_mixin_ex.css*/
+
+//기본 설정파일 불러오기-------------
+//변수 설정
+@import "../_setting/step_02_var";
+//mixin 설정
+@import "../_setting/step_02_mixin";
+
+//test
+$url:"../../img/";
+//문자의 연결은 '+' 기호로 표기
+@mixin link($image:$url, $file:none, $position:center, $time:700ms){
+    a{width: 100%; height: 100%; display: block;
+        background-image: url($image + $file);
+        background-size:cover;
+        background-position:$position;
+        transition:all $time lenear; 
+        background-repeat: no-repeat;
+    >span{display: block; width: 0; height: 0; 
+          z-index:-100; position:absolute; overflow: hidden;}
+        }//a
+    }//mixin
+//layout design----------------------
+#wrap{@include baseLayout($w: 960px, $c:transparent); margin:0 auto;}
+
+#headBox{@include baseLayout($h:100px, $c:lighten($primary, 10%));}
+  h1{width: 150px; height: 50px; margin:0 auto;
+    @include link($file:"zicoandhy.jpg");
+  >span{@extend %hidden;}
+  }//headBox h1
+  #gnb{width:100%; height: 50px; margin-top: 10px; border-top:$line;}
+
+#adBox{@include baseLayout($h:400px, $c:lighten($primary, 15%));}
+#contentBox{@include baseLayout($h:800px, $c:lighten($primary, 20%));}
+#footBox{@include baseLayout($h:150px, $c:$primary);}
