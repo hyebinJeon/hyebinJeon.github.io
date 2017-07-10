@@ -1,0 +1,42 @@
+ /*main css*/
+
+
+ #wrap{width:978px; height: auto; margin:0 auto;}
+    #headerBox{width:100%; height:200px; padding-top:45px; box-sizing:border-box; 
+               background-color: #945; }
+        h1{width:115px; height: 46px; margin:0 auto; margin-bottom:54px; background-color: #825;}
+      #gnbBox{width:978px; height:55px; padding:15px 15px; box-sizing:border-box; background-color: #156;}
+        .LoginJoinBox{width:120px; height:21px; float:left;}
+          .LoginJoinBox>li{width:40px; height:21px; display:block; margin-right:40px; float:left; background-color: #ccc;}
+        .menuBox{width:480px; float:right;}
+          .menuBox>li{width:80px; height:21px; display:block; float:left; margin-right:15px; background-color: #ccc;}
+    
+    #content{width:100%; height:auto;}
+      #adbannerBox{width: 100%; height:658px; background-color: #123;}
+      #ariticleWrap{width:100%; height:auto;}
+         .newsBox{width:60%; height:378px; float:left; background-color: #265;}
+           .newsBox>h4{width:50%; float:left; font-color:#ccc; font-size:2em;}
+           .newsBoard{width:50%; float:left; height:378px; background-color: #511;}
+             .newsBoard>p{display:block;}
+         .cfBox{width:40%; height:378px; float:left; background-color: #569;}
+      .eventBannerBox{width:100%; height:378px; float:left;}
+          .eventBanner{width:100%; height:100%; padding-top:60px; padding-left:13px;
+                       box-sizing:border-box; background-color: #923;}
+            .eventBanner>li{width:230px; height:80%; display:block; 
+                            margin-right:10px; float:left; background-color: #ccc;}
+            .eventBanner>button{float:right; margin-top:7px; margin-right:13px;}  
+
+      #adFixed{width:100%; height:400px; background-color: #236;}
+
+      #menuBox{width:100%; height:708px; background-color: #882;}
+
+      #foundstoreBox{width:100%; height:400px; background-color: #722;}
+
+      #qBox{width:100%; height:350px;}
+        .chain{width:50%; height: 350px; float:left; background-color: #152;}
+        .sns{width:50%; height: 350px; float:left; background-color: #452;}
+
+    #footBox{width:100%; height:200px; background-color: #266;}
+        .footlist{width:40%; height:30px; display:block; background-color: #155;} 
+          .footlist>li{float:left;}     
+      

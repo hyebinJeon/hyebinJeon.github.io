@@ -12,38 +12,12 @@
 <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
 <link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
 <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
-
+<link rel="stylesheet" type="text/css" href="../css/src/main.css" />
 <script src="../js/jquery/jquery-3.2.1.min.js"></script>
 <script src="../js/jquery/jquery-ui.min.js"></script>
   <title>subway main page</title>  
  
   <style>
-
-
-  #wrap{width:978px; height:auto; margin:0 auto;}
-    #headerBox{width:100%; height:173px; padding:35px 0; box-sizing:border-box; 
-               background-color: #945; }
-        h1{width:115px; height: 46px; margin:0 auto; margin-bottom:40px; background-color: #825;}
-      #gnbBox{width:978px; height:55px; padding:15px 15px; box-sizing:border-box; background-color: #156;}
-        .LoginJoinBox{width:120px; height:21px; float:left;}
-          .LoginJoinBox>li{width:40px; height:21px; display:block; margin-right:40px; float:left; background-color: #ccc;}
-        .menuBox{width:480px; float:right;}
-          .menuBox>li{width:80px; height:21px; display:block; float:left; margin-right:15px; background-color: #ccc;}
-    #content{width:100%; height:auto;}
-      #adBox{width: 100%; height:658px; background-color: #123;}
-      #eventBox{width:100%; height:756px; background-color: #538;}
-      #adFixed{width:100%; height:400px; background-color: #753;}
-      #menuBox{width:100%; height:708px; background-color: #882;}
-      #foundstoreBox{width:100%; height:400px; background-color: #722;}
-      #qBox{width:100%; height:350px;}
-        .chain{width:50%; height: 350px; float:left; background-color: #152;}
-        .sns{width:50%; height: 350px; float:left; background-color: #452;}
-    #footBox{width:100%; height:200px; background-color: #266;}
-        .footlist{width:40%; height:30px; display:block; background-color: #155;} 
-          .footlist>li{float:left;}     
-      
-
-
   </style>
 </head>
 
@@ -75,30 +49,46 @@
     
     <section id="content">
     <h2 class="hidden">contentBox</h2> 
-        <section id="adBox">
+        <section id="adbannerBox">
           <h3 class="hidden">광고배너</h3> 
-        </section> <!--adBox-->
-        <article id="eventBox">
+        </section> <!--adbannerBox-->
+        <article id="articleWap" class="clearfix">
           <h3 class="hidden">공지사항,이벤트배너</h3>
-            <section class="news">
-            <h4 class="hidden">news</h4>
+            <div id="adtopWrap">
+            <section class="newsBox">
+              <h4>NEWS AND EVENT</h4>
+              <div class="newsBoard">
+                <p>SUBWAY NEWS</p>
+              </div><!--newsBoard-->
             </section>
             <section class="cfBox">
-            <h4 class="hidden">cf</h4>
+              <h4 class="hidden">cf</h4>
             </section>
-            <section class="eventBanner">
-            <h4 class="hidden">광고배너</h4>
+            </div>
+            <section class="eventBannerBox">
+             <h4 class="hidden">광고배너</h4>
+              <ul class="eventBanner">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li class="last_li_right">4</li>
+                <button>전체이벤트 보러가기</button>
+              </ul>
             </section>
-        </article><!--eventBox-->
+        </article><!--articleWap-->
+
         <section id="adFixed">
           <h3 class="hidden">픽스 광고</h3> 
         </section><!--adFixed-->
+
         <section id="menuBox">
           <h3 class="hidden">메뉴</h3> 
         </section><!--menuBox-->
+
         <section id="foundstoreBox">
           <h3 class="hidden">매장찾기</h3> 
-        </section>
+        </section><!--fondstoreBox-->
+
         <section id="qBox">
           <h3 class="hidden">가맹문의,sns</h3> 
             <div class="chain">
