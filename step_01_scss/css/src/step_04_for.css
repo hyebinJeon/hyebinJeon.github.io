@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/*step_04_for.css*/
+/*
+@for $임의변수 시작값 through 마지막값 {
+
+}
+
+//through <= 작거나 같다 (이상 이하)
+//to < 작다 (초과,미만)
+*/
+li:nth-child(1) { background-image: url(img_1.png); }
+
+li:nth-child(2) { background-image: url(img_2.png); }
+
+li:nth-child(3) { background-image: url(img_3.png); }
+
+li:nth-child(4) { background-image: url(img_4.png); }
+
+li:nth-child(5) { background-image: url(img_5.png); }
+
+li:nth-child(1) { background-image: url("img_1.png"); }
+
+li:nth-child(1):hover { background-image: url("img_1_on.png"); }
+
+li:nth-child(2) { background-image: url("img_2.png"); }
+
+li:nth-child(2):hover { background-image: url("img_2_on.png"); }
+
+li:nth-child(3) { background-image: url("img_3.png"); }
+
+li:nth-child(3):hover { background-image: url("img_3_on.png"); }
+
+li:nth-child(4) { background-image: url("img_4.png"); }
+
+li:nth-child(4):hover { background-image: url("img_4_on.png"); }
+
+li:nth-child(5) { background-image: url("img_5.png"); }
+
+li:nth-child(5):hover { background-image: url("img_5_on.png"); }
+
+li:nth-child(6) { background-image: url("img_6.png"); }
+
+li:nth-child(6):hover { background-image: url("img_6_on.png"); }
+
+li:nth-child(7) { background-image: url("img_7.png"); }
+
+li:nth-child(7):hover { background-image: url("img_7_on.png"); }
+
+li:nth-child(8) { background-image: url("img_8.png"); }
+
+li:nth-child(8):hover { background-image: url("img_8_on.png"); }
+
+li:nth-child(9) { background-image: url("img_9.png"); }
+
+li:nth-child(9):hover { background-image: url("img_9_on.png"); }
+
+li:nth-child(10) { background-image: url("img_10.png"); }
+
+li:nth-child(10):hover { background-image: url("img_10_on.png"); }
+
+li:nth-child(11) { background-image: url("img_11.png"); }
+
+li:nth-child(11):hover { background-image: url("img_11_on.png"); }
+
+li:nth-child(12) { background-image: url("img_12.png"); }
+
+li:nth-child(12):hover { background-image: url("img_12_on.png"); }
+
+li:nth-child(13) { background-image: url("img_13.png"); }
+
+li:nth-child(13):hover { background-image: url("img_13_on.png"); }
+
+li:nth-child(14) { background-image: url("img_14.png"); }
+
+li:nth-child(14):hover { background-image: url("img_14_on.png"); }
+
+li:nth-child(15) { background-image: url("img_15.png"); }
+
+li:nth-child(15):hover { background-image: url("img_15_on.png"); }
+
+li:nth-child(16) { background-image: url("img_16.png"); }
+
+li:nth-child(16):hover { background-image: url("img_16_on.png"); }
+
+li:nth-child(17) { background-image: url("img_17.png"); }
+
+li:nth-child(17):hover { background-image: url("img_17_on.png"); }
+
+li:nth-child(18) { background-image: url("img_18.png"); }
+
+li:nth-child(18):hover { background-image: url("img_18_on.png"); }
+
+li:nth-child(19) { background-image: url("img_19.png"); }
+
+li:nth-child(19):hover { background-image: url("img_19_on.png"); }
+
+li:nth-child(20) { background-image: url("img_20.png"); }
+
+li:nth-child(20):hover { background-image: url("img_20_on.png"); }
+
+li:nth-child(21) { background-image: url("img_21.png"); }
+
+li:nth-child(21):hover { background-image: url("img_21_on.png"); }
+
+li:nth-child(22) { background-image: url("img_22.png"); }
+
+li:nth-child(22):hover { background-image: url("img_22_on.png"); }
+
+li:nth-child(23) { background-image: url("img_23.png"); }
+
+li:nth-child(23):hover { background-image: url("img_23_on.png"); }
+
+li:nth-child(24) { background-image: url("img_24.png"); }
+
+li:nth-child(24):hover { background-image: url("img_24_on.png"); }
+
+li:nth-child(25) { background-image: url("img_25.png"); }
+
+li:nth-child(25):hover { background-image: url("img_25_on.png"); }
+
+li:nth-child(26) { background-image: url("img_26.png"); }
+
+li:nth-child(26):hover { background-image: url("img_26_on.png"); }
+
+li:nth-child(27) { background-image: url("img_27.png"); }
+
+li:nth-child(27):hover { background-image: url("img_27_on.png"); }
+
+li:nth-child(28) { background-image: url("img_28.png"); }
+
+li:nth-child(28):hover { background-image: url("img_28_on.png"); }
+
+li:nth-child(29) { background-image: url("img_29.png"); }
+
+li:nth-child(29):hover { background-image: url("img_29_on.png"); }
+
+li:nth-child(30) { background-image: url("img_30.png"); }
+
+li:nth-child(30):hover { background-image: url("img_30_on.png"); }
+
+/*
+@each 임의변수 in (각각의 값){
+  //내용
+}
+*/
+li:nth-child(3) { background-image: url("img_3.png"); }
+
+li:nth-child(10) { background-image: url("img_10.png"); }
+
+li:nth-child(5) { background-image: url("img_5.png"); }
+
+li:nth-child(15) { background-image: url("img_15.png"); }
+
+.coffee_americano { background-image: url(americanopng); }
+
+.coffee_americano:hover { background-image: url(americanoon.png); }
+
+.coffee_Latte { background-image: url(Lattepng); }
+
+.coffee_Latte:hover { background-image: url(Latteon.png); }
+
+.coffee_viena { background-image: url(vienapng); }
+
+.coffee_viena:hover { background-image: url(vienaon.png); }
+
+.coffee_mocha { background-image: url(mochapng); }
+
+.coffee_mocha:hover { background-image: url(mochaon.png); }
+
+.coffee_americano { background-image: url(americanopng); }
+
+.coffee_americano:hover { background-image: url(americanoon.png); }
+
+.coffee_latte { background-image: url(lattepng); }
+
+.coffee_latte:hover { background-image: url(latteon.png); }
+
+.coffee_viena { background-image: url(vienapng); }
+
+.coffee_viena:hover { background-image: url(vienaon.png); }
+
+.coffee_mocha { background-image: url(mochapng); }
+
+.coffee_mocha:hover { background-image: url(mochaon.png); }
+
+/*for2*/
+li:nth-child(1) { color: #222; }
+
+li:nth-child(2) { color: #490; }
+
+li:nth-child(3) { color: #823; }
+
+li:nth-child(4) { color: #049; }
+
+li:nth-child(5) { color: #523; }
+
+li:nth-child(6) { color: #029; }
+
+li:nth-child(7) { color: #258; }
+
+/*for3*/
+li:nth-child(1) { color: #222; }
+
+li:nth-child(2) { color: #490; }
+
+li:nth-child(3) { color: #823; }
+
+li:nth-child(4) { color: #049; }
+
+li:nth-child(5) { color: #523; }
+
+li:nth-child(6) { color: #029; }
+
+li:nth-child(7) { color: #258; }

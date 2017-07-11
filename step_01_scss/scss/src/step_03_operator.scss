@@ -1,0 +1,22 @@
+//scss
+/* step_03_operator*/
+
+//+,-,*,/
+
+//크기-----------------------
+$width1:100px; $width2:200px;
+.box{width:$width1 + $width2;}
+.box2{width:100px + 200px;}
+.box2{width:150+200px;}
+.box2{width:(150+200)px;} //이렇게하면 px안먹힘 밑에처럼 단위도 +붙여줘야 함
+.box2{width:(150+250) + px;}
+
+//color---------------------
+.color{color:#ddd+#afc;}
+.color{color:#3d3+#3fc;}
+.color{color:#f00+#00f+#ff0;} //색상도 더해주는 기능을 갖고 있음
+
+//--------------------------
+.two{width:(100 / 3)+px;
+    height:((100+30)/3) +em;
+    font-size:(16*3/16) +rem;}

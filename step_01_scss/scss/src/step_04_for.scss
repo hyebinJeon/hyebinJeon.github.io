@@ -1,0 +1,66 @@
+//step_04_for.scss
+/*step_04_for.css*/
+
+//for:반복문
+//일정한 간격으로 연속되어진 증가 또는 감소의 기능을 
+//반복하여 처리할때 사용하는 기능
+
+/*
+@for $임의변수 시작값 through 마지막값 {
+
+}
+
+//through <= 작거나 같다 (이상 이하)
+//to < 작다 (초과,미만)
+*/
+
+li:nth-child(1){background-image: url(img_1.png);}
+li:nth-child(2){background-image: url(img_2.png);}
+li:nth-child(3){background-image: url(img_3.png);}
+li:nth-child(4){background-image: url(img_4.png);}
+li:nth-child(5){background-image: url(img_5.png);}
+
+@for $i from 1 through 30 {
+  li:nth-child(#{$i}){background-image:url("img_" + $i + ".png");}
+  li:nth-child(#{$i}):hover{background-image:url("img_"+ $i + "_on.png");}
+}
+
+
+
+
+
+/*
+@each 임의변수 in (각각의 값){
+  //내용
+}
+*/
+
+@each $j in (3,10,5,15){
+  li:nth-child(#{$j}){background-image: url("img_"+ $j + ".png");}
+}
+
+@each $k in (americano, Latte, viena, mocha){
+  .coffee_#{$k}{background-image: url($k + "png");}
+  .coffee_#{$k}:hover{background-image: url($k + "on.png");}
+}
+
+
+//간단하게 하는 방법
+$mytea : (americano, latte, viena, mocha); //변수줘서 적용시켜놓기
+@each $k in $mytea{
+  .coffee_#{$k}{background-image: url($k + "png");}
+  .coffee_#{$k}:hover{background-image: url($k + "on.png");}
+}
+
+
+/*for2*/ //섞어쓰기, $myColor는 마음대로 쓰지만 밑에는 for처럼 차례대로하는 성능
+$myColor : (#222, #490, #823, #049, #523, #029, #258);
+@for $l from 1 through 7{
+  li:nth-child(#{$l}){color:nth($myColor, $l);}
+}
+
+/*for3*/
+//length(변수명) -- list의 갯수 파악시 사용
+@for $l from 1 through length($myColor){
+  li:nth-child(#{$l}){color:nth($myColor, $l);}
+}

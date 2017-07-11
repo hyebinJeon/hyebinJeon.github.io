@@ -1,0 +1,35 @@
+//scss
+/*step_03_list.css*/
+
+//list:목록
+
+$list:(100, 200, 150, 30, 15);
+
+// nth(변수이름, 변수의 순서번호);
+li:nth-child(1){width:nth($list, 1)+px;}
+li:nth-child(2){width:nth($list, 2)+px;}
+li:nth-child(3){width:nth($list, 3)+px;}
+li:nth-child(4){width:nth($list, 4)+px;}
+li:nth-child(5){width:nth($list, 5)+px;}
+
+
+//image list
+
+$url:"../img/test/";
+
+$imgFile:("image1.png","soon.png","bo.png","ran.png","ha.png","ido.png","image2.png","image4.png","image9.png","image8.png");
+
+div{list:length($imgFile);}
+li:nth-child(1)>a{background-image: url($url+nth($imgFile, 1));}
+li:nth-child(2)>a{background-image: url($url+nth($imgFile, 2));}
+li:nth-child(3)>a{background-image: url($url+nth($imgFile, 3));}
+li:nth-child(4)>a{background-image: url($url+nth($imgFile, 4));}
+li:nth-child(5)>a{background-image: url($url+nth($imgFile, 5));}
+li:nth-child(6)>a{background-image: url($url+nth($imgFile, 6));}
+li:nth-child(7)>a{background-image: url($url+nth($imgFile, 7));}
+li:nth-child(8)>a{background-image: url($url+nth($imgFile, 8));}
+li:nth-child(9)>a{background-image: url($url+nth($imgFile, 9));}
+li:nth-child(10)>a{background-image: url($url+nth($imgFile, 10));}
+
+//파일명이 중구난방이라 쓰기 어려우니까 리스트를 만들어 쓴다.
+

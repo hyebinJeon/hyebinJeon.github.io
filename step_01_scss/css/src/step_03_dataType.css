@@ -1,0 +1,23 @@
+.type1 { content: number; }
+
+.type2 { content: number; }
+
+.type3 { content: number; }
+
+.type4 { content: string; }
+
+.type5 { content: string; }
+
+.type6 { content: color; }
+
+.type7 { content: string; }
+
+.type8 { content: string; }
+
+.type9 { content: map; }
+
+.type10 { content: bool; }
+
+.type11 { content: bool; }
+
+.type12 { content: null; }
