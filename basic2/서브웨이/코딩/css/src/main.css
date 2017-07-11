@@ -5,6 +5,9 @@
     #headerBox{width:100%; height:200px; padding-top:45px; box-sizing:border-box; 
                background-color: #ccc; }
         h1{width:115px; height: 46px; margin:0 auto; margin-bottom:54px;}
+      /*#lnbBox{width:150px; height:15px; float:right; background-color: #854;}
+        .lnb{width:150px; height:15px; background-color: #524;}
+          .lnb>li{width:70px; height:15px; margin-right:10px; float:left; background-color: #fff;}*/
       #gnbBox{width:978px; height:55px; padding:15px 15px; box-sizing:border-box; background-color: #e4f8ee;}
         .LoginJoinBox{width:120px; height:21px; float:left;}
           .LoginJoinBox>li{width:40px; text-align:center; height:21px; display:block; margin-right:40px; float:left; background-color: #ccc;}
@@ -67,10 +70,13 @@
           #sns>dd{display:block; width:120px; float:left; height: 120px; margin-top:50px; margin-right:40px; background-color: #ccc;}
 
     #footBox{width:100%; height:200px; background-color: #e0e0e0; padding:70px; box-sizing:border-box;}
-        address{width:200px; height:20px; text-align:center; display:block; margin:auto; margin-bottom:13px;}
+        address{width:600px; height:20px; text-align:center; display:block; margin:auto;}
+        #footBox span{margin-left:10px;}
+        #footBox p{text-align:center; margin-bottom:13px;}
         .footlist{width:279px; height:30px; display:block; margin:0 auto;} 
-          .footlist>li{margin-right:10px;}       
-          .footlist>li:nth-child(1){width:64px; display:block; height:30px; float:left; background-color: #fff;}       
-          .footlist>li:nth-child(2){width:68px; display:block; height:30px; float:left; background-color: #fff;}       
-          .footlist>li:nth-child(3){width:123px; display:block; height:30px; float:left; background-color: #fff;}       
+          .footlist>li{margin-right:10px; display:block; height:28px; 
+                      text-align:center; padding:2px 0; box-sizing:border-box; float:left; background-color: #fff;}       
+          .footlist>li:nth-child(1){width:64px;}       
+          .footlist>li:nth-child(2){width:68px;}       
+          .footlist>li:nth-child(3){width:123px;}       
       
