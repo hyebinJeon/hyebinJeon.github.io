@@ -1,0 +1,9 @@
+// main.scss
+/* main.css */
+@import "../base/variable";
+@import "../base/mixin";
+
+@import "./layout/header";
+@import "./layout/main_sideBox";
+@import "./layout/main_etc";
+@import "./layout/footer";

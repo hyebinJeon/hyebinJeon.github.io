@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>forie678.js</title>
+		<script src="jquery-1.6.2.min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="forie678.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.bgIsPng {
+				background-image: url("png.png");
+				width: 200px;
+				height: 200px;
+			}
+			.css3 {
+				width: 220px;
+				height: 50px;
+				padding: 20px;
+				background-color: #fff;
+				border: 10px solid #999;
+				border-radius: 50px;
+				box-shadow: 10px 10px 20px #000;
+			}
+			section.section {
+				border: 10px solid #ccc;
+			}
+			article.article {
+				border: 10px solid #eee;
+			}
+			input[type="checkbox"] {
+				border: 2px solid green;
+			}
+			div:empty {
+				background-color: green;
+				width: 220px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>forie678.js</h1>
+		<h4>작성자 : Mr. 하늘</h4>
+		<p>
+			IE9 이전의 구버젼 IE 브라우저를 최신 표준에 맞게 업그레이드해주는 All-in-one JS 파일입니다.<br>
+			forie678.js는 jquery 1.6.2 이상 버전이 필요합니다.
+		</p>
+		<article>
+			<h3>기능 (적용 브라우저)</h3>
+			<ul>
+				<li>PNG 파일의 투명도를 인식하게 합니다. (IE6)</li>
+				<li>CSS3를 사용 가능하게 합니다. (IE6, IE7, IE8)</li>
+				<li>HTML5 Markup을 사용 가능하게 합니다. (IE6, IE7, IE8)</li>
+				<li>HTML5 WebForm을 사용 가능하게 합니다. (IE6, IE7, IE8)</li>
+			</ul>
+		</article>
+		<article>
+			<h3>PNG 파일 테스트</h3>
+			<img src="png.png">
+			<div class="bgIsPng">배경이 PNG 파일입니다.</div>
+		</article>
+		<article>
+			<h3>CSS3 테스트</h3>
+			<p class="css3">
+				CSS3가 적용된 모습입니다.
+			</p>
+			<p>
+				input[type="checkbox"] <input type="checkbox">
+			</p>
+			<p>
+				div:empty <div></div>
+			</p>
+		</article>
+		<article>
+			<h3>HTML5 Markup 테스트</h3>
+			<section class="section">
+				section
+				<article class="article">
+					article
+				</article>
+			</section>
+		</article>
+		<article>
+			<h3>HTML5 WebForm 테스트</h3>
+			<form>
+				HTML5 WebForm 속성들
+				<ul>
+					<li>autofocus <input type="text" name="autofocus" autofocus></li>
+					<li>required <input type="text" name="required" required></li>
+					<li>placeholder <input type="text" name="placeholder" placeholder="placeholder"></li>
+					<li>pattern[A-Za-z] <input type="text" name="pattern" pattern="[A-Za-z]" value="0"></li>
+				</ul>
+				<input type="submit">
+			</form>
+			<form>
+				이메일
+				<input type="email" name="email" value="test">
+				<input type="submit">
+			</form>
+			<form>
+				URL
+				<input type="url" name="url" value="test">
+				<input type="submit">
+			</form>
+			<form>
+				숫자
+				<input type="number" name="number" value="0" min="1" max="10">
+				<input type="submit">
+			</form>
+			<form>
+				날짜
+				<input type="date" name="date" value="test">
+				<input type="submit">
+			</form>
+		</article>
+	</body>
+</html>

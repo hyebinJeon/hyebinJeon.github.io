@@ -1,0 +1,10 @@
+// mixin.scss
+
+
+@mixin link($u:$url, $f:none, $f2:none, $r:no-repeat,$p:0 0){
+	width: 100%; height: 100%; display: block;
+	background-image: url($u + $f);
+	background-repeat:$r; background-position:$p;
+	&:hover{background-image: url($u + $f2);}// hover
+	span{width: 0; height: 0; display: block; position: absolute; overflow: hidden;}
+}// link()
