@@ -1,0 +1,82 @@
+/*main.scss*/
+
+#wrap{width:978px; height: auto; margin:0 auto;}
+    
+    #headerBox{width:100%; height:200px; padding-top:10px; box-sizing:border-box; 
+               background-color: #ccc;}
+        h1{width:115px; height: 46px; margin:auto; margin-top:34px; margin-bottom:55px;}
+      #lnbBox{width:150px; height:23px; float:right; margin-right:10px;}
+        .lnb{width:150px; height:23px;}
+          .lnb>li{width:70px; height:23px; text-align:center; margin-right:10px; float:left; background-color: #fff;}
+      #gnbBox{width:978px; height:55px; padding:15px 15px; box-sizing:border-box; background-color: #e4f8ee;}
+        .LoginJoinBox{width:120px; height:21px; float:left;}
+          .LoginJoinBox>li{width:40px; text-align:center; height:21px; display:block; margin-right:40px; float:left; background-color: #ccc;}
+        .menuBox{width:480px; float:right;}
+          .menuBox>li{width:80px; height:21px; text-align:center; display:block; float:left; margin-right:15px; background-color: #ccc;}
+      
+      
+    #content{width:100%; height:auto;}
+      #adbannerBox{width: 100%; height:658px; background-color: #e0e0e0;}
+      #articleWrap{width:100%; height:756px;}
+           .newsBox{width:55%; height:378px;  float:left; background-color:#fff} 
+           .newsBox>h4{width:180px; float:left; margin-top:70px; margin-left:10px; font-color:#fff; font-size:2em;}
+           .newsBoardBox{width:60%; float:right; padding-top: 70px; padding-left:10px; box-sizing:border-box; height:378px; background-color: #fff;}
+             .newsBoardBox>strong{display:block; margin-bottom:9px;}
+             .newsBoard{width:300px; height:250px; background-color: #ccc;}
+         .cfBox{width:45%; height:378px; padding-top: 70px; box-sizing:border-box; float:left; background-color: #fff;}
+          .cf{width:430px; height:280px; background-color: #ccc;}
+      .eventBannerBox{width:100%; height:378px; float:left;}
+          .eventBanner{width:100%; height:100%; padding-top:60px; padding-left:13px;
+                       box-sizing:border-box; background-color: #fff;}
+            .eventBanner>li{width:230px; height:80%; display:block; 
+                            margin-right:10px; float:left; background-color: #ccc;}
+            .eventBanner>button{float:right; margin-top:7px; margin-right:13px;}  
+
+      #adFixed{width:100%; padding:100px 0px; box-sizing:border-box; height:400px; background-color: #e0e0e0;}
+        #adFixed>dt{font-size:3em; text-align:center;}
+        #adFixed>dd{text-align:center;}
+
+      #menuBox{width:100%; height:708px; padding:70px 0px; box-sizing:border-box;}
+        #menuBox>dt{display:block; width:210px; font-size:20pt; height:50px; text-align: center; margin:auto;
+                     margin-bottom:20px; border-bottom:1px solid #ccc; text-transform:uppercase;}
+        #menuBox>dd{text-align: center; font-size:8pt;}
+        #menuBox>.enjoyMenu{font-size:12pt; margin-bottom:10px;}
+        .subwayMenu{width:919px; height:300px; margin:auto; margin-top:15px;}
+          .subwayMenu>li{display:block; width:222px; height:300px; float:left; margin-right:10px; background-color: #ccc;}
+            .subwayMenu dt{width:100%; height:90%; background-color: #e4f8ee;}
+            .subwayMenu dd{width:100%; height:10%; text-align:center; background-color: #ccc;}
+
+      #foundstoreBox{width:100%; height:400px; background-color: #e0e0e0; padding-right:40px; padding-top:70px; box-sizing:border-box;}
+        #foundstorewrap{width:350px; height:auto; float:right;}
+        #foundstoreBox h3{display:block; width:100px; height:35px; float:right; font-size:18pt;}
+          .foundstore{width:350px; height:180px; padding:43px 24px; box-sizing:border-box; float:right; background-color: #e4f8ee;}
+            .top_found{width:300px; height:40px; margin-bottom:10px;}
+              .top_found dt{width:70px; height:40px; margin:auto; margin-right:10px; 
+                float:left; background-color: #555;}
+              .top_found dd{width:220px; height:40px; float:left; background-color: #555;}
+            .bottom_found{width:300px; height:40px;}
+              .bottom_found dt{width:70px; height:40px; margin:auto; margin-right:10px;
+                float:left; background-color: #555;}
+              .bottom_found dd{width:220px; height:40px; float:left; background-color: #555;}
+
+      #qBox{width:100%; height:350px;}
+        #chain{width:50%; height: 350px; float:left; padding-top:30px; box-sizing:border-box;}
+          #chain>dt{display:block; width:160px; font-size:18pt; height:40px; text-align: center; margin:auto;
+                     border-bottom:1px solid #ccc;}
+          #chain>dd{display:block; width:200px; margin:25px auto;  height:150px; background-color:#ccc;}
+          #chain p{text-align:center;}
+        #sns{width:50%; height: 350px; float:left; padding:30px 23px; box-sizing:border-box;}
+          #sns>dt{display:block; width:160px; font-size:18pt; height:40px; text-align: center; margin:auto;
+                   border-bottom:1px solid #ccc; text-transform:uppercase;}
+          #sns>dd{display:block; width:120px; float:left; height: 120px; margin-top:50px; margin-right:40px; background-color: #ccc;}
+
+    #footBox{width:100%; height:200px; background-color: #e0e0e0; padding:70px; box-sizing:border-box;}
+        address{width:600px; height:20px; text-align:center; display:block; margin:auto;}
+        #footBox span{margin-left:10px;}
+        #footBox p{text-align:center; margin-bottom:13px;}
+        .footlist{width:279px; height:30px; display:block; margin:0 auto;} 
+          .footlist>li{margin-right:10px; display:block; height:28px; 
+                      text-align:center; padding:2px 0; box-sizing:border-box; float:left; background-color: #fff;}       
+          .footlist>li:nth-child(1){width:64px;}       
+          .footlist>li:nth-child(2){width:68px;}       
+          .footlist>li:nth-child(3){width:123px;}       
