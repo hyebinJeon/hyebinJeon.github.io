@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="utf-8" />
+  <title>네이버회원가입창</title>
+  <style></style>
+</head>
+
+<body>
+  <h1><a href="http://naver.com">NAVER</a></h1>
+  <h2>네이버 회원가입</h2>
+  <div id="join">
+  <form action="#" method="post">
+    <fieldset>
+      <legend>회원가입</legend>
+      <div>
+        <input type="text" name="username" id="username" value="" placeholder="아이디" />
+        <label for="username">아이디</lable>
+        <input type="button" name="delete" id="delete" value="삭제" />
+  </div>
+  <div>
+    <input type="password" name="userpw" id="userpw"
+    value="" placeholder="비밀번호" />
+    <label for="userpw">비밀번호</label>
+    <input type="button" name="delete" id="delete" value="삭제" />
+      </div>
+      <div>
+        <input type="password" name="userpwch" id="userpwch" value="" placeholder="비밀번호 재확인" />
+        <label for="userpwch">비밀번호 재확인</label>
+        <input type="button" name="delete" id="delete" value="삭제" />
+      </div>
+      <div>
+        <input type="text" name="name" id="name" value="" placeholder="이름" />
+        <label for="name">이름</lable>
+        <input type="button" name="delete" id="delete" value="삭제" />
+  </div>
+  <div>
+    <!--form 내부에 들어가는 대다수 코드 (input, botton, label)는 inline속성을
+    지니고 있으며, 사이즈를 가질수 있다.(inline block)-->
+        <p><label for="checktype">성별을 선택하세요.</label></p>
+        <input type="radio" name="checktype" id="checktype" value="여자" />
+        <label for="checktype">여자</label>
+        <input type="radio" name="checktype" id="checktype" value="남자" />
+        <label for="checktype">남자</label>
+      </div>
+      <div>
+        <p><label for="birth">생일월일을 입력해주세요.</label></p>
+        <input type="text" name="birth" id="birth" value="" placeholder="년(4자)" maxlength="4" />년4자
+        <input type="button" name="delete" id="delete" value="삭제" />
+      </div>
+      <div>
+  <!--월 쓰는 방법 1번  <input type="number" name="" id="" minimum="1" maximum="12" step="1" -->
+  <!--월 쓰는 방법 2번-->
+    <select>
+    <option>월</option>
+    <option>1월</option>
+    <option>2월</option>
+    <option>3월</option>
+    <option>4월</option>
+    <option>5월</option>
+    <option>6월</option>
+    <option>7월</option>
+    <option>8월</option>
+    <option>9월</option>
+    <option>10월</option>
+    <option>11월</option>
+    <option>12월</option>
+  </select>
+      </div>
+      <div>
+        <input type="text" name="date" id="date" value="" placeholder="일" maxlength="2" />
+        <label for="date">일</label>
+        <input type="button" name="delete" id="delete" value="삭제" />
+      </div>
+      <div>
+        <input type="text" name="email" id="email" value="" placeholder="본인확인 이메일(선택)" />
+        <label for="email">본인확인 이메일(선택)</label>
+        <input type="button" name="delete" id="delete" value="삭제" />
+      </div>
+      <div>
+        +82
+        <select><option>대한민국 +82</option></select>
+        <input type="text" name="phone" id="phone" value="" placeholder="휴대전화번호" />
+        <label for="phone">휴대전화번호</label> <input type="button" name="delete" id="delete" value="삭제" />
+        <a href="#">인증</a>
+      </div>
+      <div>
+        <input type="text" name="number" id="number" value="" placeholder="인증번호" />
+        <label>인증번호</label>
+        <input type="button" name="delete" id="delete" value="삭제" />
+        <a href="#">확인</a>
+      </div>
+    </fieldset>
+
+      <input type="submit" name="join" id="join" value="가입하기" />
+</div>
+<div id="info">
+<ul><li><a href="#">이용약관</a></li>
+<li><strong><a href="#">개인정보처리방침</a></strong></li>
+<li><a href="#">책임의 한계와 법적고지</a></li>
+<li><a href="#">회원정보 고객센터</a></li>
+</ul>
+</div>
+<div class="copyright">
+<address><a href="#">naver</a> Copyright &copy; <a href="#">NAVER Corp.</a> All Rights Reserved.</address>
+</div>
+  </form>
+</body>
+
+</html>
