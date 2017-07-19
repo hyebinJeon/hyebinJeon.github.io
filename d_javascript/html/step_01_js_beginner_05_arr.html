@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h1>arr배열의 기초 내용</h1>
+    <script>
+    /*배열이란? 
+    array(list) : 어떠한 목록의 나열
+    var arr = [];
+    */
+    console.log([1, 3, 10, 100, 'string']);
+    
+    var arr = ['str', 'num', 135, 53, 2];
+    /*불러오기*/
+    console.log([1]);
+    
+
+
+    /*객체란?
+    object(map) 
+    {};
+    var dbj = {};
+    */
+    console.log({
+      xido:'도형',iphone:'6plus',javascript:'ease'
+    });
+    var obj = {
+      xido:'도형',iphone:'6plus',javascript:'ease'
+    };
+    /*불러오기*/
+    console.log(obj.xido);
+
+
+    var myName = 'my name is do-Hyeong';
+    var st = 'hyebin';
+    var twoNum = [1, 100, st]
+    var myObj = {
+      name : myName, 
+      student : st,
+      num : twoNum,
+      time : 10,
+      next : 'javascript'
+    };
+
+    console.log(myObj); //객체 내 전체값 확인
+    console.log(myObj.myName); // 객체내의 name값 확인
+    console.log(myObj.time); //객체내의 time값 확인, 숫자 10
+    console.log(myObj.num); //객체내의 num값, [1,100] 도출
+    console.log(myObj.num[1]); //객체내의 num값의 1번째, 100도출
+    console.log(myObj.num[2]);//객체내의 num값의 2번째, st인 student가 도출 list와 map을 섞어 쓸 수 있다는 것.
+
+
+    </script>
+</body>
+</html>
