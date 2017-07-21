@@ -1,0 +1,34 @@
+//main.scss//
+#wrap { width: 1000px; height: auto; background-color: #582; margin: 0 auto; }
+  #wrap:after { content: " "; display: block; clear: both; }
+
+#headBox { width: 1000px; height: auto;}
+  #headBox>#topBox{width:100%; height:34px; background-color: #123;}
+    .insam{width:100px; height:34px; float:left; background-color: #888;}
+    #unbBox{width:40%; height:34px; float:right; background-color: #ccc}
+      #unbBox>ul{}
+        #unbBox>ul>li{}
+        
+  #centerBox{width:100%; height:100px; background-color: #468;}
+  #gnbBox{width:100%; height:60px; background-color: #234;}
+
+#contentBox { width: 1000px; height: 4326px; background-color: #cc7;}
+  #adBox{width:1000px; height:520px; background-color: #711;}
+  #topBanner{width:1000px; height:182px; background-color: #521;}
+  #asideBox{width:1000px; height:276px; background-color: #411;}
+  #articleBox{width:1000px; height:806px; background-color: #310;}
+  #brandBanner{width:1000px; height:488px; background-color: #932;}
+  #brandArticleBox{width:1000px; height:686px; background-color: #913;}
+  #recommendBox{width:1000px; height:490px; background-color:#732;}
+  #magazineWrap{width:1000px; height:460px; background-color:#421;}
+
+#noticeBox { width: 1000px; height: auto;}
+  .noticeBox{width:1000px; height:72px; background-color: #c82;}
+  .storyBox{width:1000px; height:56px; background-color: #cc3;}
+  .familysiteBox{width:1000px; height:114px; background-color: #c92;}
+  .ectBox{width:1000px; height: 48px; background-color: #c74;}
+
+#footBox { width: 1000px; height:auto;}
+  .cscenterBox{width:1000px; height:76px; background-color: #25f;}
+  .escroBox{width:1000px; height:64px; background-color: #357;}
+  .addressBox{width:1000px; height:114px; background-color: #11f;}
