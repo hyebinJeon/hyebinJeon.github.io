@@ -1,0 +1,35 @@
+/*sub.scss*/
+#wrap{width: 980px; height: 1301px; margin:0 auto; background-image: url("../../img/sub/bg01_patt.jpg"); background-repeat:repeat;}
+  #sideWrap{width:980px; height:30px; background-color: #723;}
+    #lnbBox{width: 520px; height: 30px; float:right;}
+      #lnbBox>ul{width: 520px; height: 30px; float:right; background-color: #789;}
+        #lnbBox>ul>li{width:90px; height:30px; float:left; display:block;}
+        #lnbBox>ul>li:last-child{width:250px;}
+
+  #headWrap{width:240px; height: 1162px; float:left; padding:54px 42px; box-sizing:border-box; background-color:;}
+    #gnbBox{width:156px; height: 572px; background-color: #fff;}
+      #gnbBox>h1{width:156px; height: 150px; background-color: #751;}
+      #gnbBox>ul{width:156px; height:468px; background-color: #791;}
+        #gnbBox>ul>li{width:137px; height:62px; float:right; background-color: #ccc;}
+        #gnbBox>ul>li:nth-child(1){margin-top:10px;}
+        #gnbBox>ul>li:nth-child(6){height:140px;}
+
+  #contentWrap{width:740px; height: auto; float:left; background-color:transparent;}
+    .sentence{width:480px; height:46px; float:right; margin-top:84px; margin-right:50px;}
+    .sentence>p{font-size:18pt; color:#888; float:right;}
+    .sentence>p>span{font-size:26pt; color:#fff;}
+    #chartWrap{width:740px; float:left; height: 620px;}
+      #chartWrap>ul{width:740px; height: 620px; float:left; padding:73px 35px 0 35px; box-sizing:border-box; background-color: #257;}
+        #chartWrap>ul>li{width:205px; height:atuo; margin-right:25px; 
+                        float:left;}
+          #chartWrap>ul>li>dl>dt{width:205px; height:338px; border-radius:20px; margin-bottom:10px; box-shadow:0.4em 0.4em 0.4em #222; background-color: #587;}
+            #chartWrap>ul>li:nth-child(2)>dl>dt{margin-top:38px;}
+            #chartWrap>ul>li>dl>dt>span{display:block; font-size:3.5em; transform:rotate(-90deg) translate(-180px, 50px);}
+          #chartWrap>ul>li>dl>dd{width:205px; height:192px; border:1px solid #fff; border-top:0; 
+                                border-bottom:0; box-sizing:border-box; background-color: #156;}
+            #chartWrap>ul>li:nth-child(2)>dl>dd{height:153px;}               
+    #curriWrap{width:740px; height: 412px; float:left; background-color: #679;}
+
+  #footerBox{width:980px; height:109px; float:left; background-color:#756;}
+
+#gittest{width:100;}
