@@ -1,4 +1,12 @@
 /*sub.scss*/
+<<<<<<< HEAD
+=======
+
+$url:"../../img/sub/mouse.jpg"
+$chartWrap{
+
+}
+>>>>>>> 88a937e59871655ea32a4ff32c837205292c3237
 #wrap{width: 980px; height: 1301px; margin:0 auto; background-image: url("../../img/sub/bg01_patt.jpg"); background-repeat:repeat;}
   #sideWrap{width:980px; height:30px; background-color: #723;}
     #lnbBox{width: 520px; height: 30px; float:right;}
@@ -6,7 +14,11 @@
         #lnbBox>ul>li{width:90px; height:30px; float:left; display:block;}
         #lnbBox>ul>li:last-child{width:250px;}
 
+<<<<<<< HEAD
   #headWrap{width:240px; height: 1162px; float:left; padding:54px 42px; box-sizing:border-box; background-color:;}
+=======
+  #headWrap{width:240px; height: 1162px; float:left; padding:54px 42px; box-sizing:border-box;}
+>>>>>>> 88a937e59871655ea32a4ff32c837205292c3237
     #gnbBox{width:156px; height: 572px; background-color: #fff;}
       #gnbBox>h1{width:156px; height: 150px; background-color: #751;}
       #gnbBox>ul{width:156px; height:468px; background-color: #791;}
@@ -30,6 +42,10 @@
             #chartWrap>ul>li:nth-child(2)>dl>dd{height:153px;}               
     #curriWrap{width:740px; height: 412px; float:left; background-color: #679;}
 
+<<<<<<< HEAD
   #footerBox{width:980px; height:109px; float:left; background-color:#756;}
 
 #gittest{width:100;}
+=======
+  #footerBox{width:980px; height:109px; float:left; background-color:#755;}
+>>>>>>> 88a937e59871655ea32a4ff32c837205292c3237

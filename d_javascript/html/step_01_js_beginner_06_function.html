@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>function</title>
+</head>
+<body>
+  <h1>function</h1>
+  <script>
+  /* function : 함수(scss:@mixin, include)
+    -기본형태 : function(){} 
+    -function Name(){}
+    -var Name = function(){};
+  */
+
+  //함수의 이름을 작성할 때에는 첫글자를 대문자로 표기
+  // function Fn1(){}//함수 선언식
+  // console.log(function Fn1(){});
+
+  /*var Fn2 = function(){}; //함수 표현식
+  console.log(Fn2);*/
+
+  function Fn1(){
+    var a = 10;
+    var b = 20;
+    var c = a + b;
+    return c; //계산작업 후, 최종적으로 얘만 보내겠다라는 것. return.
+  }
+  console.log(Fn1()); //함수 호출 retun c값이 도출 됨
+
+
+  function Fn2(i){
+    var a = i;
+    var b = 20;
+    var c = a*b;
+    return c;
+  }
+  console.log(Fn2(20));
+  
+  
+  function AddFn(i,j){
+    var a = i;
+    var b = j;
+    var c = a+b;
+    return c;
+  }
+console.log( AddFn(20,40) );
+  //scss:@mixin mx1($r){
+  //background-repeat:$r}
+
+  var Plus =function(i,j){
+    var fir = i;
+    var sec = j;
+    var result = i+j;
+    return result;
+  };
+  var Multiple =function(i,j){
+    var fir = i;
+    var sec = j;
+    var result = i*j;
+    return result;
+  };
+  var Division =function(i,j){
+    var fir = i;
+    var sec = j;
+    var result = i/j;
+    return result;
+  };
+  var Rest =function(i,j){
+    var fir = i;
+    var sec = j;
+    var result = i%j;
+    return result;
+  };
+
+  console.log(Plus(10, 100));
+  console.log(Multiple(3, 20));
+  console.log(Division(1900, 400));
+
+  var myMath = {
+    'm':Multiple,
+    'p':Plus,
+    'd':Division,
+     re: Rest
+  };
+
+console.log(myMath.p(2,10)); //변수해서 함수를 집어넣음
+console.log(myMath.re(10,3));
+console.log(parseInt(myMath.d(11,3)));
+  </script>
+</body>
+</html>

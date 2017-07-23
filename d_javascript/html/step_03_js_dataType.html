@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>javascript dataType</title>
+</head>
+<body>
+  <h1>javascript dataType</h1>
+  <h2>기본 자료형</h2>
+  <ul>
+    <li>숫자</li>
+    <li>문자</li>
+    <li>논리</li>
+    <li>특수형:undefined</li>
+    <li>특수형:null</li>
+  </ul>
+  <h2>참조 자료형</h2>
+  <ul>
+    <li>배열</li>
+    <li>객체</li>
+    <li>함수</li>
+  </ul>
+  <!-- javascript -->
+  <script>
+    // 기본 자료형
+    // 숫자
+    var num = 1;
+    console.log(num);
+    console.log(typeof(num));
+
+    console.log(1);
+    console.log(typeof(1));
+
+    console.log(num+10);
+    console.log(1+10);
+
+    var plusNum = num+100;
+    console.log(plusNum);
+
+    console.log(plusNum + '1'); //101+문자'1' = 1011
+    console.log(typeof(plusNum + '1')); //101+1 의 타입은? =>string
+
+    var changeNum = parseInt(plusNum + '1'); //parseInt: 값을 숫자로 치환시키는 기능
+    console.log(changeNum + 100); //1011+100 = 1111
+
+    var hy = "hayeong";
+    console.log(typeof(hy));
+    var hyChange = parseInt(hy);
+    console.log(hyChange); //NaN : 숫자가 아님 에러메시지가 뜸. 문자는 parseInt 해도 안먹음1
+
+    hy = hy + 100;
+    console.log(hy);
+    console.log(typeof(hy)); //hayoung100
+    console.log(parseInt(hy)); //Nan
+
+    hy = 100 + hy; //100hayeong100
+    console.log(hy); //100hayeong100
+    console.log(typeof(hy)); // 100hayoung100
+    console.log(parseInt(hy)); //100 -> 앞의 숫자 100은 parseInt가 적용돼서 100이 나온다.
+
+    //boolean: true/false
+    var boo = true;
+    console.log(boo);
+    console.log(!boo); //false
+    //!의 의미:not(반대의 개념)
+    //a[href!="#"]{}
+
+    //특수기능 : undefined/null
+    var un;
+    console.log(un); //undefined
+    un = null
+    console.log(un); //null
+
+    var zero, none, nothing;
+    zero = 0;
+    nothing = null;
+    console.log(zero, none, nothing); //zero=o none=undefiend nothing=null
+
+    var zero, none, nothing;
+    zero = 0;
+    nothing = null;
+    console.log(zero, none, nothing);
+    console.log(zero == none); // ==두개가 값이 같은가 true
+    console.log(zero == nothing);
+    console.log(none == nothing);
+    console.log(none === nothine);// ===형타입까지 같은가 false
+
+  </script>
+</body>
+</html>

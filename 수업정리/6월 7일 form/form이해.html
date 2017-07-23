@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="utf-8" />
+  <title>기초개념이해하기</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    h1 {
+      color: #fff;
+      background-color: #0af;
+      padding: 0.3em;
+      margin: 0;
+    }
+
+    .user {
+      width: 70%;
+      height: auto;
+      background-color: #acf;
+    }
+
+    .pwd {
+      width: 70%;
+      height: auto;
+      background-color: #caf;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>form기초</h1>
+  <form action="#" method="post">
+    <fieldset>
+      <legend>입력 영역</legend>
+      <div class="user">
+        <input type="text" name="username" id="userName" value="" placeholder="아이디 입력" />
+        <label for="userName">사용자 이름을 입력하세요.</label>
+      </div>
+      <div class="pwd">
+        <input type="password" name="username" id="userpassword" value="" placeholder="비밀번호 입력" />
+        <label for="userpassword">사용자의 비밀번호를 입력하세요.</label>
+      </div>
+    </fieldset>
+
+
+    <!-- 선택 -->
+    <fieldset>
+      <legend>선택1 radio </legend>
+      <p>당신의 성별을 선택하세요</p>
+      <input type="radio" id="male" name="sex" value="male" checked="checked" />
+      <label for="male">남자</label>
+      <input type="radio" id="female" name="sex" value="female" />
+      <label for="female">여자</label>
+      <input type="radio" id="hi" name="sex" value="hi" />
+      <label for="hi">하이브리드</label>
+      <!-- *선택사항중 동일한 결과물에 내용을 전송하려면 name값을 똑같이 사용해라.
+     남자 여자, 중복체크 안되게-->
+    </fieldset>
+
+    <!-- 선택2 -->
+    <fieldset>
+      <legend>선택2 checkbox</legend>
+      <p>오늘 저녁에 먹고싶은 음식을 선택하세요</p>
+      <input type="checkbox" id="food1" name="food" value="치킨" checked="checked" />
+      <!--checked 미리 선택되어져 있는거-->
+      <label for="food1">치킨</label>
+
+      <input type="checkbox" id="food2" name="food" value="보쌈" />
+      <label for="food2">보쌈</label>
+
+      <input type="checkbox" id="food3" name="food" value="피자" />
+      <label for="food3">피자</label>
+
+      <input type="checkbox" id="food4" name="food" value="족발" />
+      <label for="food4">족발</label>
+      <!--value값 똑같이 써줘야함-->
+
+      <!--암묵적 형식 :
+      원칙: <input type="" id="" /> <lable for="">선택</lable>
+      암묵적 방식 : 1. <lable for=""><input type="" id="" />선택</lable>
+                  2. <lable><input type="" />선택</lable>
+                  =>암묵적 방식중 1번은 id,for를 연결하며 사용하기 때문에 큰 문제가 없지만,
+                  2번의 방식은 반드시 작성해야하는 id,for를 사용하지 않아 시멘틱(정확한 의미)의
+                  의미를 가지지 않으므로 표준과, 유효성의 문제가 된다(권장x)-->
+    </fieldset>
+
+    <!-- 버튼 -->
+    <fieldset>
+      <legend>버튼영역설명</legend>
+
+      <!--버튼은 id를 쓰지 않는다.
+   *image는 src(이미지 불러오기),alt(불러올 이미지 설명)을 반드시 같이 작성해야한다.
+    참고 페이지 :
+    http://html.spec.whatwg.org/#the-input-element (2.10.5 input element표 참고)
+    버튼에 쓰고자 하는 이름은 value에 써준다. 단, image와 file은 value값을 안쓴다. -->
+
+      <input type="submit" name="ok" value="확인" />
+      <input type="reset" name="cancle" value="취소" />
+      <input type="button" name="btn" value="검색" />
+      <input type="image" src="#" alt="#" name="img" />
+      <input type="file" name="data" />
+
+    </fieldset>
+
+    <!-- 멀티(복합) 영역-->
+    <fieldset>
+      <legend>multi영역</legend>
+      <!--입력-->
+      <textarea id="multitext" value="" name=""
+      cols="20" rows="5" maxlength="50"></textarea>
+      <!--cols가로 rows세로 maxlength최대글자수 정도의 크기를 만들어라(임시사이즈, 최소크기일대 적용하는 내용-->
+      <!--선택-->
+      <label for="selectmenu">selectMenu</label>
+      <select name="" id=""> <!--value는 따로 쓰지 않음 option이 value가됨-->
+        <option>선택하세요.</option>
+        <option value="coffe">커피(+1000)</option>
+        <option value="tumble">텀블러(+100)</option>
+        <option value="randombox">랜덤박스(+10,000)</option>
+      </select>
+      <select name="" id="">
+        <optgroup label="drink"> <!--optgroup은 옵션을 상위하나로 묶어주는것-->
+        <option value="coffe">coffe</option>
+        <option value="juice">juice</option>
+      </option group>
+      </select>
+      <!--버튼-->
+      <button type="submit" name="#">확인</button>
+      <button type="reset" name="#">취소</button>
+      <button type="button" name="#">검색</button>
+    </fieldset>
+  </form>
+</body>
+
+</html>

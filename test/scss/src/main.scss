@@ -1,0 +1,71 @@
+// main.scss
+/*main.css*/
+@import "../base/variable";
+//@import "../base/_mixin";
+
+// @import "./layout/header";
+// @import "./layout/main_etc";
+// @import "./layout/footer";
+
+%hidden{width:0; height: 0; display: block; position:absolute; z-index:-100; overflow: hidden}
+
+#wrap{width: 980px; height: auto; margin:0 auto; background-color: #ccc;}
+#wrap:after{content:" "; display:block;clear:both;}
+
+#sideBox{width: 100%; height:30px; float:left; 
+  background: lighten(map-get($color,primary),6.5%); float:left;
+    >h2{@extend %hidden;}
+    >ul{width: 434px; height: 100%; float:right;
+     >li{width: 95px; height: 100%; float:left;}}
+     >li:nth-child(1){background-color:map-get($color,gray;)}
+     >li:nth-child(2){background-color:map-get($color,primay;)}
+     >li:last-child{width:245px; background-color:map-get($color,point);}
+        >li:hover{background-color:map-get($color,white);}
+
+    a{@include link($f:"aside.png", $f2:"aside_on.png",$p:0 0);}
+    $sideLink:(-545px 0, -640px 0,right 0);
+    @for $i from 1 through length($sideLink){
+    >li:nth-child(#{$i})>a{background-position:nth($sideLink, $i);
+                          transition:all 0.3s linear;}
+    }
+
+$url:"../../img/";
+@mixin link($u:$url, $f:none, $f2:none, $r:no-repeat, $p:0 0){
+  width:100%; height: 100%; display:block;
+  background-image: url($u + $f);
+  background-repeat: repeat;
+  background-position:$p;
+  &:hover{background-image: url($u + $f2);}
+  >span{width: 0; height: 0; display: block; position: absolute; overflow:hidden;}
+}        
+
+#headBox{width: 250px; height:auto; min-height: 710px; float:left;
+        background-color:lighten(map-get($color,primary), 6.5%); float:left;
+        padding:55px 55px 104px 42px; box-sizing:border-box;
+        h1{width:100%; height:105px; margin-bottom: 40px; background-color: #fff;
+        a{@include link($f:"header/header.png", $f2:"header/header_on.png");}
+        }
+        >#gnb{width:100%; height:auto;
+          >h2{@extend %hidden;}
+          ul{width: 100%; height:416px;
+            >li{width:100%; height: 38px; margin-bottom:25px; background-color: #fff;}
+            >li:nth-last-child(2){margin-bottom:8px;}
+            >li:last-child{height:112px; margin-bottom:0;}
+            
+            $gnbLink:(0 -144px, 0 -206px, 0 -268px,0 -331px,0 -393px,0 -438px);
+            @for from 1 through length($gnbLink){
+            >li:nth-child(#{$i})>a{background-position:nth($gnbLink, $i);}
+              }// @for
+
+            //a{
+            //>span{}
+              //}//a
+            }//ul
+          }//gnb
+}//headBox         
+#contentBox{width:(980-250)+px; height:710px; float:left;
+            background-color:#ffa;}
+#footBox{width: 100%; height:110px; 
+        border-top:1px solid map-get($color,line); float:left;
+        background-color:map-get($color,white);}  
+    

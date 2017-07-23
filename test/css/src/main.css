@@ -1,0 +1,51 @@
+/*main.css*/
+/*variable*/
+#sideBox > h2, #headBox > #gnb > h2 { width: 0; height: 0; display: block; position: absolute; z-index: -100; overflow: hidden; }
+
+#wrap { width: 980px; height: auto; margin: 0 auto; background-color: #ccc; }
+
+#wrap:after { content: " "; display: block; clear: both; }
+
+#sideBox { width: 100%; height: 30px; float: left; background-color: #777; }
+
+#sideBox > ul { width: 435px; height: 100%; float: right; }
+
+#sideBox > ul > li { width: 95px; height: 100%; float: left; }
+
+#sideBox > ul > li:last-child { width: 245px; }
+
+#headBox { width: 250px; height: auto; min-height: 710px; float: left; background-color: #888888; float: left; padding: 55px 55px 104px 42px; box-sizing: border-box; }
+
+#headBox h1 { width: 100%; height: 105px; margin-bottom: 40px; background-color: #fff; }
+
+#headBox h1 a { width: 100%; height: 100%; display: block; background-image: url("../../img/header/header.png"); background-repeat: repeat; background-position: 0 0; }
+
+#headBox h1 a:hover { background-image: url("../../img/header/header_on.png"); }
+
+#headBox h1 a > span { width: 0; height: 0; display: block; position: absolute; overflow: hidden; }
+
+#headBox > #gnb { width: 100%; height: auto; }
+
+#headBox > #gnb ul { width: 100%; height: 416px; }
+
+#headBox > #gnb ul > li { width: 100%; height: 38px; margin-bottom: 25px; background-color: #fff; }
+
+#headBox > #gnb ul > li:nth-last-child(2) { margin-bottom: 8px; }
+
+#headBox > #gnb ul > li:last-child { height: 112px; margin-bottom: 0; }
+
+#headBox > #gnb ul > li:nth-child(1) > a { background-position: 0 -144px; }
+
+#headBox > #gnb ul > li:nth-child(2) > a { background-position: 0 -206px; }
+
+#headBox > #gnb ul > li:nth-child(3) > a { background-position: 0 -268px; }
+
+#headBox > #gnb ul > li:nth-child(4) > a { background-position: 0 -331px; }
+
+#headBox > #gnb ul > li:nth-child(5) > a { background-position: 0 -393px; }
+
+#headBox > #gnb ul > li:nth-child(6) > a { background-position: 0 -438px; }
+
+#contentBox { width: 730px; height: 710px; float: left; background-color: #ffa; }
+
+#footBox { width: 100%; height: 110px; border-top: 1px solid #555; float: left; background-color: #fff; }
