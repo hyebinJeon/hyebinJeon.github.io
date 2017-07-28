@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+/*sub.css*/
+=======
 /*sub.scss*/
 #wrap { width: 980px; height: 1301px; margin: 0 auto; background-image: url("../../img/sub/bg01_patt.jpg"); background-repeat: repeat; }
 
@@ -52,3 +55,4 @@
 #curriWrap { width: 740px; height: 412px; float: left; background-color: #679; }
 
 #footerBox { width: 980px; height: 109px; float: left; background-color: #755; }
+>>>>>>> 88a937e59871655ea32a4ff32c837205292c3237
