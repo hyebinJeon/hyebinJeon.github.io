@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/font-awesome.min.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>my title</title>  
+</head>
+<body>
+  <form action="" method="post">
+  <fieldset>
+    <legend>생년월일 선택하기</legend>
+    <label for="year">태어난해</label>
+      <select name="" id="year">
+        <script>
+          for(var i=2017; i>=1917; i--){
+            document.write('<option>'+i+'</option>');
+          }
+        </script>
+      </select>
+
+      <label for="month">월</label>
+        <select name="" id="month">
+
+          <script>
+          for(var i=12; i>=1; i--){
+            document.write('<option>'+i+'</option>');
+          }
+          </script>
+
+        </select>
+
+      <label for="day">일</label>
+        <select name="" id="day">
+
+          <script>
+          for(var i=1; i<=31; i++){
+            document.write('<option>'+i+'</option>');
+          }
+          </script>
+
+        </select>
+        </select>
+  </fieldset>
+  <fieldset>
+    <legend>해보기2</legend>
+    <label for="year">태어난해</label>
+    <select name="" id="year">
+      <script>
+        var date = new Date();
+        var nowYear = date.getFullYear(); //2017년 현재
+        var yearLimit = nowYear - 150; // 1867년
+
+        for(var i = nowYear; i>=yearLimit; i--){
+          document.write('<option value="' +i+ '">' +i+ '년</option>')
+        }
+      </script>
+    </select>
+  </fieldset>
+<fieldset>
+    <legend>지역</legend>
+    <label for="location">지역</label>
+    <select name="" id="location">
+      <script>
+        var area = ["서울","경기","광주","울산","부산","충남","충북","경남","경북","강원","제주", "오산"];
+        for(var i=0; i<area.length; i++){
+          document.write('<option value="' +area[i]+ '">' +area[i]+ '</option>');
+        }
+      </script>
+    </select>
+    <select name="" id="address">
+      <script>
+        var area2 = {"서울":"02", "경기":"031", "광주":"03", "울산":"04", "부산":"05","충남":"06","충북":"07","경남":"08","경북":"09","강원":"10","제주":"11", "오산":"12" };
+        for(var j in area2){
+          document.write('<option value="' +area2[j]+ '">' +area2[j]+ '</option>');
+        }
+      </script>
+    </select>
+  </fieldset>
+  </form>
+</body>
+</html>
