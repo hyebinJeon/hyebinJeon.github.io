@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+   <meta name="viewpoint"
+                content="width=device=width, initial-scale=1.0">
+   <meta name="keyword" content="html, css, jquery">             
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <script scr="../ie/Respond/Respond-master/dest/respond.min.js"></script>
+  <![endif]-->
+
+<link rel="shortcut icon" type="image/x-icon" href="#">
+<link rel="apple-touch-icon" href="#">
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/font-awesome.min.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+
+  <title>선택자 및 css이해</title>  
+<style>
+#wrap{width:960px; height:auto; min-height:150px; margin:0 auto;}
+.head_box{width:960px; height:150px; margin: 0 auto; background-color: #cc7;}
+h1{width: 150px; height: 50px; float:left; margin:1em; background-color:#076;
+color:#fff;}
+.gnb{width: 600px; height: 40px; float:right; margin-top:20px;}
+.gnb>li{float:left; margin-right:10px; position:relative;}
+.gnb>li:after{content:" "; display:block; width: 2px; height: 80%;
+background-color: #888; position:absolute; right:-4px; top:10%;}
+.gnb>li:last-child:after{margin-right:0;}
+.gnb>li:last-child:after{display:none;}
+.gnb a{padding:0.2em; color:#fff;}
+.gnb a:hover{font-weight : bold;}
+</style>
+</head>
+
+
+<body>
+<div id="wrap">
+  <div class="head_box">
+    <h1>jQuery Test</h1>
+    <ul class="gnb">
+      <li><a href="#">list_01</a></li>
+      <li><a href="#">list_02</a></li>
+      <li><a href="#">list_03</a></li>
+      <li><a href="#">list_04</a></li>
+      <li><a href="#">list_05</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!--jquery-->
+  <script>
+  $(function($){
+    //jquery
+    $('#wrap').css({'backgroundColor': '#cfc','width':'100'+'%'});
+    $('.head_box').css({'width': '900px','backgroundColor':'#7cf'});
+    $('h1').css({'textAlign':'center','lineHeight':'50'+'px','fontSize':'1'+'em'})
+    $('.gnb>li').css({'backgroundColor':'#f00'});
+    $('.gnb a').css({'color':'#0a4'});
+    $('.gnb>li').eq(0).css({'backgroundColor':'#0cc'}); //eq0과 firstchild는 똑같
+    $('.gnb>li:first').css({'backgroundColor':'#0cc'});
+    $('.gnb>li:nth-child(2)').css({'backgroundColor':'#3cc'});
+    $('.gnb>li:nth-child(3)').css({'backgroundColor':'#4cc'});
+    $('.gnb>li:nth-child(4)').css({'backgroundColor':'#6cc'});
+    $('.gnb>li:last').css({'backgroundColor':'#7cc'});
+    $('.gnb').find('a').css({fontsize:'1.4em'}); //find는 자손이라는 뜻
+
+    //이벤트 메소드 .on()
+    var gnb = $('.gnb');
+    gnb.children('li').on('mouseenter',function(){
+      $(this).parent(gnb).css({'backgroundColor':'transparent'});
+      $(this).siblings('li').css({'backgroundColor':'#222','color':'#fa0'});
+    });
+
+    gnb.children('li').on('mouseout',function(){});
+    // $('.gnb>li').eq(0).css({backgroundColor:#0cc});
+    // $('.gnb').children('li').eq(0).css({'backgroundColor':'#0cc'});
+  })(this.jQuery);
+  </script>
+</body>
+</html>
