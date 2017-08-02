@@ -15,7 +15,7 @@
           .LoginJoinBox>li:nth-child(2){width:36px;}
         .menuBox{width:432px; text-transform:uppercase; float:right;}
           .menuBox>li{width:70px; height:70px; text-align:center; line-height:70px; display:block; float:left; font-size:13pt; margin-right:20px;}
-          .menuBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box;}
+          .menuBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box; transition: 100ms;}
             .menuBox>li:first-child{width:52px;}
             .menuBox>li:last-child{width:88px;}
 
@@ -28,7 +28,7 @@
         .adButton>button:nth-of-type(2){float:right;}
        #adbannerBox>.adBanner{width: 300%; height:634px; }
        #adbannerBox>.adBanner>li{width:33.333333%; height:634px; float: left;}
-       #adbannerBox>.adBanner>li:first-child{width: 33.333333%; height:634px; background-color: #cda; background-image: url("../../img/adBanner.jpg");}
+       #adbannerBox>.adBanner>li:first-child{width: 33.333333%; height:634px; background-image: url("../../img/adBanner.jpg");}
       
 
       #articleWrap{width:100%; height:756px; padding:0 26px; box-sizing:border-box;}
@@ -40,26 +40,39 @@
             .newsBox>.newsBoard{width:100%; height:204px; border-top:solid 2px #005e15; border-bottom:solid 2px #005e15; box-sizing:border-box; background-color: #fff;}
           .cfBox{width:412px; height:232px; float:left; margin-left:82px; margin-bottom:50px;}
           .cf{width:430px; height:232px; background-color: #ccc;}
-        .eventBannerBox{width:100%; height:378px; float:left;}
+        .eventBannerBox{width:100%; height:280px; float:left;}
           .eventBanner{width:100%; height:100%; padding-top:57px;
-                       box-sizing:border-box; background-color: #fff;}
-            .eventBanner>li{width:230px; height:80%; display:block; 
-                            margin-right:8px; float:left; background-color: #ccc;}
-            .eventBanner>button{float:right; margin-top:7px; margin-right:13px;} 
+                       box-sizing:border-box;}
+            .eventBanner>li{width:216px; height:244px; display:block; 
+                            margin-right:8px; float:left; background-color: #ccc; background-repeat:no-repeat;}
+            .eventBanner>li>a{display:block; width:216px; height:244px;}                
+              .eventBanner>li:nth-child(1){background-image: url("../../img/promotion_01.jpg");}    
+              .eventBanner>li:nth-child(2){background-image: url("../../img/promotion_02.jpg");} 
+              .eventBanner>li:nth-child(3){background-image: url("../../img/promotion_03.jpg");} 
+              .eventBanner>li:nth-child(4){background-image: url("../../img/promotion_04.jpg");}             
+            .eventBanner>.more{float:right; margin-top:7px; margin-right:13px;} 
 
-      #adFixed{width:100%; padding:100px 0px; box-sizing:border-box; height:400px; background-color: #e0e0e0;}
-        #adFixed>dt{font-size:3em; text-align:center;}
-        #adFixed>dd{text-align:center;}
+      #adFixed{width:100vw; height:400px; position:relative; left:50%; top:0; margin-left:-50vw; 
+            background-image: url("../../img/fixed.jpg"); padding:120px 0; box-sizing:border-box;
+            background-repeat:no-repeat; background-position:center; background-size:cover; 
+            background-attachment:fixed; margin-top:96px}
+        #adFixed>dt{font-size:3em; font-weight:10; color:#333; text-align:center; margin-bottom:10px;}
+        #adFixed>dd{text-align:center; color:#333;}
 
       #menuBox{width:100%; height:708px; padding:70px 0px; box-sizing:border-box;}
-        #menuBox>dt{display:block; width:210px; font-size:20pt; height:50px; text-align: center; margin:auto;
-                     margin-bottom:20px; border-bottom:1px solid #ccc; text-transform:uppercase;}
-        #menuBox>dd{text-align: center; font-size:8pt;}
-        #menuBox>.enjoyMenu{font-size:12pt; margin-bottom:10px;}
-        .subwayMenu{width:919px; height:300px; margin:auto; margin-top:15px;}
-          .subwayMenu>li{display:block; width:222px; height:300px; float:left; margin-right:10px; background-color: #ccc;}
-            .subwayMenu dt{width:100%; height:90%; background-color: #e4f8ee;}
-            .subwayMenu dd{width:100%; height:10%; text-align:center; background-color: #ccc;}
+        #menuBox>dt>h4 {display:block; width:206px; height:46px; margin:0 auto; margin-top:74px; margin-bottom:90px; font-color:#fff; font-size:20pt; font-size:20pt; text-align:center; margin:auto; text-transform:uppercase; text-align:center; border-bottom:solid 2px #005e15; box-sizing: border-box; margin-bottom:20px}
+        #menuBox>dd{text-align: center; font-size:10pt;}
+        #menuBox>.enjoyMenu{font-size:13pt; font-weight:700; margin-bottom:10px;}
+        .subwayMenu{width:888px; height:252px; margin:auto; margin-top:80px;}
+          .subwayMenu>li{display:block; width:216px; height:250px; float:left; margin-right:8px; 
+                        background-repeat:no-repeat;}
+            .subwayMenu>li>a{display:block; width:216px; height:250px;}            
+            .subwayMenu dt{width:216px; height:220px;}
+              .subwayMenu li:nth-child(1) dt{background-image: url(../../img/menu_01.jpg);}
+              .subwayMenu li:nth-child(2) dt{background-image: url(../../img/menu_02.jpg);}
+              .subwayMenu li:nth-child(3) dt{background-image: url(../../img/menu_03.jpg);}
+              .subwayMenu li:nth-child(4) dt{background-image: url(../../img/menu_04.jpg);}
+            .subwayMenu dd{width:100%; height:30px; font-size:13pt; line-height:30px; text-align:center;}
 
       #foundstoreBox{width:100%; height:400px; background-color: #e0e0e0; padding-right:40px; padding-top:70px; box-sizing:border-box;}
         #foundstorewrap{width:350px; height:auto; float:right;}
