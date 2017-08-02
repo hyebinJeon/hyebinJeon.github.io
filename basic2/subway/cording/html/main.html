@@ -8,7 +8,9 @@
   <script src="../ie/ie7/IE9.js"></script>
   <script src="../ie/PIE/PIE_IE9.js"></script>
   <![endif]-->
-
+ 
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
 <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
 <link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
 <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
@@ -17,10 +19,7 @@
 <script src="../js/jquery/jquery-ui.min.js"></script>
   <title>subway main page</title>  
  
-  <style>
-  @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-  body { font-family: 'Nanum Gothic', sans-serif; }
-  </style>
+
 </head>
 
 
@@ -36,7 +35,7 @@
           <li class="last_li_right"><a href="#">search</a></li>
         </ul>
       </section>
-      <h1></h1>
+      <h1><a href="#"></a></h1>
       
       <section id="gnbBox">
       <h2 class="hidden">gnb</h2>
@@ -61,8 +60,8 @@
     <h2 class="hidden">contentBox</h2> 
         <section id="adbannerBox">
           <div class="adButton">
-          <button><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-          <button><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+          <button type="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+          <button type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
           </div>
           <ul class="adBanner">
             <li></li>
@@ -73,14 +72,15 @@
         </section> <!--adbannerBox-->
         <article id="articleWrap" class="clearfix">
           <h3 class="hidden">공지사항,이벤트배너</h3>
+            <h4>event&amp;news</h4>
             <section class="newsBox">
-              <h4>Event News</h4>
-              <div class="newsBoardBox">
-                <strong>SUBWAY NEWS</strong>
+                <div class="newsName">
+                  <strong>SUBWAY NEWS</strong>
+                  <p class="more"><a href="#">more ></a></p>
+                </div>
                 <div class="newsBoard">
                 </div>
-              </div><!--newsBoard-->
-            </section>
+            </section><!--newsBox-->
             <section class="cfBox">
               <h4 class="hidden">cf</h4>
               <div class="cf">

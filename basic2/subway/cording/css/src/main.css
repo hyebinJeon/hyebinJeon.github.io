@@ -10,35 +10,42 @@
         .LoginJoinBox{width:102px; line-height:70px; height:70px; float:left;}
         .LoginJoinBox li::first-letter{text-transform:uppercase;}
           .LoginJoinBox>li{text-align:center; font-size:13pt; height:70px; display:block; margin-right:20px; float:left;}
-          .LoginJoinBox>li:hover{border-bottom:solid 2px #005e15;}
+          .LoginJoinBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box;}
           .LoginJoinBox>li:first-child{width:46px; word-spacing:-5px;}
           .LoginJoinBox>li:nth-child(2){width:36px;}
         .menuBox{width:432px; text-transform:uppercase; float:right;}
           .menuBox>li{width:70px; height:70px; text-align:center; line-height:70px; display:block; float:left; font-size:13pt; margin-right:20px;}
-          .menuBox>li:hover{border-bottom:solid 2px #005e15;}
+          .menuBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box;}
             .menuBox>li:first-child{width:52px;}
             .menuBox>li:last-child{width:88px;}
 
     #content{width:100%; height:auto;}
-      #adbannerBox{width: 100%; height:634px; padding:10px; box-sizing:border-box;}
-      #adbannerBox>ul{width: 100%; height:634px; padding:10px; box-sizing:border-box;}
-      #adbannerBox>ul>li{width: 100%; height:634px;float: left;}
-      #adbannerBox>ul>li:first-child{width: 100%; height:634px; background-color: #cda; background-image: url("../../img/adBanner.jpg");}
-      #adbannerBox i{font-size: 2em; margin:300px 0; color:#fff;}
-      #articleWrap{width:100%; height:756px;}
-           .newsBox{width:55%; height:378px;  float:left; background-color:#fff} 
-           .newsBox>h4{width:180px; float:left; margin-top:70px; margin-left:10px; font-color:#fff; font-size:2em;}
-           .newsBoardBox{width:60%; float:right; padding-top: 70px; padding-left:10px; box-sizing:border-box; height:378px; background-color: #fff;}
-             .newsBoardBox>strong{display:block; margin-bottom:9px;}
-             .newsBoard{width:300px; height:250px; background-color: #ccc;}
-         .cfBox{width:45%; height:378px; padding-top: 70px; box-sizing:border-box; float:left; background-color: #fff;}
-          .cf{width:430px; height:280px; background-color: #ccc;}
-      .eventBannerBox{width:100%; height:378px; float:left;}
-          .eventBanner{width:100%; height:100%; padding-top:60px; padding-left:13px;
+      #adbannerBox{width: 100%; height:634px; position:relative;}  
+      .adButton{width:100%; height:0; position:absolute; z-index:100; padding:6px; box-sizing:border-box;top: 50%; left: 0; margin-top: -15px;}
+        .adButton>button{font-size:2em; height:30px;  color:#fff;}
+        .adButton>button:hover{color:#333;}
+        .adButton>button:first-of-type{float:left;}
+        .adButton>button:nth-of-type(2){float:right;}
+       #adbannerBox>.adBanner{width: 300%; height:634px; }
+       #adbannerBox>.adBanner>li{width:33.333333%; height:634px; float: left;}
+       #adbannerBox>.adBanner>li:first-child{width: 33.333333%; height:634px; background-color: #cda; background-image: url("../../img/adBanner.jpg");}
+      
+
+      #articleWrap{width:100%; height:756px; padding:0 26px; box-sizing:border-box;}
+           #articleWrap>h4{display:block; width:204px; height:46px; margin:0 auto; margin-top:74px; margin-bottom:90px; font-color:#fff; font-size:20pt; text-transform:uppercase; text-align:center; border-bottom:solid 2px #005e15; box-sizing: border-box;}
+          .newsBox{width:376px; height:232px; float:left;}
+            .newsName{width:100%; height:28px;}
+              .newsName>strong{font-size:13pt; font-weight:900;}
+              .newsName>.more{float:right;}
+            .newsBox>.newsBoard{width:100%; height:204px; border-top:solid 2px #005e15; border-bottom:solid 2px #005e15; box-sizing:border-box; background-color: #fff;}
+          .cfBox{width:412px; height:232px; float:left; margin-left:82px; margin-bottom:50px;}
+          .cf{width:430px; height:232px; background-color: #ccc;}
+        .eventBannerBox{width:100%; height:378px; float:left;}
+          .eventBanner{width:100%; height:100%; padding-top:57px;
                        box-sizing:border-box; background-color: #fff;}
             .eventBanner>li{width:230px; height:80%; display:block; 
-                            margin-right:10px; float:left; background-color: #ccc;}
-            .eventBanner>button{float:right; margin-top:7px; margin-right:13px;}  
+                            margin-right:8px; float:left; background-color: #ccc;}
+            .eventBanner>button{float:right; margin-top:7px; margin-right:13px;} 
 
       #adFixed{width:100%; padding:100px 0px; box-sizing:border-box; height:400px; background-color: #e0e0e0;}
         #adFixed>dt{font-size:3em; text-align:center;}

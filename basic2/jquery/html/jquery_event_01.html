@@ -1,0 +1,125 @@
+<!--jqyery_event_01_html-->
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+   <meta name="viewpoint"
+                content="width=device=width, initial-scale=1.0">
+   <meta name="keyword" content="html, css, jquery">           
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="shortcut icon" type="image/x-icon" href="#">
+<link rel="apple-touch-icon" href="#">
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/font-awesome.min.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>my title</title>  
+  <style>
+    h1{width: 100%; height:auto; font-size:13pt; padding:2em; box-sizing:border-box;
+      border-bottom:2px solid #faa; margin-bottom: 1em;}
+    .btn{width:900px; height:auto; margin:0 auto;}
+    .btn>button{padding:0.5em; background-color: #09a; color:#fff; font-size:1.3em;
+                transition:all 500ms ease-in;}
+    .btn>button:hover{background-color: #59c; border-radius:0.3em;}
+    .input_box{font-size:1.5em; padding:0.5em; border:1px solid #555;}
+    .tab_box{width: 960px; height:auto; border:2px solid #ccc;}
+    .tab_box:after{content:""; display:block; clear:both;}
+    .tab_menu{width:100%; height:20px;}
+    .tab_menu>li{width:150px; height:100%; float:left; text-align:center; 
+      border-right:1px solid #ccc;}
+    .tab_content{width:100%; height:auto; box-sizing:border-box; padding:0.5em;}
+    .tab_content>div{display:none;}
+    .tab_content>div.tab_c_1{display:block;}
+  </style>
+</head>
+<body>
+<h1>event test</h1>
+<input type="text" class="input_box">
+<div class="btn">
+  <button type="button" class="btn_01">click</button>
+</div>
+<div class="tab_box">
+  <ul class="tab_menu">
+    <li>tab_01</li>
+    <li>tab_02</li>
+    <li>tab_03</li>
+  </ul>
+  <div class="tab_content">
+    <div class="tab_c_1">lorem10</div>
+    <div class="tab_c_2">lorem20</div>
+    <div class="tab_c_3">lorem100</div>
+</div>
+<script>
+// $('[선택]').on('[이벤트]',function(event){
+//   event.preventDefault(); //먼저 발생되는 기능 취소
+// });
+
+
+// <p>text</p>
+// <a href="">text </a> //location="";
+
+// //자바스크립트 이벤트 메소드
+// - 'click' : 왼버튼만 누르는 것을 쉽게 확인
+// - 'dblclick' 더블클릭(왼버튼)
+// - 'mousedown : 왼버튼(1), 가운데버튼(2), 오른쪽버튼(3) 마우스 누르고 있는것'
+// - 'mouseup : 왼버튼(1), 가운데버튼(2), 오른쪽버튼(3) 마우스 떼고 있는것'
+
+// - 'keydown : 키보드 누르고 있는것'
+// - 'keyup : 키보드 떼고 있는것'
+// - 'keypress : 키보드를 치는 것(down/up합친기능)'
+
+// - 'mouseleave'
+// - 'mouseover'
+// - 'mouseout'
+// - 'mouseenter'
+
+// - 'scroll'
+// - 'mousewheel' //ff에 대해서는 별도로 처리
+// - 'resize'
+// - 'trigger : 스크롤이라든지 등등 일정동작들을 하다가 정해진 구간에서 실행하는 것'
+
+// - 'focus : 창활성화 되는 것'
+// - 'blur'
+
+(function($){
+  $('.btn_01').on('mousedown'), function(event){
+    switch(event.which){
+      case 1:
+      $('h1').text('마우스 왼쪽버튼 클릭');
+      break;
+      case 2:
+      $('h1').text('마우스 가운데버튼 클릭');
+      break;
+      case 3:
+      $('h1').text('마우스 오른쪽버튼 클릭');
+      break;
+      default:
+      console.log('마우스를 클릭하셨나요?.');
+      $('h1').text('마우스 클릭하셨나요?');
+    }
+  });
+$('.input_box' ).on('keypress'),function(event){
+  console.log(event);
+});
+
+var tabMenu = $('.tab_menu');
+tabMenu.children('li').on('click',function)(){
+var_$this = $(this); //선택한 그 자신
+var tab_index = _$this.index(); //선택한 것의 위치 파악
+ console.log(tab_index);
+});
+})(this.jQuery);
+
+
+</script>
+</body>
+</html>

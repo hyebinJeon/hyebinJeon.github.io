@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/font-awesome.min.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>document</title>  
+  <style>
+  ul,ol{width:100%; height:auto;}
+    ul:after,ol:after{content:""; display:block; clear:both;}
+    li{padding:0.5em; background-color: #caf; margin:0.2em; float:left;}
+    li:hover{background-color: #625;}
+  </style>
+</head>
+<body>
+  <h1>순서값 찾아오기</h1>
+  <ul class="number">
+    <li>순서_01</li>
+    <li>순서_02</li>
+    <li>순서_03</li>
+    <li>순서_04</li>
+    <li>순서_05</li>
+    <li>순서_06</li>
+    <li>순서_07</li>
+    <li>순서_08</li>
+    <li>순서_09</li>
+    <li>순서_10</li>
+  </ul>
+
+  <ol class="link_Num">
+    <li><a href="#">링크달린 순서_01</a></li>
+    <li><a href="#">링크달린 순서_02</a></li>
+    <li><a href="#">링크달린 순서_03</a></li>
+    <li><a href="#">링크달린 순서_04</a></li>
+    <li><a href="#">링크달린 순서_05</a></li>
+    <li><a href="#">링크달린 순서_06</a></li>
+    <li><a href="#">링크달린 순서_07</a></li>
+    <li><a href="#">링크달린 순서_08</a></li>
+    <li><a href="#">링크달린 순서_09</a></li>
+    <li><a href="#">링크달린 순서_10</a></li>
+  </ol>
+
+<ul class="btn_num">
+  <li><button type="button">버튼의 역할_1</button></li>
+  <li><button type="button">버튼의 역할_2</button></li>
+  <li><button type="button">버튼의 역할_3</button></li>
+  <li><button type="button">버튼의 역할_4</button></li>
+  <li><button type="button">버튼의 역할_5</button></li>
+  <li><button type="button">버튼의 역할_6</button></li>
+  <li><button type="button">버튼의 역할_7</button></li>
+  <li><button type="button">버튼의 역할_8</button></li>
+  <li><button type="button">버튼의 역할_9</button></li>
+  <li><button type="button">버튼의 역할_10</button></li>
+</ul>
+
+<ol class="select_go">
+  <li><button type="button">선택한 순서에 다른 요소 색변경_1</button></li>
+  <li><button type="button">선택한 순서에 다른 요소 색변경_2</button></li>
+  <li><button type="button">선택한 순서에 다른 요소 색변경_3</button></li>
+  <li><button type="button">선택한 순서에 다른 요소 색변경_4</button></li>
+  <li><button type="button">선택한 순서에 다른 요소 색변경_5</button></li>
+  <li><button type="button">선택한 순서에 다른 요소 색변경_6</button></li>
+  <li><button type="button">선택한 순서에 다른 요소 색변경_7</button></li>
+  <li><button type="button">선택한 순서에 다른 요소 색변경_8</button></li>
+  <li><button type="button">선택한 순서에 다른 요소 색변경_9</button></li>
+  <li><button type="button">선택한 순서에 다른 요소 색변경_10</button></li>
+</ol>
+<!--script-->
+  <script>
+    (function($){
+      //-----------------------------------------------------------
+      var numberList = $('.number').children('li');
+      //마우스 클릭 이벤트(.on('click',function(){}))
+      numberList.on('click',function(){
+        //마우스 클릭으로 이벤트 발생시 그 요인이 되는 요소 ==>$(this)
+        //몇번째 요소를 선택했는지 확인
+        console.log( $(this).index() )
+      });//numbelist.on('click') //내가 마우스를 클릭하면 뒤에 있는 것을 실행하라
+    // ==============================================================
+    //링크태그가 달린 리스트 순서 확인
+    var linkNum = $('.link_Num').children('li');
+    linkNum.on('click', function(evt){
+      //evt가 무엇일까?
+      //link기능이 존재한다면 해당하는 링크의 속성이 이벤트로 처리됨 
+      //link속성이 가진 이벤트를 삭제
+      evt.preventDefault();
+      console.log(evt);
+      console.log($(this).index());
+    });
+    //====================================================
+    var btnNum = $('.btn_num').children('li');
+    //btnNum을 클릭했을 때 .on('click',function(){}
+    btnNum.on('click',function(evt){
+      //button의 이벤트 발생효과 무효화 처리
+      evt.preventDefault();
+      console.log( $(this).index() );
+      
+      //선택한 개체의 배경색을 변경
+      btnNum.css({'backgroundColor':'#ffc'});
+      $(this).css({'backgroundColor':'#afc'});
+    });
+    //=====================================================
+    var salGo = $('.select_go').children('li');
+    salGo.on('click',function(evt){
+      evt.preventDefault();
+
+      //console.log($(this).index());
+      var i = $(this).index();//번호 변수화
+      //변수처리된 아이를 가져오기.numberList 내가 선택한 순서와 동일한 순서에 색상 변경하기
+      numberList.eq(i).css({backgroundColor:'#ffd',color:'#0a3',height:'50px'});
+
+    }); 
+      //-----------------------------------------------------------
+    })(this.jQuery);
+  </script>
+</body>
+</html>
