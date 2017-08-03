@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/font-awesome.min.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>jquery show hide</title>
+  <style>
+    #wrap{width: 100%; height: auto;}
+    #headerBox{width: 960px; height:auto; margin:0 auto; background-color: #fda;}
+    h1{width: 100%; height: auto; padding-top:0.5em; margin-bottom:1em; 
+      text-align: center;}
+    #gnb{width: 80%; height: auto; margin:0 auto; margin-left:0 auto;}
+    #gnb>li{width:calc(100%/12); float: left; box-sizing:border-box; padding:1em;}
+    #gnb>li>button{width: 100%; height:auto;}
+    #addBanner{width: 100%; height: 500px; display:none; background-color: #0af;}
+    #addBanner>h2{color:#fff; font-size:3em;}
+    /*jquery addClass용*/
+    .view{display: block; background-color: #fc0;
+          transform:rotate(5deg); transition:all 1000ms ease-in}
+    .view:hover{transform:rotateZ(360deg);}
+    .view>h2{text-align:center; padding-top:3em; border-bottom:1em solid #fff;}
+  </style>  
+</head>
+<body>
+  <div id="wrap">
+    <header id="headerBox" >
+      <h1>jquery test_show &amp; hide</h1>
+      <ul id="gnb">
+        <li><button type="button">show</button></li>
+        <li><button type="button">hide</button></li>
+        <li><button type="button">toggle</button></li>
+        <li><button type="button">show</button></li>
+        <li><button type="button">hide</button></li>
+        <li><button type="button">toggle</button></li>
+        <li><button type="button">show</button></li>
+        <li><button type="button">hide</button></li>
+        <li><button type="button">toggle</button></li>
+        <li><button type="button">show</button></li>
+        <li><button type="button">hide</button></li>
+        <li><button type="button">toggle</button></li>
+      </ul>
+    </header>
+    <section id="addBanner">
+      <h2>광고배너영역</h2>
+    </section>
+  </div>
+<!--script-->
+<script>
+  (function($){
+    var gnb = $('#gnb');
+    gnb.addClass('clearfix')  //addClass()
+   //해당된 변수에 .class를 달아준다.
+   //addClass()란, css(style)에 존재하는 class이름을 가져와서 html요소에 삽입. <div class="clearfix">되어 있음
+    //gnb.removeClass('clearfix'): 선택된 요소에 담긴 class이름을 삭체처리//removeclass <div class="">처리가 됨
+    var gnbList = gnb.children('li');
+    var banner = $('#addBanner');
+    // gnbList클릭 이벤트 (.on())
+    gnbList.eq(0).on('click', function(e){
+      e.preventDefault();
+      banner.show();
+    });    
+  //==========================================
+  //gnbList클릭시 숨김처리(.on())
+  gnbList.eq(1).on('click',function(e){
+    e.preventDefault();
+    banner.hide();
+  });
+  //===========================================
+  //gnbList클릭시 토글기능(.on())
+  gnbList.eq(2).on('click',function(e){
+    e.preventDefault();
+    banner.toggle();
+  });
+  //===========================================
+  gnbList.eq(3).on('click',function(e){
+    e.preventDefault();
+    banner.fadeIn(500);
+  });
+  //===========================================
+  gnbList.eq(4).on('click',function(e){
+    e.preventDefault();
+    banner.fadeOut('slow');
+  });
+  //===========================================
+  gnbList.eq(5).on('click',function(e){
+    e.preventDefault();
+    banner.fadeToggle('fast');
+  });
+    //애니메이션 효과처리되는 이벤트 효과에서는 마우스든 다른 효과든 중간에 정지 처리되어야 할 필요가 있다.
+    //stop()이라는 메소드이다.
+    //애니메이션 효과를 주는 메소드(api)앞에 .stop() 메소드를 연결하기만 하면 간단하게 처리할수 있다.
+    //stio() : 반복처리되는 이벤트 기능이 메모리되어 처리되는 것을 삭제하는 기능
+  //===========================================
+  gnbList.eq(6).on('click',function(e){
+    e.preventDefault();
+    banner.stop().slideDown('');
+  });
+  //===========================================
+  gnbList.eq(7).on('click',function(e){
+    e.preventDefault();
+    banner.stop().slideUp('');
+  });
+  //============================================
+   gnbList.eq(8).on('click',function(e){
+    e.preventDefault();
+    banner.stop().slideToggle('');
+  });
+  //============================================
+
+   gnbList.eq(9).on('click',function(e){
+    e.preventDefault();
+    banner.addClass('view');
+  });
+  //============================================
+  gnbList.eq(10).on('click',function(e){
+    e.preventDefault();
+    banner.removeClass('view');
+  });
+  //=============================================
+   gnbList.eq(11).on('click',function(e){
+    e.preventDefault();
+    banner.toggleClass('view');
+  });
+  //=============================================
+  })(this.jQuery);
+</script>
+</body>
+</html>

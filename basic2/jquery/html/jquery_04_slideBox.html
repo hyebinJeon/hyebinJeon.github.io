@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../../fontAwesome/css/font-awesome.min.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>my title</title> 
+  <style>
+    #wrap{width: 100%; min-height:960px; height: auto; margin:0 auto;}
+    #wrap:after{content:""; display:block; clear:both;}
+    #headBox{width: 100%; height: auto; padding: 0.5em; float:left; box-sizing:border-box; background-color: #afc;}
+    h1{font-size:2em; color:#539;}
+    #sideBox{width:20%; height: auto; min-height:500px; min-width: 200px;  background-color: #ddd; float:left;}
+    #contentBox{width: 80%; min-width:740px; min-height:500px; background-color: #fda; height: auto; float:left;
+      background-color: #fda; float:left; padding:1em; box-sizing:border-box;}
+    #contentBox dl{width:100%;height: auto; border:1px solid #333; padding:0.2em; background-color: #fff;}
+    #contentBox dt{width:100%; height:1.5em; background-color: #7af; color:#fff; font-size:1.3em; transition:all 300s ease-out; border-top:1px solid #777;}
+    #contentBox dt:hover{background-color: #3af;}
+    #contentBox i{color:#ffa; float:right; margin-top:0.3em; margin-right: 2em; 
+                 transition:all 300ms;}
+    #contentBox dd{width: 100%; height: auto; padding:0.5em; box-sizing: border-box; background-color: #d1d1d1; color:#555;}
+    #contentBox dd:hover{background-color: #ccc;}
+    button{font-size: 1em; color:inherit;}
+    
+    /*jquery addClass요소*/
+    .rotateArrow{transform:rotate(180deg);}
+
+
+  </style> 
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>세로형 슬라이드 메뉴 상자 만들기</h1>
+    </header>
+    <aside id="sideBox"></aside>
+    <article id="contentBox">
+      <dl>
+        <dt><button type="button">slide_title_01</button>
+        <i class="fa fa-arrow-circle-down"></i></dt>
+        <dd>slide_content_01<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, assumenda.</dd>
+        <dt><button type="button">slide_title_02</button>
+        <i class="fa fa-arrow-circle-down"></i></dt>
+        <dd>slide_content_02<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, saepe, repudiandae. Doloremque tempore esse odit, explicabo perspiciatis accusamus sapiente nemo.</dd>
+        <dt><button type="button">slide_title_03</button>
+        <i class="fa fa-arrow-circle-down"></i></dt>
+        <dd>slide_content_03<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid vel enim consectetur fuga modi praesentium provident, debitis quo rerum! Labore sapiente, accusantium, et similique temporibus illum quisquam minima pariatur perferendis.</dd>
+        <dt><button type="button">slide_title_04</button>
+        <i class="fa fa-arrow-circle-down"></i></dt>
+        <dd>slide_content_04<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, quam ipsum maxime modi assumenda reiciendis in corporis alias ullam voluptate dolorum, quae. Velit dolorem, sit sed, dolores maiores consequuntur enim maxime neque quas eligendi facere repellendus ipsum, molestiae natus delectus!</dd>
+        <dt><button type="button">slide_title_05</button>
+        <i class="fa fa-arrow-circle-down"></i></dt>
+        <dd>slide_content_05<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illum illo, recusandae commodi alias voluptatem aperiam veniam voluptatum explicabo tempora error libero nostrum nemo autem inventore provident excepturi rem laboriosam. Velit officia, minima aspernatur excepturi ducimus aut at voluptatum autem atque voluptate, cumque asperiores corporis recusandae porro, inventore illum sed.</dd>
+      </dl>
+    </article>
+  </div>
+
+  <script>
+    (function($){
+      var content = $('#contentBox');
+      var conBtn = content.find('dt');
+      //1.
+      //모든 dd를 숨기기(display:none처리)
+      var conMenu = content.find('dd');
+      //dd.css({display:'none'});
+      conMenu.hide();
+
+      //2 : dt를 클릭하면 dd 나타나게 만들기
+      conBtn.on('click',function(e){
+        e.preventDefault();
+        // show명령어로는 모든 dd가 나타나게 된다. conMenu.show(); //display:block처리와 동일
+
+      //3 : 선택한 dt의 바로 뒤에 존재하는 dd만을 나타나게 만들기.  
+        //내가 선택한 것 $(this) -> 여기서는 dt
+        //next()
+        var _$this = $(this);
+       // _$this.next('dd').stop().slideToggle();
+
+        var viewDD = _$this.next('dd').css('display');
+        console.log(viewDD);
+        //8. dd상태를 파악후 fontAwesome의 class이름을 변경되게 처리
+          if(viewDD == 'none'){
+             //  _$this.find('i')
+             //  .removeClass('fa-arrow-circle-down')
+             //  .addClass('fa-arrow-circle-up');
+             _$this.find('i').addClass('rotateArrow');
+          }else{
+            //  _$this.find('i')
+            // .removeClass('fa-arrow-circle-up')
+            // .addClass('fa-arrow-circle-down');
+            _$this.find('i').removeClass('rotateArrow');
+          }
+      //4 : 다른것을 클릭했다면 먼저 열려있던 메뉴항목은 닫히도록 처리하기.  
+        conMenu.stop().slideUp();
+        _$this.next('dd').stop().slideToggle();
+     
+      //5 : this의 i요소에 담긴 class이름 삭제
+        // _$this.find('i').removeClass('fa-arrow-circle-down');
+      //6 : 삭제된 class이름 대신 up을 적용
+        // _$this.find('i').addClass('fa-arrow-circle-up');
+       
+      //7 : 선택된 dt($(this))의 바로 뒤에 오는 dd의 상태를 확인
+      // var viewDD = _$this.next('dd').css('display');
+      // console.log(viewDD);
+      //8 
+      /*if(viewDD == 'none'){
+        _$this.find('i')
+        .removeClass('fa-arrow-circle-down')
+        .addClass('fa-arrow-circle-up');
+      }else{
+         _$this.find('i')
+        .removeClass('fa-arrow-circle-up')
+        .addClass('fa-arrow-circle-down');
+      }*/
+
+    });
+    })(this.jQuery);
+  </script>
+
+</body>
+</html>

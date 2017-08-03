@@ -10,7 +10,7 @@
         .LoginJoinBox{width:102px; line-height:70px; height:70px; float:left;}
         .LoginJoinBox li::first-letter{text-transform:uppercase;}
           .LoginJoinBox>li{text-align:center; font-size:13pt; height:70px; display:block; margin-right:20px; float:left;}
-          .LoginJoinBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box;}
+          .LoginJoinBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box; transition: 100ms;}
           .LoginJoinBox>li:first-child{width:46px; word-spacing:-5px;}
           .LoginJoinBox>li:nth-child(2){width:36px;}
         .menuBox{width:432px; text-transform:uppercase; float:right;}
@@ -20,7 +20,7 @@
             .menuBox>li:last-child{width:88px;}
 
     #content{width:100%; height:auto;}
-      #adbannerBox{width: 100%; height:634px; position:relative;}  
+      #adbannerBox{width: 100%; height:634px; position:relative; overflow:hidden;}  
       .adButton{width:100%; height:0; position:absolute; z-index:100; padding:6px; box-sizing:border-box;top: 50%; left: 0; margin-top: -15px;}
         .adButton>button{font-size:2em; height:30px;  color:#fff;}
         .adButton>button:hover{color:#333;}
@@ -44,7 +44,7 @@
           .eventBanner{width:100%; height:100%; padding-top:57px;
                        box-sizing:border-box;}
             .eventBanner>li{width:216px; height:244px; display:block; 
-                            margin-right:8px; float:left; background-color: #ccc; background-repeat:no-repeat;}
+                            margin-right:8px; float:left; background-repeat:no-repeat;}
             .eventBanner>li>a{display:block; width:216px; height:244px;}                
               .eventBanner>li:nth-child(1){background-image: url("../../img/promotion_01.jpg");}    
               .eventBanner>li:nth-child(2){background-image: url("../../img/promotion_02.jpg");} 
@@ -56,11 +56,11 @@
             background-image: url("../../img/fixed.jpg"); padding:120px 0; box-sizing:border-box;
             background-repeat:no-repeat; background-position:center; background-size:cover; 
             background-attachment:fixed; margin-top:96px}
-        #adFixed>dt{font-size:3em; font-weight:10; color:#333; text-align:center; margin-bottom:10px;}
+        #adFixed>dt{width:260px; height: 116px; margin:0 auto; background-image: url("../../img/adfixed_font.png"); background-repeat:no-repeat; margin-bottom:10px;}
         #adFixed>dd{text-align:center; color:#333;}
 
       #menuBox{width:100%; height:708px; padding:70px 0px; box-sizing:border-box;}
-        #menuBox>dt>h4 {display:block; width:206px; height:46px; margin:0 auto; margin-top:74px; margin-bottom:90px; font-color:#fff; font-size:20pt; font-size:20pt; text-align:center; margin:auto; text-transform:uppercase; text-align:center; border-bottom:solid 2px #005e15; box-sizing: border-box; margin-bottom:20px}
+        #menuBox>dt>h4 {display:block; width:206px; height:46px; margin:0 auto; margin-top:74px; margin-bottom:90px; color:#333; font-size:20pt; font-size:20pt; text-align:center; margin:auto; text-transform:uppercase; text-align:center; border-bottom:solid 2px #005e15; box-sizing: border-box; margin-bottom:20px}
         #menuBox>dd{text-align: center; font-size:10pt;}
         #menuBox>.enjoyMenu{font-size:13pt; font-weight:700; margin-bottom:10px;}
         .subwayMenu{width:888px; height:252px; margin:auto; margin-top:80px;}
@@ -74,29 +74,40 @@
               .subwayMenu li:nth-child(4) dt{background-image: url(../../img/menu_04.jpg);}
             .subwayMenu dd{width:100%; height:30px; font-size:13pt; line-height:30px; text-align:center;}
 
-      #foundstoreBox{width:100%; height:400px; background-color: #e0e0e0; padding-right:40px; padding-top:70px; box-sizing:border-box;}
-        #foundstorewrap{width:350px; height:auto; float:right;}
-        #foundstoreBox h3{display:block; width:100px; height:35px; float:right; font-size:18pt;}
-          .foundstore{width:350px; height:180px; padding:43px 24px; box-sizing:border-box; float:right; background-color: #e4f8ee;}
-            .top_found{width:300px; height:40px; margin-bottom:10px;}
-              .top_found dt{width:70px; height:40px; margin:auto; margin-right:10px; 
-                float:left; background-color: #555;}
-              .top_found dd{width:220px; height:40px; float:left; background-color: #555;}
+      #foundstoreBox{width:100vw; height:400px; position:relative; left:50%; top:0; margin-left:-50vw; 
+       background-repeat:no-repeat; background-position:center; background-size:cover; background-attachment:fixed; background-image: url("../../img/foundstore_02.jpg"); padding-right:40px; padding-top:70px; box-sizing:border-box;}
+        #foundstorewrap{width:350px; height:auto; margin-right:400px; float:right;}
+        #foundstoreBox h3{display:block; width:101px; height:35px; margin-bottom:10px;float:right; color:#fff; font-size:20pt;}
+          .foundstore{width:346px; height:176px; padding:50px 30px; border-radius:1em; box-sizing:border-box; float:right; background-color: #faf9fb;}
+            .top_found{width:300px; height:32px; margin-bottom:10px;}
+              .top_found dt{width:68px; height:32px; margin:auto; margin-right:6px; 
+                float:left; color:#fff; font-size:13pt; line-height: 32px; padding-left:10px; box-sizing:border-box; background-color: #005e15;}
+              .top_found dd{width:208px; height:32px; float:left; background-color: #fff;}
+              .top_found dd input{width:176px; height:32px; border:none; box-sizing:border-box;}
+              .top_found dd button{width:32px; height:32px; float:right; background-color: #333;}
             .bottom_found{width:300px; height:40px;}
-              .bottom_found dt{width:70px; height:40px; margin:auto; margin-right:10px;
-                float:left; background-color: #555;}
-              .bottom_found dd{width:220px; height:40px; float:left; background-color: #555;}
+              .bottom_found dt{width:68px; height:32px; margin:auto; color:#fff; line-height: 32px; padding-left:10px; box-sizing:border-box; margin-right:6px;
+                float:left; font-size:13pt; background-color: #005e15;}
+              .bottom_found dd{width:208px; height:32px; float:left; background-color: #fff;}
+              .bottom_found dd input{width:176px; height:32px; border:none; box-sizing:border-box;}
+              .bottom_found dd button{width:32px; height:32px; float:right; background-color: #333;}
+              .foundstore dd button i{color:#fff;}
 
-      #qBox{width:100%; height:350px;}
-        #chain{width:50%; height: 350px; float:left; padding-top:30px; box-sizing:border-box;}
-          #chain>dt{display:block; width:160px; font-size:18pt; height:40px; text-align: center; margin:auto;
-                     border-bottom:1px solid #ccc;}
-          #chain>dd{display:block; width:200px; margin:25px auto;  height:150px; background-color:#ccc;}
+      #qBox{width:100%; height:490px;}
+        #chain{width:50%; height: 490px; float:left; padding-top:100px; box-sizing:border-box;}
+          #chain>dt{display:block; width:160px; font-size:20pt; height:40px; text-align: center; margin:auto;
+                    border-bottom:1px solid #ccc; margin-bottom:90px; color:#333; text-align:center; text-align:center; border-bottom:solid 2px #005e15;box-sizing: border-box; margin-bottom:20px}
+          #chain>dd{display:block; width:192px; height:144px; margin:42px auto; background-image: url("../../img/chain.jpg");}
           #chain p{text-align:center;}
-        #sns{width:50%; height: 350px; float:left; padding:30px 23px; box-sizing:border-box;}
-          #sns>dt{display:block; width:160px; font-size:18pt; height:40px; text-align: center; margin:auto;
-                   border-bottom:1px solid #ccc; text-transform:uppercase;}
-          #sns>dd{display:block; width:120px; float:left; height: 120px; margin-top:50px; margin-right:40px; background-color: #ccc;}
+        #sns{width:50%; height: 490px; float:left; padding:100px 50px; box-sizing:border-box;}
+          #sns>dt{display:block; width:160px; font-size:20pt; height:40px; text-align: center; margin:auto;
+                  border-bottom:1px solid #ccc; margin-bottom:90px; color:#333; text-align:center; text-align:center; border-bottom:solid 2px #005e15; box-sizing: border-box; margin-bottom:20px; text-transform:uppercase; }
+          #sns>dd{display:block; width:64px; height:64px; float:left; margin-top:70px; margin-right:80px;}
+          #sns>dd>a{}
+          #sns>dd>a>p{margin-top:70px; text-align:center;}
+            #sns>.faceBook{background-image: url("../../img/facebook.png");}
+            #sns>.kakao{background-image: url("../../img/kakao.png");}
+            #sns>.twitter{background-image: url("../../img/twitter.png");}
 
     #footBox{width:100%; height:200px; background-color: #e0e0e0; padding:70px; box-sizing:border-box;}
         address{width:600px; height:20px; text-align:center; display:block; margin:auto;}
