@@ -64,18 +64,22 @@
         #menuBox>dd{text-align: center; font-size:10pt;}
         #menuBox>.enjoyMenu{font-size:13pt; font-weight:700; margin-bottom:10px;}
         .subwayMenu{width:888px; height:252px; margin:auto; margin-top:80px;}
-          .subwayMenu>li{display:block; width:216px; height:250px; float:left; margin-right:8px; 
-                        background-repeat:no-repeat;}
+          .subwayMenu>li{display:block; width:216px; height:250px; float:left; margin-right:8px;} 
+            .subwayMenu>li dt{background-repeat:no-repeat;}      
             .subwayMenu>li>a{display:block; width:216px; height:250px;}            
-            .subwayMenu dt{width:216px; height:220px;}
+            .subwayMenu dt{width:216px; height:220px; transition:all 500ms;}
               .subwayMenu li:nth-child(1) dt{background-image: url(../../img/menu_01.jpg);}
               .subwayMenu li:nth-child(2) dt{background-image: url(../../img/menu_02.jpg);}
               .subwayMenu li:nth-child(3) dt{background-image: url(../../img/menu_03.jpg);}
               .subwayMenu li:nth-child(4) dt{background-image: url(../../img/menu_04.jpg);}
+              .subwayMenu li:nth-child(1):hover dt{background-image: url(../../img/menu_hover_01.jpg);}
+              .subwayMenu li:nth-child(2):hover dt{background-image: url(../../img/menu_hover_02.jpg);}
+              .subwayMenu li:nth-child(3):hover dt{background-image: url(../../img/menu_hover_03.jpg);}
+              .subwayMenu li:nth-child(4):hover dt{background-image: url(../../img/menu_hover_04.jpg);}
             .subwayMenu dd{width:100%; height:30px; font-size:13pt; line-height:30px; text-align:center;}
 
       #foundstoreBox{width:100vw; height:400px; position:relative; left:50%; top:0; margin-left:-50vw; 
-       background-repeat:no-repeat; background-position:center; background-size:cover; background-attachment:fixed; background-image: url("../../img/foundstore_02.jpg"); padding-right:40px; padding-top:70px; box-sizing:border-box;}
+       background-repeat:no-repeat; background-position:center; background-size:cover; background-attachment:fixed; background-image:url("../../img/vegetable.jpg"); padding-right:40px; padding-top:70px; box-sizing:border-box;}
         #foundstorewrap{width:350px; height:auto; margin-right:400px; float:right;}
         #foundstoreBox h3{display:block; width:101px; height:35px; margin-bottom:10px;float:right; color:#fff; font-size:20pt;}
           .foundstore{width:346px; height:176px; padding:50px 30px; border-radius:1em; box-sizing:border-box; float:right; background-color: #faf9fb;}
@@ -110,12 +114,12 @@
             #sns>.twitter{background-image: url("../../img/twitter.png");}
 
     #footBox{width:100%; height:200px; background-color: #e0e0e0; padding:70px; box-sizing:border-box;}
-        address{width:600px; height:20px; text-align:center; display:block; margin:auto;}
+        address{width:630px; height:20px; font-size:13pt; text-align:center; display:block; margin:auto;}
         #footBox span{margin-left:10px;}
-        #footBox p{text-align:center; margin-bottom:13px;}
-        .footlist{width:279px; height:30px; display:block; margin:0 auto;} 
-          .footlist>li{margin-right:10px; display:block; height:28px; 
+        #footBox p{font-size:10pt; text-align:center; margin-top:5px; margin-bottom:13px;}
+        .footlist{width:304px; height:30px; display:block; margin:0 auto;} 
+          .footlist>li{margin-right:10px; display:block; height:28px; font-size:13pt;
                       text-align:center; padding:2px 0; box-sizing:border-box; float:left; background-color: #fff;}       
-          .footlist>li:nth-child(1){width:64px;}       
-          .footlist>li:nth-child(2){width:68px;}       
-          .footlist>li:nth-child(3){width:123px;}       
+          .footlist>li:nth-child(1){width:72px;}       
+          .footlist>li:nth-child(2){width:72px;}       
+          .footlist>li:nth-child(3){width:140px;}       
