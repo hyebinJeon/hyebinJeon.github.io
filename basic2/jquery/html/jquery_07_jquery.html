@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/font-awesome.min.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>jquery에서 마우스 rollover기능 이해하기</title>  
+  <style>
+    h1,h2{padding:0.5em; background-color: #ccf; border-bottom:1px solid #333; margin-bottom:0.5em; margin-top:2em;}
+    h1{font-size:2em;}
+    h2{font-size:1.5em;}
+    div{width: 500px; height: 150px; border:2px solid #ccc; background-color: #fcd;
+        box-sizing:border-box; padding:0.5em; margin:0 auto;}
+    p{width: 100%; height: 100%;}
+    p>span{display:block; width: 50%; height: 50px; background-color: #ccc;
+          border:2px solid #555; box-sizing:border-box; padding:1em;}    
+
+  </style>
+</head>
+<body>
+  <h1>rollover기능 이해하기</h1>
+  <h2>mouseenter-mouseleave</h2>
+  <div class="handler_1">
+    <p>mouse Roller<span>mouse more Rollover</span></p>
+  </div>
+
+  <h2>mouseover-mouseout</h2>
+  <div class="handler_2">
+    <p>mouse Roller<span>mouse more Rollover</span></p>
+  </div>
+  
+  <h2>hover</h2>
+  <div class="handler_3">
+    <p>mouse Roller<span>mouse more Rollover</span></p>
+  </div>
+  <!--script-->
+  <script>
+  (function($){
+  //++++++++++++++++++++++++++++++++++++++++++
+    //mouseenter & mouseleave .handler_1
+    var hand_1 = $('.handler_1');
+    hand_1.find('p').on('mouseenter',function(){
+      var i = 0;
+      //appeend:내용상의 뒤에 첨부
+      $(this).append(++i);
+    });//on
+
+
+    //mouseover & mouseout .handler_2
+    var hand_2=$('.handler_2')
+    hand_2.find('p').on('mouseover',function(){
+      var i = 0;
+      //appeend:내용상의 뒤에 첨부
+      $(this).append(++i);
+    });//on
+
+
+    //hover(in & out) .handler
+    var hand_3=$('.handler_3')
+    hand_3.find('p').hover(
+      function(){
+          var i = 0;
+          $(this).append(++1);
+        },function(){
+            $(this).append('out')
+      });//hover
+
+  //++++++++++++++++++++++++++++++++++++++++++
+  })(this.jQuery);
+  </script>
+</body>
+</html>
