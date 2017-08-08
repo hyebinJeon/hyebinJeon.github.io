@@ -34,13 +34,31 @@
                               position: relative; padding-top:70px; 
                               box-sizing:border-box;}
             .menuName{width:140px; height: 40px; line-height:40px; text-align:center; font-size:1.5em; color:#fff;
-                      border-radius:5px; position:absolute; top:-20px; left:350px;
+                      border-radius:5px; position:absolute; top:-20px; left:370px;
                       z-index:100; background-color:#005e15;}    
-              .menuList{width:780px; height:770px; margin:auto;}
-                .menuList>li{width:370px; height: 370px; margin-right:40px; margin-bottom:30px; 
-                            float:left; background-color: #005e15;}
-                 .menuList>li>a{width:370px; height:345px; display:block; background-color: #e4f8ee;}           
-                 .menuList>li>p{width:370px; height: 25px; text-align:center; font-size:15pt; background-color: #e0e0e0;}               
+              .subwayMenu{width:888px; height:252px; margin:auto; margin-top:50px;}
+                .subwayMenu>li{display:block; width:216px; height:250px; float:left; margin-right:8px;} 
+                  .subwayMenu>li dt{background-repeat:no-repeat;}      
+                  .subwayMenu>li>a{display:block; width:216px; height:250px;}            
+                  .subwayMenu dt{width:216px; height:220px; transition:all 500ms;}
+                    .subwayMenu li:nth-child(1) dt{background-image: url(../../img/menu_01.jpg);}
+                    .subwayMenu li:nth-child(2) dt{background-image: url(../../img/menu_02.jpg);}
+                    .subwayMenu li:nth-child(3) dt{background-image: url(../../img/menu_03.jpg);}
+                    .subwayMenu li:nth-child(4) dt{background-image: url(../../img/menu_04.jpg);}
+                    .subwayMenu li:nth-child(1):hover dt{background-image: url(../../img/menu_hover_01.jpg);}
+                    .subwayMenu li:nth-child(2):hover dt{background-image: url(../../img/menu_hover_02.jpg);}
+                    .subwayMenu li:nth-child(3):hover dt{background-image: url(../../img/menu_hover_03.jpg);}
+                    .subwayMenu li:nth-child(4):hover dt{background-image: url(../../img/menu_hover_04.jpg);}
+                  .subwayMenu dd{width:100%; height:30px; font-size:1em; line-height:30px; text-align:center;}
+            .menuItWrap{width: 888px; height: 708px; margin:24px auto;}
+              .menuImg{width: 434px; height: 330px; float:left; padding-top:30px; box-sizing:border-box;}
+               .menuImg .food{width: 434px; height: 330px; background-image: url("../../img/menu_big_01.png"); background-repeat:no-repeat;}        
+              .memuIt{width: 454px; height: 330px;float:left; color:#333; padding-right:30px; padding-top:50px; box-sizing:border-box;}
+                .memuIt dt{font-size:3em; font-weight:900; color:#333;}
+                 .dd_01{font-size:1.4em; color:#333;}
+                 .dd_02{font-size:1.2em; margin-top:30px; color:#333;}
+              .nutrient{font-size:1.5em; margin:12px 0; color:#333;}
+              .menuArea table{width: 888px; height: 306px; background-color: #125;}     
 
 
  

@@ -1,0 +1,57 @@
+/* slide_button.css */
+
+body{overflow-x:hidden;}
+#wrap{width: 100%; min-width: 960px; height: auto; margin: 0 auto; }
+
+#headBox{width: 960px; height: 100px; margin: 0 auto; 
+	      background-color: #acf; position: relative;}
+#headBox:before{content:" "; display: block; 
+            position: absolute; top: 0; left: 50%; z-index:-100; 
+				    width: 100vw; height:inherit; 
+				    background-color:#fcc; margin-left:-50vw;}
+
+#addBanner{width: 100%; height:550px; background-color: #fa7;}
+
+#contentBox{width: 960px; height:1000px; margin: 0 auto; background-color: #ccc;}
+
+.slide_btn{width:250px; height:auto; min-height:200px;
+					position: fixed; left: 0; top: 100px; z-index: 500;
+					border-radius:0.5em; border:2px solid #777;
+					background-color: #fff; 
+					box-shadow:0.2em 0.2em 0.2em #333;}
+.slide_btn>h3{width: 100%; height: auto; 
+							background-color: #0af;
+							color:#fff; margin-bottom: 0.3em;}
+.slide_btn>button{width:100px; height:35px; 
+					background-color: #0af; position: absolute;
+				  right: -100px; top:1em; z-index:500;
+					color:#fff; font-size: 1.2em;}
+.slide_btn>button:hover{background-color: #07a;}				
+
+.slide_btn>ul{width: 100%; height: auto; padding:0 10%; box-sizing:border-box;}
+.slide_btn>ul>li{width: 100%; height: 100px; background-color: #afc;
+							border-radius:100px; overflow:hidden; }
+.slide_btn>ul>li>a{background-size:cover; background-position:centert; transition:all 500ms;}              
+.slide_btn>ul>li:nth-child(1)>a{background-image: url("../../img/actor/wb1.jpg");}
+.slide_btn>ul>li:nth-child(2)>a{background-image: url("../../img/actor/jd1.jpg");}
+.slide_btn>ul>li:nth-child(3)>a{background-image: url("../../img/actor/ir1.jpg");}
+.slide_btn>ul>li:nth-child(1)>a:hover{background-image: url("../../img/actor/wb2.jpg");}
+.slide_btn>ul>li:nth-child(2)>a:hover{background-image: url("../../img/actor/jd2.jpg");}
+.slide_btn>ul>li:nth-child(3)>a:hover{background-image: url("../../img/actor/ir2.jpg");}
+
+.leftMove{left:-250px;}
+
+
+/* 
+   1. .me_link이름을 .slide_btn>ul에 적용
+   2. .slide_btn>ul>li의 가로값을 세로에도 적용(가로 == 세로)
+*/
+.me_link a{width:100%; height:100%; 
+	      background-repeat:no-repeat; display:block;}
+.me_link a>span{
+				width: 0; height: 0; display: block; 
+				position: absolute; z-index: -100; overflow: hidden;}
+
+
+#footBox{width: 100%; height: 120px; background-color:#555; box-sizing:border-box;
+		padding:1.5em 0.7em 0.3em; color:#fff;}
