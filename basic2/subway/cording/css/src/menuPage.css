@@ -36,9 +36,6 @@
                               box-sizing:border-box;}
             .tab_menu{width:888px; height:50px; background-color: #451;}
               .tab_menu>li{width: 177px; height: 50px; float:left;}
-            /*.menuName{width:140px; height: 40px; line-height:40px; text-align:center; font-size:1.5em; color:#fff;
-                      border-radius:5px; position:absolute; top:-20px; left:370px;
-                      z-index:100; background-color:#005e15;}    */
               .subwayMenu{width:888px; height:252px; margin:auto; margin-top:50px;}
                 .subwayMenu>li{display:block; width:216px; height:250px; float:left; margin-right:8px;} 
                   .subwayMenu>li dt{background-repeat:no-repeat;}      
