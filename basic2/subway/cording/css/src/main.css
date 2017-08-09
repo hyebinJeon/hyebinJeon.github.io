@@ -3,21 +3,22 @@
     #headerBox{width:100%; height:264px; padding-top:16px; box-sizing:border-box; 
                background-color: #fff;}
         h1{width:186px; height: 54px; margin:auto; margin-top:52px; margin-bottom:72px; background-image:url("../../img/logo.jpg");}
+        h1>a{width:186px; height: 54px; display:block;}
       #lnbBox{width:150px; height:23px; float:right; margin-right:26px;}
         .lnb{width:160px; height:24px;}
           .lnb>li{width:68px; height:24px; text-transform:uppercase; text-align:center; font-size:1em; line-height:24px; margin-right:20px; float:left;}
-      #gnbBox{width:940px; padding:0 26px; font-size:1em; font-weight:700; color:#333; box-sizing:border-box; height:70px; background-color: #f8faf0;}
+      #gnbBox{width:940px; padding:0 26px; font-size:1em; font-weight:700; color:#333; box-sizing:border-box; height:70px; background-color: #f8faf0; border-bottom:solid 1px #ccc}
         .LoginJoinBox{width:102px; line-height:70px; height:70px; float:left;}
         .LoginJoinBox:hover{color:#005e15;}
         .LoginJoinBox li::first-letter{text-transform:uppercase;}
           .LoginJoinBox>li{text-align:center; height:70px; display:block; margin-right:20px; float:left;}
-          .LoginJoinBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box; transition: 100ms;}
+          .LoginJoinBox>li:hover{border-bottom:solid 1px #005e15; box-sizing:border-box; transition: 100ms;}
           .LoginJoinBox>li:first-child{width:46px; word-spacing:-5px;}
           .LoginJoinBox>li:nth-child(2){width:36px;}
         .menuBox{width:432px; text-transform:uppercase; float:right;}
         .menuBox:hover{color:#005e15;}
           .menuBox>li{width:70px; height:70px; text-align:center; line-height:70px; display:block; float:left; font-size:1em; margin-right:20px;}
-          .menuBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box; transition: 100ms;}
+          .menuBox>li:hover{border-bottom:solid 1px #005e15; box-sizing:border-box; transition: 100ms;}
             .menuBox>li:first-child{width:52px;}
             .menuBox>li:last-child{width:88px;}
 
@@ -48,7 +49,8 @@
           .eventBanner{width:100%; height:100%; padding-top:57px;
                        box-sizing:border-box;}
             .eventBanner>li{width:216px; height:244px; display:block; 
-                            margin-right:8px; float:left; background-repeat:no-repeat;}
+                            margin-right:8px; float:left; background-repeat:no-repeat; background-size:100%; background-position:center;}
+            .eventBanner>li:hover{background-size:120%; transition:800ms}
             .eventBanner>li>a{display:block; width:216px; height:244px;}                
               .eventBanner>li:nth-child(1){background-image: url("../../img/promotion_01.jpg");}    
               .eventBanner>li:nth-child(2){background-image: url("../../img/promotion_02.jpg");} 

@@ -33,7 +33,7 @@
           <li class="last_li_right"><a href="#">search</a></li>
         </ul>
       </section>
-      <h1><a href="#"></a></h1>
+      <h1><a href="file:///D:/work/git/hyebinJeon.github.io/basic2/subway/cording/html/main.html#"></a></h1>
       
       <section id="gnbBox">
       <h2 class="hidden">gnb</h2>
@@ -67,7 +67,14 @@
           <h3 class="hidden">메뉴목록</h3>
             <section class="menuArea">
               <h4 class="hidden">메뉴</h4>
-              <div class="menuName">추천메뉴</div>
+              <ul class="tab_menu">
+                <li><a href="#">추천메뉴</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">프리미엄</a></li>
+                <li><a href="#">클래식</a></li>
+                <li><a href="#">샌드위치</a></li>
+              </ul><!--tab_menu-->
+              <div class=tab_content>
                 <ul class="subwayMenu">
               <li><a href="#">
                 <dt></dt>
@@ -90,6 +97,16 @@
                 </a>
               </li>
             </ul>
+              <ul>
+              
+              </ul>
+              <ul>
+              </ul>
+              <ul>
+              </ul>
+              <ul>
+              </ul>
+            </div><!--tab_content-->
 
             <section class="menuItWrap">
               <h4 class="hidden">메뉴상세설명</h4>
@@ -107,8 +124,64 @@
                     </dl>
                   </div>
                 </div><!--menuItBox-->
-              <h4 class="nutrient">영양성분표</h4> 
               <table>
+                <caption>영양성분표</caption>
+                <thead>
+                  <tr>
+                    <th colspan="2" class="firstCell_1">치킨데리야끼 Chicken Teriyaki 영양정보</th>
+                    <td colspan="2" class="firstCell_2">6인 샌드위치기준</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>칼로리</th>
+                    <td class="tableline">370.0</td>
+                    <th>탄수화물(g)</th>
+                    <td>58.0</td>
+                  </tr>
+                  <tr>
+                  <th>지방칼로리</th>
+                  <td class="tableline">45.0</td>
+                  <th>식이섬유(g)</th>
+                  <td>5.0</td>
+                  </tr>
+                  <tr>
+                  <th>총지방(g)</th>
+                  <td class="tableline">5.0</td>
+                  <th>당류(g)</th>
+                  <td>16.0</td>
+                  </tr>
+                  <tr>
+                  <th>포화지방(g)</th>
+                  <td class="tableline">1.0</td>
+                  <th>비타민A % DA</th>
+                  <td>10.0</td>
+                  </tr>
+                  <tr>
+                  <th>트랜스지방(g)</th>
+                  <td class="tableline">0.0</td>
+                  <th>비타민C % DA</th>
+                  <td>30.0</td>
+                  </tr>
+                  <tr>
+                  <th>콜레스트롤(mg)</th>
+                  <td class="tableline">40.0</td>
+                  <th>칼슘 % DA</th>
+                  <td>6.0</td>
+                  </tr>
+                  <tr>
+                  <th>나트륨(mg)</th>
+                  <td class="tableline">1100.0</td>
+                  <th>철분 % DV</th>
+                  <td>15.0</td>
+                  </tr>
+                  <tr>
+                  <th>단백질</th>
+                  <td class="tableline">23.0</td>
+                  <th colspan="2"></th>
+                  </tr>
+
+                </tbody>
               </table>
             </section><!--menuItWrap-->
 
@@ -132,6 +205,9 @@
       </div>
     </footer><!--footer-->
 
+
+  <!--script-->
+  <script src="../js/jquery/menuPage.js"></script>
   </div>
 
 

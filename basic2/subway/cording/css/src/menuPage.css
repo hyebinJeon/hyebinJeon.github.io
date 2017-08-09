@@ -4,21 +4,22 @@
     #headerBox{width:100%; height:264px; padding-top:16px; box-sizing:border-box; 
                background-color: #fff;}
         h1{width:186px; height: 54px; margin:auto; margin-top:52px; margin-bottom:72px; background-image:url("../../img/logo.jpg");}
+        h1>a{width:186px; height: 54px; display:block;}
       #lnbBox{width:150px; height:23px; float:right; margin-right:26px;}
         .lnb{width:160px; height:24px;}
           .lnb>li{width:68px; height:24px; text-transform:uppercase; text-align:center; font-size:1em; line-height:24px; margin-right:20px; float:left;}
-      #gnbBox{width:940px; padding:0 26px; font-size:1em; font-weight:700; color:#333; box-sizing:border-box; height:70px; background-color: #f8faf0;}
+      #gnbBox{width:940px; padding:0 26px; font-size:1em; font-weight:700; color:#333; box-sizing:border-box; height:70px; background-color: #f8faf0; border-bottom:solid 1px #ccc}
         .LoginJoinBox{width:102px; line-height:70px; height:70px; float:left;}
         .LoginJoinBox:hover{color:#005e15;}
         .LoginJoinBox li::first-letter{text-transform:uppercase;}
           .LoginJoinBox>li{text-align:center; height:70px; display:block; margin-right:20px; float:left;}
-          .LoginJoinBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box; transition: 100ms;}
+          .LoginJoinBox>li:hover{border-bottom:solid 1px #005e15; box-sizing:border-box; transition: 100ms;}
           .LoginJoinBox>li:first-child{width:46px; word-spacing:-5px;}
           .LoginJoinBox>li:nth-child(2){width:36px;}
         .menuBox{width:432px; text-transform:uppercase; float:right;}
         .menuBox:hover{color:#005e15;}
           .menuBox>li{width:70px; height:70px; text-align:center; line-height:70px; display:block; float:left; font-size:1em; margin-right:20px;}
-          .menuBox>li:hover{border-bottom:solid 2px #005e15; box-sizing:border-box; transition: 100ms;}
+          .menuBox>li:hover{border-bottom:solid 1px #005e15; box-sizing:border-box; transition: 100ms;}
             .menuBox>li:first-child{width:52px;}
             .menuBox>li:last-child{width:88px;}
 
@@ -29,13 +30,15 @@
                         font-size:7em;}
           #innerBox p{text-align:center; margin:auto; color:#ccc;}
 
-        #menuWrap{width: 100%; height:auto; margin-bottom:100px; padding:160px 26px; box-sizing:border-box;}
+        #menuWrap{width: 100%; height:auto; padding:160px 26px; box-sizing:border-box;}
           #menuWrap>.menuArea{width:888px; height:auto; border-top:1px solid #999; 
                               position: relative; padding-top:70px; 
                               box-sizing:border-box;}
-            .menuName{width:140px; height: 40px; line-height:40px; text-align:center; font-size:1.5em; color:#fff;
+            .tab_menu{width:888px; height:50px; background-color: #451;}
+              .tab_menu>li{width: 177px; height: 50px; float:left;}
+            /*.menuName{width:140px; height: 40px; line-height:40px; text-align:center; font-size:1.5em; color:#fff;
                       border-radius:5px; position:absolute; top:-20px; left:370px;
-                      z-index:100; background-color:#005e15;}    
+                      z-index:100; background-color:#005e15;}    */
               .subwayMenu{width:888px; height:252px; margin:auto; margin-top:50px;}
                 .subwayMenu>li{display:block; width:216px; height:250px; float:left; margin-right:8px;} 
                   .subwayMenu>li dt{background-repeat:no-repeat;}      
@@ -57,9 +60,13 @@
                 .memuIt dt{font-size:3em; font-weight:900; color:#333;}
                  .dd_01{font-size:1.4em; color:#333;}
                  .dd_02{font-size:1.2em; margin-top:30px; color:#333;}
-              .nutrient{font-size:1.5em; margin:12px 0; color:#333;}
-              .menuArea table{width: 888px; height: 306px; background-color: #125;}     
-
+              .menuArea table{width: 888px; height: 306px;}     
+                caption{font-size:1.6em; text-align:left; font-weight:900; margin:12px 0; color:#333;}
+                tr>td, tr>th{border-bottom:solid 1px #666; color:#333; height: 32px; text-align:left}
+                th{width:320px; text-indent:20px; color:#333;}
+                td{width: 86px; color:#333;}
+                .firstCell_1{border-top:solid 2px #666; font-size:1.2em; color:#005e15;}
+                .firstCell_2{border-top:solid 2px #666; color:#666; text-align:right; padding-right:20px; box-sizing:border-box;}
 
  
     #footBox{width:100%; height:200px; background-color: #e0e0e0; padding:60px 20px; box-sizing:border-box;}

@@ -13,6 +13,8 @@
   input[type="search"],input[type="email"],input[type="tel"]{
     border:1px solid #777; text-indent:5px;
   }
+
+  table,tr,td,th,thead,tbody,tfoot{border-spacing:0; border-collapse: collapse;}
   button,input[type="submit"],input[type="reset"],input[type="button"]{
     cursor:pointer;
   }
