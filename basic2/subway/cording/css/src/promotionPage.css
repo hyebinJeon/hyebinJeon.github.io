@@ -8,7 +8,8 @@
       #lnbBox{width:150px; height:23px; float:right; margin-right:26px;}
         .lnb{width:160px; height:24px;}
           .lnb>li{width:68px; height:24px; text-transform:uppercase; text-align:center; font-size:1em; line-height:24px; margin-right:20px; float:left;}
-      #gnbBox{width:940px; padding:0 26px; font-size:1em; font-weight:700; color:#333; box-sizing:border-box; height:70px; background-color: #f8faf0; border-bottom:solid 1px #ccc}
+      #gnbBox{width:940px; padding:0 26px; font-size:1em; font-weight:700; color:#333; box-sizing:border-box; height:70px; background-color: #f8faf0; border-bottom:solid 1px #ccc; position:relative;}
+      #gnbBox:before{content:" "; width: 100vw; height:inherit; background-color:inherit; left: 50%; margin-left: -50vw; position: absolute; z-index: -100; border-bottom:solid 1px #ccc;}  
         .LoginJoinBox{width:102px; line-height:70px; height:70px; float:left;}
         .LoginJoinBox:hover{color:#005e15;}
         .LoginJoinBox li::first-letter{text-transform:uppercase;}
@@ -47,7 +48,8 @@
                  .menuList>li>a{width:260px; height:310px; display:block; border-radius:2em;}                 
 
 
-#footBox{width:100%; height:200px; background-color: #e0e0e0; padding:60px 20px; box-sizing:border-box;}
+#footBox{width:100%; height:200px; background-color: #e0e0e0; padding:60px 20px; box-sizing:border-box; position:relative;}
+#footBox:before{content:" ";  width: 100vw; height:inherit; background-color:inherit; top:0; left: 50%; margin-left: -50vw; position: absolute; z-index: -100;}
         .logo_2{width:186px; height: 54px; float:left; margin-top:10px;background-image:url("../../img/logo_2.png");}
         .footR{width:78%; height: 100%; float:right; margin-left:4px;}
         address{width:630px; height:20px; font-size:1em; display:block; margin-bottom:10px;}

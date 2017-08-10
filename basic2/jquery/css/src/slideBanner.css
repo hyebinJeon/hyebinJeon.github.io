@@ -1,0 +1,25 @@
+/*slideBanner.CSS*/
+
+#wrap{width: 960px; height: auto; margin:0 auto;}
+#headBox{width: 100%; height: 100px; background-color: #afc;}
+h1{width: 100%; height: 100%; text-align:center; color: #333; font-size:4em;}
+
+#addBannerBox{width: 100%; height: 550px; background-color: #ccc; border:2px solid #333;
+              border-left:0; border-right:0; position:relative;}
+
+.btn{width: 100%; height: 0; position:absolute; top:50%; left:0;}
+.btn button{width: 100px; height: 200px; background-color:rgba(255,255,255,0.5); font-size:2em; font-weight:bold; float:left; margin-top:-100px;}
+.btn button:hover{background-color:rgba(255,255,255,0.8);}
+.btn button:last-of-type{float:right;}
+
+#addBannerBox>ul {width: 400%; height: 100%; background-color: #dda; margin-left:-100%;}
+#addBannerBox>ul>li{width: 25%; height: 100%; float:left;}
+#addBannerBox>ul>li.banner_1{background-color: #a1a;}
+#addBannerBox>ul>li.banner_2{background-color: #a69;}
+#addBannerBox>ul>li.banner_3{background-color: #a25;}
+#addBannerBox>ul>li.banner_4{background-color: #a39;}
+#addBannerBox>ul>li>a{width: 100%; height: 100%; display: block;
+                      color:#fff; font-size:4em; text-align:center; line-height:550px;}
+
+#contentBox{width: 100%; height: 800px; background-color: #caa;}
+#footBox{width: 100%; height: 60px; background-color: #555;}

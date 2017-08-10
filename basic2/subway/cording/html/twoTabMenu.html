@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <title>Document</title>
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jquery-ui.min.js"></script>
+  <style>
+    .tab_menu{width: 600px; height: 50px; border: 1px solid  #888;}
+    .tab_menu>li{float: left; height: 100%; padding:0 10px; background-color: #ccc; margin-right: 1em;}
+    .tab_content{width: 600px; border:3px solid #fca;}
+    .tab_1{background-color: #0df;}
+    .tab_2{background-color: #f85;}
+    .tab_1>ul{width: 100%; height: 30px; background-color: #cca;}
+    .tab_1>ul>li{float: left; display:inline-block; padding:0.5em; margin-right:0.5em; background-color: #7aa;}
+    .tab_1>ul:nth-of-type(1){background-color: #124; color:#fff;}
+    .tab_1>ul:nth-of-type(2){background-color: #f24; color:#fff;}
+    .tab_1>ul:nth-of-type(3){background-color: #824; color:#fff;}
+    .tab_1>ul:nth-of-type(4){background-color: #a24; color:#fff;}
+    .tab_2>.con_box>div{border:5px solid #fff; box-sizing:border-box;}
+    .tab_2 p{color:#fff;}
+    .con_box:nth-of-type(1){background-color:#124;}
+    .con_box:nth-of-type(2){background-color:#f24;}
+    .con_box:nth-of-type(3){background-color:#824;}
+    .con_box:nth-of-type(4){background-color:#a24;}
+
+  </style>
+</head>
+<body>
+  
+  <ul class="tab_menu">
+    <li><a href="#">tab_1</a></li>
+    <li><a href="#">tab_2</a></li>
+    <li><a href="#">tab_3</a></li>
+    <li><a href="#">tab_4</a></li>
+  </ul>
+  <div class="tab_content tab_1">
+    <ul>
+      <li>tab_1_con_1</li>
+      <li>tab_1_con_2</li>
+      <li>tab_1_con_3</li>
+      <li>tab_1_con_4</li>
+    </ul>
+    <ul>
+      <li>tab_2_con_1</li>
+      <li>tab_2_con_2</li>
+      <li>tab_2_con_3</li>
+      <li>tab_2_con_4</li>
+    </ul>
+    <ul>
+      <li>tab_3_con_1</li>
+      <li>tab_3_con_2</li>
+      <li>tab_3_con_3</li>
+      <li>tab_3_con_4</li>
+    </ul>
+    <ul>
+      <li>tab_4_con_1</li>
+      <li>tab_4_con_2</li>
+      <li>tab_4_con_3</li>
+      <li>tab_4_con_4</li>
+    </ul>
+  </div>
+  <div class="tab_content tab_2">
+    <div class="con_box">
+      <div>
+        <p>1------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>2------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>3------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>4------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+    </div>
+   <div class="con_box">
+      <div>
+        <p>1------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>2------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>3------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>4------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+    </div>
+   <div class="con_box">
+      <div>
+        <p>1------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>2------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>3------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>4------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+    </div>
+   <div class="con_box">
+      <div>
+        <p>1------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>2------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>3------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+      <div>
+        <p>4------------------Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis vero quaerat porro. Numquam minus doloremque aut iste sapiente earum modi nesciunt assumenda, perspiciatis accusantium libero itaque voluptatem laudantium voluptatibus.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    
+    (function($) {
+        var tabCon = $('.tab_content');
+        var tab_1 = $('.tab_1');
+        var tab_2 = $('.tab_2');
+        
+        $('.tab_1').children().eq(0).show(); 
+        $('.tab_1').children().eq(0).siblings().hide();
+        $('.tab_2').children().eq(0).show();
+        $('.tab_2').children().eq(0).siblings().hide();
+        $('.tab_2').children().children().eq(0).show();
+        $('.tab_2').children().children().eq(0).siblings().hide();
+       
+        
+// ---------------------------------------------------------------
+        $('.tab_menu').children().on('click',function(e){
+          e.preventDefault();
+          var i = $(this).index();
+          tab_1.children().eq(i).show();
+          tab_1.children().eq(i).siblings().hide();
+
+        $('.tab_2').children().eq(i).show();
+        $('.tab_2').children().eq(i).siblings().hide();
+        $('.tab_2').children().eq(i).children().eq(0).show();
+        $('.tab_2').children().eq(i).children().eq(0).siblings().hide();
+        });
+// -----------------------------------------------------------------
+        var tabUl = $('.tab_1').children();
+        var li = tabUl.children('li');
+
+// -----------------------------------------------------------
+        li.on('click', function(){
+          var j = $(this).parent().index();
+          var i = $(this).index();
+          console.log('UL:', j);
+          console.log('LI:', i);
+          tab_2.children().eq(j).show();
+          tab_2.children().eq(j).siblings().hide();
+          tab_2.children().eq(j).children().eq(i).show();
+          tab_2.children().eq(j).children().eq(i).siblings().hide();          
+          tab_2.children().eq(j).siblings().children().hide();
+        });
+
+    })(this.jQuery);
+  </script>
+</body>
+</html>
