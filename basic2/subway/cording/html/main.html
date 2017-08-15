@@ -9,6 +9,7 @@
   <script src="../ie/PIE/PIE_IE9.js"></script>
   <![endif]-->
  
+
   
 <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
 <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
@@ -37,7 +38,7 @@
       </section>
       <h1><a href="file:///D:/work/git/hyebinJeon.github.io/basic2/subway/cording/html/main.html#"></a></h1>
       
-      <section id="gnbBox">
+      <section id="gnbBox" class="clearfix">
       <h2 class="hidden">gnb</h2>
         <nav id="gnb">
         <h3 class="hidden">gnb</h3>
@@ -46,11 +47,37 @@
             <li class="last_li_right"><a href="#">join</a></li>
           </ul>
           <ul class="menuBox">
-            <li><a href="#">menu</a></li>
-            <li><a href="#">프로모션</a></li>
-            <li><a href="#">서브웨이</a></li>
-            <li><a href="#">커뮤니티</a></li>
-            <li class="last_li_right"><a href="#">프랜차이즈</a></li>
+            <li>
+              <a href="#">menu</a>  
+              <ol><a href="#">추천메뉴</a></ol>
+              <ol><a href="#">베스트</a></ol>
+              <ol><a href="#">클래식</a></ol>
+              <ol><a href="#">샐러드</a></ol>
+              <ol><a href="#">사이드</a></ol>
+            </li>
+            <li>
+              <a href="#">프로모션</a>
+              <ol><a href="#">진행이벤트</a></ol>
+              <ol><a href="#">지난이벤트</a></ol>
+            </li>
+            <li>
+              <a href="#">서브웨이</a>
+              <ol><a href="#">why?</a></ol>
+              <ol><a href="#">지사안내</a></ol>
+              </li>
+            <li>
+              <a href="#">커뮤니티</a>
+              <ol><a href="#">뉴스&amp;공지</a></ol>
+              <ol><a href="#">cf</a></ol>
+              <ol><a href="#">고객문의</a></ol>
+              <ol><a href="#">채용안내</a></ol>
+            </li>
+            <li class="last_li_right">
+              <a href="#">프랜차이즈</a>
+              <ol><a href="#">가맹요건</a></ol>
+              <ol><a href="#">가맹절차</a></ol>
+              <ol><a href="#">가맹신청</a></ol>
+            </li>
           </ul>
         </nav> <!--Gnb-->
       </section>
@@ -64,9 +91,10 @@
           <button type="button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
           </div>
           <ul class="adBanner">
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
           </ul>
           <h3 class="hidden">광고배너</h3> 
         </section> <!--adbannerBox-->
@@ -193,7 +221,8 @@
     </footer><!--footer-->
 
   </div>
-
-
+<!--script-->
+<script src="../js/src/menuSlide.js"></script>
+<script src="../js/src/adBanner.js"></script>
 </body>
 </html>

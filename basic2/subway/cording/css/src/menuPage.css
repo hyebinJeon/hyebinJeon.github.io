@@ -9,7 +9,7 @@
       #lnbBox{width:150px; height:23px; float:right; margin-right:26px;}
         .lnb{width:160px; height:24px;}
           .lnb>li{width:68px; height:24px; text-transform:uppercase; text-align:center; font-size:1em; line-height:24px; margin-right:20px; float:left;}
-      #gnbBox{width:940px; padding:0 26px; font-size:1em; font-weight:700; color:#333; box-sizing:border-box; height:70px; background-color: #f8faf0; border-bottom:solid 1px #ccc; position:relative;}
+      #gnbBox{width:940px; padding:0 26px; font-size:1em; font-weight:700; color:#333; box-sizing:border-box; height:70px; background-color: #f8faf0; position:relative;}
       #gnbBox:before{content:" "; width: 100vw; height:inherit; background-color:inherit; left: 50%; margin-left: -50vw; position: absolute; z-index: -100; border-bottom:solid 1px #ccc;}
         .LoginJoinBox{width:102px; line-height:70px; height:70px; float:left;}
         .LoginJoinBox:hover{color:#005e15;}
@@ -27,21 +27,23 @@
 
 
       #contentBox{width:100%; height:auto;}
-        #innerBox{width: 100%; height:384px; padding:100px 0; box-sizing:border-box; background-repeat:no-repeat; background-image: url("../../img/innerBox.jpg");}
+        #innerBox{width: 100%; height:384px; padding:100px 0; box-sizing:border-box; background-repeat:no-repeat; border-top:solid 1px #ccc; background-image: url("../../img/innerBox.jpg");}
           #innerBox h3{font-family:arial;font-weight:bold; text-transform:uppercase; text-align:center; 
                         font-size:7em;}
           #innerBox p{text-align:center; margin:auto; color:#ccc;}
 
-        #menuWrap{width: 100%; height:auto; padding:160px 26px; box-sizing:border-box;}
-          #menuWrap>.menuArea{width:888px; height:auto; border-top:1px solid #999; 
+        #menuWrap{width:100%; height:auto; padding:130px 26px; box-sizing:border-box;}
+          #menuWrap>.menuArea{width:888px; height:auto; border-top:1.2px solid #999; 
                               position: relative; 
                               box-sizing:border-box;}
-            .tab_menu{width:888px; height:50px; background-color: #451;}
-            .tab_menu>li{width: 177px; height: 50px; float:left;}
+            .menuName{width:220px; height:26px; background-color:#ffba00; border-radius:12px;
+                     position:absolute; z-index:200; top:-14px; left:331px; padding:1px 70px;
+                     box-sizing:border-box;} 
+            .menuName>span{font-size:1.2em; font-family:arial; font-weight:bold; color:#333;}             
             .subwayMenu{width:888px; height:252px; margin:auto; margin-top:80px;}
-            .subwayMenu div>ul>li{display:block; width:216px; height:250px; float:left; margin-right:8px;} 
-            .subwayMenu div>ul>li dt{background-repeat:no-repeat;}      
-            .subwayMenu div>ul>li>a{display:block; width:216px; height:250px;}            
+            .subwayMenu ul>li{display:block; width:216px; height:250px; float:left; margin-right:8px; float:left;} 
+            .subwayMenu ul>li dt{background-repeat:no-repeat;}      
+            .subwayMenu ul>li>a{display:block; width:216px; height:250px;}            
             .subwayMenu dt{width:216px; height:220px; transition:all 500ms;}
               .subwayMenu li:nth-child(1) dt{background-image: url(../../img/menu_01.jpg);}
               .subwayMenu li:nth-child(2) dt{background-image: url(../../img/menu_02.jpg);}
@@ -52,9 +54,13 @@
               .subwayMenu li:nth-child(3):hover dt{background-image: url(../../img/menu_hover_03.jpg);}
               .subwayMenu li:nth-child(4):hover dt{background-image: url(../../img/menu_hover_04.jpg);}
             .subwayMenu dd{width:100%; height:30px; font-size:1em; line-height:30px; text-align:center;}
+
             .menuItWrap{width: 888px; height: 708px; margin:24px auto;}
               .menuImg{width: 434px; height: 330px; float:left; padding-top:30px; box-sizing:border-box;}
-               .menuImg .food{width: 434px; height: 330px; background-image: url("../../img/menu_big_01.png"); background-repeat:no-repeat;}        
+               .menuImg .food{width: 434px; height: 330px; background-image: url("../../img/menu_big_01.png"); background-repeat:no-repeat;}
+               .menuImg .food_02{width: 434px; height: 330px; background-image: url("../../img/menu_big_02.png"); background-repeat:no-repeat;}
+               .menuImg .food_03{width: 434px; height: 330px; background-image: url("../../img/menu_big_03.png"); background-repeat:no-repeat;}
+               .menuImg .food_04{width: 434px; height: 330px; background-image: url("../../img/menu_big_04.png"); background-repeat:no-repeat;}        
               .memuIt{width: 454px; height: 330px;float:left; color:#333; padding-right:30px; padding-top:50px; box-sizing:border-box;}
                 .memuIt dt{font-size:3em; font-weight:900; color:#333;}
                  .dd_01{font-size:1.4em; color:#333;}
@@ -75,8 +81,8 @@
         address{width:630px; height:20px; font-size:1em; display:block; margin-bottom:10px;}
         #footBox span{margin-left:10px;}
         #footBox p{font-size:10pt; margin-top:8px;}
-        .footlist{width:304px; height:30px; display:block;} 
-          .footlist>li{margin-right:10px; line-height:28px; display:block; height:28px; font-size:1em;
+        .footlist{width:308px; height:30px; display:block;} 
+          .footlist>li{margin-right:8px; line-height:28px; display:block; height:28px; font-size:1em;
                       text-align:center; padding:2px 0; box-sizing:border-box; float:left; background-color: #fff;}       
           .footlist>li:nth-child(1){width:72px;}       
           .footlist>li:nth-child(2){width:72px;}       

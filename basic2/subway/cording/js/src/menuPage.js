@@ -1,24 +1,32 @@
-/*menuPage.js*/    
-    (function($) {
-        var tabCon = $('.tab_content');
+(function($) {
+
         var tab_1 = $('.tab_1');
         var tab_2 = $('.tab_2');
         
-        $('.tab_1').children().eq(0).show(); 
-        $('.tab_1').children().eq(0).siblings().hide();
-        $('.tab_2').children().hide();
-        $('.tab_2').children().children().hide();
+        $('.tab_1').children().show(); 
+        $('.tab_2').children().children().eq(0).show();
+        $('.tab_2').children().children().eq(0).siblings().hide();
        
-        
+   
+        $('.tab_1').children().on('click',function(e){
+          e.preventDefault();
+          var i = $(this).index();
+          console.log(i);
+
+          tab_2.children().children().eq(i).show();
+          tab_2.children().children().eq(i).siblings().hide();
+        });
 // ---------------------------------------------------------------
-        $('.tab_menu').children().on('click',function(e){
+        /*$('.tab_menu').children().on('click',function(e){
           e.preventDefault();
           var i = $(this).index();
           tab_1.children().eq(i).show();
           tab_1.children().eq(i).siblings().hide();
 
-          tab_2.children().hide();
-          tab_2.children().children().hide();
+        $('.tab_2').children().eq(i).show();
+        $('.tab_2').children().eq(i).siblings().hide();
+        $('.tab_2').children().eq(i).children().eq(0).show();
+        $('.tab_2').children().eq(i).children().eq(0).siblings().hide();
         });
 // -----------------------------------------------------------------
         var tabUl = $('.tab_1').children();
@@ -36,5 +44,5 @@
           tab_2.children().eq(j).children().eq(i).siblings().hide();          
           tab_2.children().eq(j).siblings().children().hide();
         });
-
+*/
     })(this.jQuery);
