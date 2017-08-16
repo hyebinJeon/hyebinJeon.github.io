@@ -6,6 +6,9 @@
 	var gnbOl = gnbLi.find('ol');
 	gnbOl.hide();
 
+
+
+
 	gnb.on('mouseenter',function(e){
 		e.preventDefault();
 		gnbOl.stop().slideDown();

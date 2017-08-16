@@ -9,7 +9,6 @@ var btn_r = btn.children('button:last');
 var timed = 500;
 
 bannerBox.css({overflow:'hidden'});
-banner_group.children('li').show();
 
 var li_last = banner_group.children('li').last();
 banner_group.prepend(li_last);
