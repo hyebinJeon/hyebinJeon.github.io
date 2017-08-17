@@ -12,7 +12,7 @@ body{overflow-x: hidden;}
         #gnbBox:before{content:" "; width: 100vw; height:inherit; background-color:inherit; left: 50%; margin-left: -50vw; position: absolute; z-index: -100; border-bottom:solid 1px #ccc;}
          #gnb{width: 100%; height: auto; position:absolute;  z-index:1000; right: 0;}
          #gnb::before{content:" "; display: block; width: 100vw; height:100%; position:absolute; z-index:-100; 
-         background-color: #f8faf0; left: 50%; margin-left: -50vw;}
+         background-color: rgba(248,250,240,0.8); left: 50%; margin-left: -50vw;}
         .LoginJoinBox{width:102px; height:20px; float:left; padding:25px 0; /* background-color: #f8faf0;*/}
         .LoginJoinBox a:hover{color:#ffba00;}
         .LoginJoinBox li::first-letter{text-transform:uppercase;}
