@@ -34,28 +34,30 @@ body{overflow-x: hidden;}
 
 
       #contentBox{width:100%; height:auto;}
-        #innerBox{width: 100%; height:384px; padding:120px 0; box-sizing:border-box; background-repeat:no-repeat; background-image: url("../../img/innerBox.jpg");}
+        #innerBox{width: 100%; height:384px; padding:110px 0; box-sizing:border-box; background-repeat:no-repeat; background-image: url("../../img/innerBox.jpg");}
           #innerBox h3{font-family:arial;font-weight:bold; text-transform:uppercase; text-align:center; 
                         font-size:5.8em;}
           #innerBox p{text-align:center; margin:auto; color:#ccc;}
-        #menuWrap{width: 940px; height:auto; padding-top:146px; box-sizing:border-box; }
-          #menuWrap>.menuArea{width:850px; height:auto; border-top:3px solid #999; 
-                              position: relative; padding-top:70px; 
-                              box-sizing:border-box; margin:0 auto;}
-            .menuName{width:150px; height: 24px; text-align:center; 
-                      border-radius:5px; position:absolute; top:-12px; left:350px;
-                      z-index:100; background-color: #e4f8ee;}
-                            
-.gallery{width: 700px; height: auto; margin: 0 auto;}
+        #menuWrap{width:100%; height:auto; padding:130px 30px; box-sizing:border-box;}
+          #menuWrap>.menuArea{width:888px; height:auto; border:1.2px solid #999; 
+                              position: relative; 
+                              box-sizing:border-box;}
+            .menuName{width:220px; height:26px; background-color:#ffba00; border-radius:12px;
+                     position:absolute; z-index:200; top:-14px; left:331px; padding:1px 70px;
+                     box-sizing:border-box;} 
+            .menuName>span{font-size:1.2em; font-family:arial; font-weight:bold; color:#333;}             
 
-.gallery_box{width:600px; height:400px; border:2px solid #755; margin:1em auto;}
-.gallery_box img{width: 100%; height: auto;}
-.gallery_list{width:inherit; height:auto; margin-top:0.5em; background-color: #ccc;}
-.gallery_list > li{width: 130px; height:80px; margin:0.2em; display:inline-block; overflow: hidden;}
-.gallery_list button{width: 100%; height:auto; padding: 0; position: relative;}
-.gallery_list img{width: 100%; height: auto; transition:all 400ms;
-          position: absolute; left: 50%; margin-left: -50%; top: 0;}
-.gallery_list li:hover img{width: 120%; height: auto; margin-left: -60%;}
+            /* modal */
+            .modal_box{width:900px; height: 500px; position:fixed; background-color: #aaf; top:50%; left:50%; margin-top:-250px; margin-left:-450px; border-radius:0.7em; z-index:1500;}
+            .modal_bg{width:100%; height:100%; position:fixed; top:0; left:0; z-index:1400; background-color:rgba(0,0,0,0.4);}
+            .modal_dp{display: none;}
+            
+            #contentBox ul{width:100%; height:auto; margin:0 auto; padding:1.4em; box-sizing:border-box;}
+            #contentBox ul:after{content:" "; display:block; clear:both;}
+            #contentBox li{width:270px; height: 400px; float:left; margin:0.2em; border:0.1em solid #aaa; overflow:hidden;}
+            #contentBox button{padding:0; width:inherit; height:inherit;}
+            #contentBox span{width:0; height:0; display: block; position:absolute; z-index:-100; overflow:hidden;}                
+           
 
 #footBox{width:100%; height:200px; background-color: #e0e0e0; padding:60px 20px; box-sizing:border-box; position:relative;}
 #footBox:before{content:" ";  width: 100vw; height:inherit; background-color:inherit; top:0; left: 50%; margin-left: -50vw; position: absolute; z-index: -100;}
