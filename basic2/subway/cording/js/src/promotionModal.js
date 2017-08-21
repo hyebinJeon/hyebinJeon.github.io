@@ -31,40 +31,28 @@ gallery_list.on('click', function(e){
 //이미지 넣기 ++++++++++++++++++++++++++
 
 
-var url = '../img/gallery/';
+var url = '../img/';
 
 var image = [
   {
-    'small' : {'img':'adBanner.jpg' , 'alt':'1번째 사진'},
-    'big' : {'img': '' , 'alt':'1번째 큰 사진'}
+    'small' : {'img':'p03.jpg' , 'alt':'1번째 사진'},
+    'big' : {'img': 'p03_big.jpg' , 'alt':'1번째 큰 사진'}
   },
   {  
-    'small' : {'img':'j02.jpg' , 'alt':'2번째 사진'},
-    'big' : {'img': 'j02_big.jpg' , 'alt':'2번째 큰 사진'}
+    'small' : {'img':'p02.jpg' , 'alt':'2번째 사진'},
+    'big' : {'img': 'p02_big.jpg' , 'alt':'2번째 큰 사진'}
   },
   {
-    'small' : {'img':'j03.jpg' , 'alt':'3번째 사진'},
-    'big' : {'img': 'j03_big.jpg' , 'alt':'3번째 큰 사진'}
+    'small' : {'img':'p01.jpg' , 'alt':'3번째 사진'},
+    'big' : {'img': 'p01_big.jpg' , 'alt':'3번째 큰 사진'}
   },
   {  
-    'small' : {'img':'j04.jpg' , 'alt':'4번째 사진'},
-    'big' : {'img': 'j04_big.jpg' , 'alt':'4번째 큰 사진'}
+    'small' : {'img':'p04.jpg' , 'alt':'4번째 사진'},
+    'big' : {'img': 'p04_big.jpg' , 'alt':'4번째 큰 사진'}
   },
   {
-    'small' : {'img':'j05.jpg' , 'alt':'5번째 사진'},
-    'big' : {'img': 'j05_big.jpg' , 'alt':'5번째 큰 사진'}
-  },
-  {  
-    'small' : {'img':'j06.jpg' , 'alt':'6번째 사진'},
-    'big' : {'img': 'j06_big.jpg' , 'alt':'6번째 큰 사진'}
-  },
-  {
-    'small' : {'img':'j07.jpg' , 'alt':'7번째 사진'},
-    'big' : {'img': 'j07_big.jpg' , 'alt':'7번째 큰 사진'}
-  },
-  {  
-    'small' : {'img':'j08.jpg' , 'alt':'8번째 사진'},
-    'big' : {'img': 'j08_big.jpg' , 'alt':'8번째 큰 사진'}
+    'small' : {'img':'p05.jpg' , 'alt':'5번째 사진'},
+    'big' : {'img': 'p05_big.jpg' , 'alt':'5번째 큰 사진'}
   }
 ];
 

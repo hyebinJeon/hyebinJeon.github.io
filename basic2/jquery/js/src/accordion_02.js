@@ -22,11 +22,6 @@
   var conBoxDl = conBox.children('dl');
   var conDt = conBoxDl.children('dt');
   var conDd = conBoxDl.children('dd');
-
-  var ddWidth = parseInt(conDd.eq(0).width());
-  var ddPdL = parseInt(conDd.eq(0).css('paddingLeft'));
-  var ddPdR = parseInt(conDd.eq(0).css('paddingRight'));
-
   
   var ddFullWidth = conDd.eq(0).innerWidth(); //가로값 파악하기 위한것 
   
