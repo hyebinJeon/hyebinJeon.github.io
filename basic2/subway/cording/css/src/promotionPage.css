@@ -34,21 +34,21 @@ body{overflow-x: hidden;}
 
 
       #contentBox{width:100%; height:auto;}
-        #innerBox{width: 100%; height:384px; padding:110px 0; box-sizing:border-box; background-repeat:no-repeat; background-image: url("../../img/innerBox.jpg");}
+        #innerBox{width: 100%; height:384px; padding:110px 0; box-sizing:border-box; background-repeat:no-repeat; background-image: url("../../img/innerBox.jpg"); border-top:solid 1px #ccc;}
           #innerBox h3{font-family:arial;font-weight:bold; text-transform:uppercase; text-align:center; 
                         font-size:5.8em;}
           #innerBox p{text-align:center; margin:auto; color:#ccc;}
-        #menuWrap{width:100%; height:auto; padding:130px 30px; box-sizing:border-box;}
-          #menuWrap>.menuArea{width:888px; height:auto; border:1.2px solid #999; 
-                              position: relative; 
+        #menuWrap{width:100%; height:auto; padding:130px 26px; box-sizing:border-box;}
+          #menuWrap>.menuArea{width:888px; height:auto; border-top:1.2px solid #999; 
+                              position: relative; padding-top:30px;
                               box-sizing:border-box;}
             .menuName{width:220px; height:26px; background-color:#ffba00; border-radius:12px;
                      position:absolute; z-index:200; top:-14px; left:331px; padding:1px 70px;
                      box-sizing:border-box;} 
-            .menuName>span{font-size:1.2em; font-family:arial; font-weight:bold; color:#333;}             
+            .menuName>p{width:76px; height:26px; font-size:1.2em; font-weight:bold; color:#333; position:absolute; z-index:500; }             
 
             /* modal */
-            .modal_box{width:900px; height: 500px; position:fixed; background-color: #aaf; top:50%; left:50%; margin-top:-250px; margin-left:-450px; border-radius:0.7em; z-index:1500;}
+            .modal_box{width:600px; height:760px; position:fixed; background-color: #aaf; top:36%; left:55%; margin-top:-250px; margin-left:-450px; border-radius:0.7em; z-index:1500;}
             .modal_bg{width:100%; height:100%; position:fixed; top:0; left:0; z-index:1400; background-color:rgba(0,0,0,0.4);}
             .modal_dp{display: none;}
             

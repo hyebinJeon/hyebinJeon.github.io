@@ -35,8 +35,8 @@ var url = '../img/gallery/';
 
 var image = [
   {
-    'small' : {'img':'adBanner.jpg' , 'alt':'1번째 사진'},
-    'big' : {'img': '' , 'alt':'1번째 큰 사진'}
+    'small' : {'img':'j01.jpg' , 'alt':'1번째 사진'},
+    'big' : {'img': 'j01_big.jpg' , 'alt':'1번째 큰 사진'}
   },
   {  
     'small' : {'img':'j02.jpg' , 'alt':'2번째 사진'},

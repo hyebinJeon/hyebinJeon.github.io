@@ -45,9 +45,9 @@ body{overflow-x: hidden;}
                               position: relative; 
                               box-sizing:border-box;}
             .menuName{width:220px; height:26px; background-color:#ffba00; border-radius:12px;
-                     position:absolute; z-index:200; top:-14px; left:331px; padding:1px 70px;
+                     position:absolute; z-index:200; top:-14px; left:331px; padding:1px 72px;
                      box-sizing:border-box;} 
-            .menuName>span{font-size:1.2em; font-family:arial; font-weight:bold; color:#333;}             
+            .menuName>span{font-size:1.2em; font-weight:bold; color:#333;}             
             .subwayMenu{width:888px; height:252px; margin:auto; margin-top:80px;}
             .subwayMenu ul>li{display:block; width:216px; height:250px; float:left; margin-right:8px; float:left;} 
             .subwayMenu ul>li dt{background-repeat:no-repeat;}      
