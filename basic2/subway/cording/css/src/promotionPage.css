@@ -43,9 +43,9 @@ body{overflow-x: hidden;}
                               position: relative; padding-top:30px;
                               box-sizing:border-box;}
             .menuName{width:220px; height:26px; background-color:#ffba00; border-radius:12px;
-                     position:absolute; z-index:200; top:-14px; left:331px; padding:1px 70px;
+                     position:absolute; z-index:200; top:-14px; left:331px; padding:1px;
                      box-sizing:border-box;} 
-            .menuName>p{width:76px; height:26px; font-size:1.2em; font-weight:bold; color:#333; position:absolute; z-index:500; }             
+            .menuName>p{width:110px; height:26px; font-size:1.2em; margin:0 auto; font-weight:bold; color:#333; z-index:500; }             
 
             /* modal */
             .modal_box{width:600px; height:760px; position:fixed; background-color: #aaf; top:36%; left:55%; margin-top:-250px; margin-left:-450px; border-radius:0.7em; z-index:1500;}
