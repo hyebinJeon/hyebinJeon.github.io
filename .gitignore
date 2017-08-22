@@ -23,3 +23,5 @@ basic2/graphic/photoshop/template/*
 *.psd
 *.jpg
 *.jpge
+*.egg
+*.zip
