@@ -25,3 +25,5 @@ basic2/graphic/photoshop/template/*
 *.jpge
 *.egg
 *.zip
+
+**/node_modules/
