@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<script src="http://code.jquery.com/jquery.min.js"></script>
+
+  <title>my title</title>  
+</head>
+<body>
+  #wrap
+  <script>
+    (function($){
+      //유틸리티 메서드 : 선택자를 먼저 처리하는 것이 아닌, 기능을 먼저사용하도록 처리
+      $.getJSON('./test.json',function(data){
+        var jsonFile = data;
+        console.log(jsonFile);
+      });
+    })(this.jQuery);
+  </script>
+</body>
+</html>

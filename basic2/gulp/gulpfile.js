@@ -10,14 +10,23 @@ var path = {
   sass:{
     src: url.before + '/scss/**/*.scss',
     dist: url.after + '/css'
-  }
+  },
+  html: url.after + '**/*.html'
 };
+
+// html -----------------------------
+gulp.task('html', function(){
+  return gulp.src(path.html)
+            .pipe(sync.stream());
+});
+
 
 // sass 설정
 gulp.task('sass', function () {
   return gulp.src(path.sass.src)
              .pipe(sass.sync().on('error', sass.logError))
-             .pipe(gulp.dest(path.sass.dist));
+             .pipe(gulp.dest(path.sass.dist))
+             .pipe(sync.stream());
 });
 
 //서버생성(browser-sync) ---------------------------------
@@ -33,6 +42,7 @@ gulp.task('sync',function(){
 //실시간 감지++++++++++++
 gulp.task('watch', function () {
   gulp.watch(path.sass.src, ['sass']);
+  gulp.watch(path.html,['html']);
 });
 
 //gulp명령어를 입력하면 바로 수행하는 기능+++++++++++++

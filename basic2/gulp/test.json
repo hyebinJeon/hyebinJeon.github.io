@@ -1,0 +1,6 @@
+//test.json
+
+[
+  {"name" : "xido", "gender":"male", "height":"190"},
+  {"name" : "xida", "gender":"female", "height":"170"}
+]
