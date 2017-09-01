@@ -1,0 +1,11 @@
+/*page_XY_02.css*/
+#wrap{width: 100%; min-width:960px; height:auto; background-color: #ddd;}
+  #headBox{width: 100%; height: 50px; background-color: #afc;}
+  #imgMove{width:100%; height:700px; background-color: #dda; padding:2em; box-sizing:border-box;}
+  #imgMove>p{width: 700px; height:1.4em; background-color: #fff; border:2px solid #777; margin:0 auto; margin-bottom:1em;}
+  #imgMove>p>strong{height:100%; float:left; border:1px solid #777; margin-right:0.5em;}
+  #imgMove>p>span{color:#07f;}
+  .my_img{width: 600px; height: 500px; margin:0 auto; border-radius:1em; background-color: #fff;}
+
+#contentBox{width: 960px; height: 800px; margin:0 auto; background-color: #c99;}
+#footBox{width: 100%; height: 50px; background-color: #777;}
