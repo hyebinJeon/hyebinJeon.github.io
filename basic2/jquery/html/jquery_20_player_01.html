@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/src/player_01.css" />
+
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>my title</title>  
+</head>
+<body>
+  <div id="wrap">
+
+    <header id="headBox">
+      <h1>music and video test</h1>
+    </header>
+
+    <section id="videoBox">
+      <div id="video">
+        <video muted preload autoplay>
+          <source src="../multi/movie/WebsiteDesign Master.mp4" type="video/mp4" />
+          <!--<source src="" type="movie/mp4" />-->
+          <!--<source src="" type="movie/ogg" />-->
+          <!--<source src="" type="movie/webM" />-->
+          <p>현재 사용하고 계신 브라우저는 동영상을 볼 수 없는 브라우저입니다.
+              최신브라우저 또는 <a href="http://google.com/chrome">크롬브라우저</a>를 설치하고 사용하세요.</p>
+        <!--
+        controps: 재생기 직접 컨트롤할수 있는 기능
+        muted:무음처리
+        preload:로딩
+        autoplay:자동재생
+        voulume:0~1볼륨컨드톨
+        poster:미리보여주는 이미지-->
+        </video>
+      </div>
+      <div class="playButton">
+        <button type="button" class="play">재생</button>
+        <button type="button" class="pause">일시정지</button>
+      </div>
+    </section>
+
+    <section id="musicBox">
+      <div id="music">
+        <audio autoplay>
+          <source src="../multi/music/01- In Da Club [Explicit]" type="audio/mp3">
+          <!--<source src="../multi/music/01- In Da Club [Explicit].mp3" type="audio/mp3">-->
+          <!--<source src="../multi/music/01- In Da Club [Explicit].mp3" type="audio/mp3">-->
+          <!--<source src="../multi/music/01- In Da Club [Explicit].mp3" type="audio/mp3">-->
+          <p>현재 브라우저는 음악 재생이 안되는 브라우저입니다</p>
+        </audio>
+      </div>
+       <div class="playButton">
+        <button type="button" class="play">재생</button>
+        <button type="button" class="pause">일시정지</button>
+      
+        <button type="button" class="prev">이전 곡</button>
+        <button type="button" class="next">다음 곡</button>
+      </div>
+    </section>
+
+    <article id="contentBox"></article>
+    
+    <footer id="footBox"></footer>
+  
+  </div><!--wrap-->
+  <script src="../js/src/player_01.js"></script>
+</body>
+</html>

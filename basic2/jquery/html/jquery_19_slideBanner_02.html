@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!--[if let IE 9]>
+  <script src="../ie/html5shiv/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="../ie/ie7/IE9.js"></script>
+  <script src="../ie/PIE/PIE_IE9.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
+<link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/src/jquery_19_slideBanner_02.css" />
+<script src="../js/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery/jquery-ui.min.js"></script>
+  <title>my title</title>  
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>slide banner 만들기 이해</h1>
+    </header>
+    
+    <section id="slideBanner">
+      <div class="slide_btn">
+        <div class="l_btn">&lt;</div>
+        <div class="r_btn">&gt;</div>
+      </div>
+    <!--slide banner 담는 곳 이미지 4개 생성-->
+      <ul id="bannerBox">
+        <li class="slide_01">slide_01</li>
+        <li class="slide_02">slide_02</li>
+        <li class="slide_03">slide_03</li>
+        <li class="slide_04">slide_04</li>
+      </ul><!--이미지애드배너-->
+      <!--banner와 같이 움직이며, 내용은 여기에 설명이 담김-->
+      <ol class="indicator">
+        <li class="indi_01 active"><button type="button"><span class="hidden">설명</span></button></li>
+        <li class="indi_02"><button type="button"><span class="hidden">설명</span></button></li>
+        <li class="indi_03"><button type="button"><span class="hidden">설명</span></button></li>
+        <li class="indi_04"><button type="button"><span class="hidden">설명</span></button></li>
+      </ol><!--인디케이터-->
+    </section>
+    <article id="contentBox">
+      <h2>contentBox</h2>
+    </article>
+    
+    <footer id="footBox">
+      <h2>footBox</h2>
+    </footer>
+  </div>
+  <script src="../js/src/jquery_19_slideBanner_02.js"></script>
+</body>
+</html>
