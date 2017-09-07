@@ -1,0 +1,61 @@
+/*main.css*/
+
+#wrap{width: 960px; height: auto; background-color: #ccc; margin:0 auto}
+  #headBox{width: 100%; height: 60px; background-color: #ff0066; position:relative;}
+    h1{width: 150px; height:inherit; float:left; padding:10px; box-sizing: border-box; background-color: #777;}
+      .logoimg{width: 130px; height: 40px; background-image:  url("../../img/header/logo.png"); background-repeat:no-repeat;}
+    #right{width: 200px; height: 60px; float:right; padding:5px 40px 5px 0px; box-sizing:border-box;}
+    #lnbBox{width: 115px; height: 18px; float:right;  margin-bottom:8px; color:#fff;}
+      .lnb{width: 100%; height:inherit;}
+        .lnb>li{height:inherit; float:left; margin-right:10px;}
+          .lnb>li:nth-child(1){width:35px;}
+          .lnb>li:nth-child(2){width:30px;}
+          .lnb>li:nth-child(3){width:30px;}
+      .search{width: 145px; height:20px; float:right; background-image: url("../../img/header/search.png");}
+
+    #gnbBox{width: 810px; height: 30px; background-color: transparent; border-bottom:1px solid #777; position:absolute; z-index:100; bottom:-30px; right:0;}
+      .gnb{width:100%; height:inherit; padding:3px 15px;}
+        .gnb>li{width:50px; float:left; margin-right:70px; color:#ff0066; font-weight:bold;}
+       .gnb>li:nth-child(1){width:63px;}
+       .gnb>li:nth-child(2){width:78px;}
+       .gnb>li:nth-child(3){width:75px;}
+       .gnb>li:nth-child(4){width:97px;}
+  
+  #adBanner{width:100%; height: 490px; position:relative;}
+    #adBannerLi{width:400%; height:100%; margin-left:-100%;}
+      #adBannerLi>li{width: 25%; height:100%; float:left;}
+        #adBannerLi>li.banner_li_1{background-image: url("../../img/banner/banner_04.png");}
+        #adBannerLi>li.banner_li_2{background-image: url("../../img/banner/banner_01.png");}
+        #adBannerLi>li.banner_li_3{background-image: url("../../img/banner/banner_02.png");}
+        #adBannerLi>li.banner_li_4{background-image: url("../../img/banner/banner_03.png");}
+
+
+
+
+  #button{width:100%; height:0; position:absolute; top:50%;}
+    #button>div{width:58px; height: 76px;}
+    .button_L{background-image: url("../../img/banner/left_btn.png"); float:left;}
+    .button_L:hover{background-image: url("../../img/banner/left_btn_on.png"); float:left;}
+    .button_R{background-image: url("../../img/banner/right_btn.png"); float:right;}
+    .button_R:hover{background-image: url("../../img/banner/right_btn_on.png"); float:right;}
+ 
+  #articleBox{width: 100%; height: 360px; background-color: #ff0066; padding:30px 30px; box-sizing:border-box;}
+    .more{width: 900px; height: 20px; margin-bottom:15px;}
+      .more>p{color:#fff; font-style:italic; font-weight:bold; width: 68px; height: 20px; float:left;}
+      .more>.border{width:800px; height: 20px; border-bottom:1px solid #fff; box-sizing:border-box; float:left; margin-right:12px;}
+      .more>.plus{width: 20px; height: 20px; background-image: url("../../img/article/more_btn.png");float:left;}
+    .article{width: 900px; height: 280px;}
+      .article>li{height:inherit; float:left; background-repeat:no-repeat;}
+      .article_01{width:360px; background-image: url("../../img/article/article_box_01.png"); padding:20px 40px; box-sizing:border-box;}
+        .article_01>.lnb_2Box{width: 110px; height: 220px; background-color:transparent; float:right;}
+          .article_01>.lnb_2Box>li{width:94px; height:22px; color:#fff; border-bottom:1px solid #fff; margin-bottom:20px; font-weight:bold;}
+            .article_01>.lnb_2Box>li:nth-child(3){width:80px;}
+            .article_01>.lnb_2Box>li:nth-child(4){width:108px;}
+            .article_01>.lnb_2Box>li:nth-child(5){width:108px;}
+            .article_01>.lnb_2Box>li:nth-child(6){width:50px;}
+
+      .article_02{width:260px; background-image: url("../../img/article/article_box_02.png");}
+      .article_03{width:280px; height:inherit;background-image: url("../../img/article/article_box_03.png"); padding:15px 10px; box-sizing:border-box;}
+        .article_03>div{width: 100%; height:100%; overflow:hidden;}
+        .article_03>div>p{width:100%; padding-right:3rem; height:inherit; overflow-y:auto;}
+  #footBox{width: 100%; height: 120px; background-color: #ccc;}

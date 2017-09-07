@@ -27,3 +27,7 @@ basic2/graphic/photoshop/template/*
 *.zip
 
 **/node_modules/
+
+*.mp3
+*.mp4
+*.png
