@@ -1,0 +1,21 @@
+/*! reset.scss*/
+@charset "uft-8";
+  html,body{width:100%; height:100%;}
+  html, body, h1, h2, h3, h4, h5, h6,
+  p, div, pre, form, fieldset, hr,
+  ul,ol,li,dl,dt,dd{margin: 0; padding: 0;}
+
+  ul,ol,li{list-style:none;}
+  input[type="text"],input[type="password"]{border:none;}
+  button,input{background-color: transparent; padding:0; border:0;}
+  input[type="text"],input[type="password"],
+  input[type="search"],input[type="email"],input[type="tel"]{
+    border:1px solid #777; text-indent:5px;
+  }
+  button,input[type="submit"],input[type="reset"],input[type="button"]{
+    cursor:pointer;
+  }
+  a{text-decoration:none; color:inherit;}
+  a:hover{color:#a00;}
+/*html5 reset*/
+  header,nav,aside,article,section,footer,main,figure{display:block; margin:0; padding:0;}

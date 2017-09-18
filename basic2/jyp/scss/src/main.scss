@@ -1,0 +1,57 @@
+//main.scss
+
+@import "../base/nomalize.scss";
+@import "../base/reset.scss";
+@import "../base/mixin.scss";
+@import "../base/var.scss";
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#wrap{@include size($h:100%,$c:$gray); min-width:960px; margin:0 auto; position:relative;}//#wrap
+  h2{@include size($w:none, $h:100%); font-size:4em; float:left; margin-left:1.5em; color:$strong; float:left;}
+  h2:first-letter{text-transform:uppercase;}
+  .plusBox{float:left; font-size:4em; font-weight:50; margin-left:1em; color:$gray;}
+  #headBox{@include size($h:100px,$c:transparent); position:absolute; top:0px; z-index:100;}
+  #adBanner{@include size($h:100%,$c:#c52); margin-bottom:20em;
+    >#musicVideo{@include size($w:100%, $h:100%); overflow:hidden;}
+    >#musicVideo>video{@include size($w:100%,$c:#514);}
+    }//adBanner
+
+  #newsWrap{@include size($h:100%); margin-bottom:25em;
+    div.h2Box{@include size($h:15%);}
+    .plus{@include size($w:80px,$h:80px,$c:#c4a);}
+    #newsBox{@include size($w:65%,$h:85%); margin:0 auto;
+      li{@include size($w:33.3333%,$h:100%); float:left;}
+      li>div{@include size($h:90%); background-size:cover;}
+      li>button{@include size($h:10%, $c:#ac8);}
+        .newsP_01{@include link($f:"mainPage/news/jjprojectB.png");
+          &:hover{@include link($f:"mainPage/news/jjproject.png");}}
+        .newsP_02{@include link($f:"mainPage/news/suziB.png");
+          &:hover{@include link($f:"mainPage/news/suzi.png");}}
+        .newsP_03{@include link($f:"mainPage/news/day6B.png");
+          &:hover{@include link($f:"mainPage/news/day6.png");}}
+   
+      }//newsBox
+    }//newsWrap
+
+  #artistWrap{@include size($h:100%);margin-bottom:25em;
+    div.h2Box{@include size($h:15%);}
+    #artistBox{@include size($h:85%);
+      #artistBoxT{@include size($h:50%, $c:#dad);
+        li{@include size($w:25%, $h:100%) float:left;}
+          .artist_01{@include link($f:"mainPage/artist/jypB.png");}
+          .artist_02{@include link($f:"mainPage/artist/suziB.png");}
+          .artist_03{@include link($f:"mainPage/artist/got7B.png");}
+          .artist_04{@include link($f:"mainPage/artist/backB.png");}
+        }//BoxTop 
+      #artistBoxB{@include size($h:50%, $c:#ada);
+        li{@include size($w:25%, $h:100%) float:left;}
+          .artist_05{@include link($f:"mainPage/artist/twiceB.png");}
+          .artist_06{@include link($f:"mainPage/artist/2pmB.png");}
+          .artist_07{@include link($f:"mainPage/artist/day6B.png");}
+          .artist_08{@include link($f:"mainPage/artist/jjprojectB.png");}
+        }//BoxBottom
+    }//artistBox
+    }//artistWrap
+  #snsWrap{@include size($h:50%, $c:#a18); margin-bottom:25em;}
+  footer{@include size($h:5%, $c:$black);}

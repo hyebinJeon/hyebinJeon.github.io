@@ -1,0 +1,11 @@
+/*! nomalize.scss */
+@charset "utf-8";
+
+/*namalize 일반적으로 자주 사용하는 기법을 내가 필요할 때 꺼내쓰는거*/
+  .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
+  .hidden{display:inline-block; width:0; height:0; float:left; overflow:hidden;}
+  #wrap .first_li{margin-left:0;}
+  #wrap .last_li{margin-bottom:0;}
+  #wrap .last_li_right{margin-right:0;}
+  .hidden_wrap a>span{width: 0; height: 0; display: block; overflow:hidden;}
+  

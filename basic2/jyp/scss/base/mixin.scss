@@ -1,0 +1,11 @@
+// mixin.scss
+
+@mixin size($w:100%, $h:auto, $c:none){
+  width:$w; height:$h; background-color:#{$c};
+}
+
+@mixin link($u:$imgF, $f:none, $p:center){
+        background-image: url($u + $f);
+        background-repeat: no-repeat; 
+        background-position:$p;
+        overflow:hidden;}
