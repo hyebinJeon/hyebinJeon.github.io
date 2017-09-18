@@ -113,7 +113,8 @@ h2:first-letter {
   width: 100%;
   height: 100%;
   background-color: #c52;
-  margin-bottom: 20em; }
+  margin-bottom: 20em;
+  position: relative; }
   #adBanner > #musicVideo {
     width: 100%;
     height: 100%;
@@ -123,6 +124,15 @@ h2:first-letter {
     width: 100%;
     height: auto;
     background-color: #514; }
+  #adBanner #scroll {
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left:50%;
+    bottom:0;
+    background-color: #a2d;
+    writing-mode:tb-rl;}
+    #scroll>.scrollBorder{height:30px; border:solid #333 1px; margin-top:50px;}
 
 #newsWrap {
   width: 100%;
@@ -131,15 +141,15 @@ h2:first-letter {
   margin-bottom: 25em; }
   #newsWrap div.h2Box {
     width: 100%;
-    height: 15%;
+    height: 10%;
     background-color: none; }
   #newsWrap .plus {
     width: 80px;
     height: 80px;
     background-color: #c4a; }
   #newsWrap #newsBox {
-    width: 65%;
-    height: 85%;
+    width: 80%;
+    height: 90%;
     background-color: none;
     margin: 0 auto; }
     #newsWrap #newsBox li {
@@ -165,7 +175,8 @@ h2:first-letter {
         background-image: url("../../img/Full/mainPage/news/jjproject.png");
         background-repeat: no-repeat;
         background-position: center;
-        overflow: hidden; }
+        overflow: hidden;
+        transition: all 300ms ease-out; }
     #newsWrap #newsBox .newsP_02 {
       background-image: url("../../img/Full/mainPage/news/suziB.png");
       background-repeat: no-repeat;
@@ -194,11 +205,11 @@ h2:first-letter {
   margin-bottom: 25em; }
   #artistWrap div.h2Box {
     width: 100%;
-    height: 15%;
+    height: 10%;
     background-color: none; }
   #artistWrap #artistBox {
     width: 100%;
-    height: 85%;
+    height: 90%;
     background-color: none; }
     #artistWrap #artistBox #artistBoxT {
       width: 100%;

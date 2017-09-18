@@ -12,20 +12,21 @@
   h2:first-letter{text-transform:uppercase;}
   .plusBox{float:left; font-size:4em; font-weight:50; margin-left:1em; color:$gray;}
   #headBox{@include size($h:100px,$c:transparent); position:absolute; top:0px; z-index:100;}
-  #adBanner{@include size($h:100%,$c:#c52); margin-bottom:20em;
-    >#musicVideo{@include size($w:100%, $h:100%); overflow:hidden;}
+  #adBanner{@include size($h:100%,$c:#c52); margin-bottom:20em; position:relative;
+    >#musicVideo{@include size($w:100%, $h:100%); overflow:hidden;} 
     >#musicVideo>video{@include size($w:100%,$c:#514);}
+    #scroll{width: 10px; height: 100px; background-color: #a2d;}
     }//adBanner
 
   #newsWrap{@include size($h:100%); margin-bottom:25em;
-    div.h2Box{@include size($h:15%);}
+    div.h2Box{@include size($h:10%);}
     .plus{@include size($w:80px,$h:80px,$c:#c4a);}
-    #newsBox{@include size($w:65%,$h:85%); margin:0 auto;
+    #newsBox{@include size($w:80%,$h:90%); margin:0 auto;
       li{@include size($w:33.3333%,$h:100%); float:left;}
       li>div{@include size($h:90%); background-size:cover;}
       li>button{@include size($h:10%, $c:#ac8);}
         .newsP_01{@include link($f:"mainPage/news/jjprojectB.png");
-          &:hover{@include link($f:"mainPage/news/jjproject.png");}}
+          &:hover{@include link($f:"mainPage/news/jjproject.png"); transition:all 300ms ease-out;}}
         .newsP_02{@include link($f:"mainPage/news/suziB.png");
           &:hover{@include link($f:"mainPage/news/suzi.png");}}
         .newsP_03{@include link($f:"mainPage/news/day6B.png");
@@ -35,8 +36,8 @@
     }//newsWrap
 
   #artistWrap{@include size($h:100%);margin-bottom:25em;
-    div.h2Box{@include size($h:15%);}
-    #artistBox{@include size($h:85%);
+    div.h2Box{@include size($h:10%);}
+    #artistBox{@include size($h:90%);
       #artistBoxT{@include size($h:50%, $c:#dad);
         li{@include size($w:25%, $h:100%) float:left;}
           .artist_01{@include link($f:"mainPage/artist/jypB.png");}
