@@ -76,7 +76,7 @@ header, nav, aside, article, section, footer, main, figure {
 #wrap {
   width: 100%;
   height: 100%;
-  background-color: #CCCCCC;
+  background-color: none;
   min-width: 960px;
   margin: 0 auto;
   position: relative; }
@@ -85,7 +85,7 @@ h2 {
   width: none;
   height: 100%;
   background-color: none;
-  font-size: 4em;
+  font-size: 3.5em;
   float: left;
   margin-left: 1.5em;
   color: #00a0e9;
@@ -95,34 +95,143 @@ h2:first-letter {
   text-transform: uppercase; }
 
 .plusBox {
-  float: left;
-  font-size: 4em;
-  font-weight: 50;
-  margin-left: 1em;
-  color: #CCCCCC; }
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  background-color: none;
+  color: #CCCCCC;
+  margin-left: 0.8em;
+  font-size: 3em; }
+  .plusBox:hover {
+    transform: scale(1.5);
+    transition: all 300ms ease-in;
+    color: #00b4e7; }
 
 #headBox {
   width: 100%;
-  height: 100px;
+  height: 120px;
   background-color: transparent;
   position: absolute;
   top: 0px;
-  z-index: 100; }
+  z-index: 100;
+  padding: 2.5em 3em 0;
+  box-sizing: border-box; }
+  #headBox h1 {
+    width: 190px;
+    height: 70px;
+    background-color: none;
+    background-image: url("../../img/Full/jypLogo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    float: left; }
+    #headBox h1 > a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-color: none;
+      cursor: pointer; }
+  #headBox #gnbLogo {
+    width: 50px;
+    height: 5px;
+    background-color: #00a0e9;
+    float: right;
+    right: 3em;
+    position: fixed;
+    z-index: 200;
+    margin-top: 10px; }
+    #headBox #gnbLogo a {
+      width: 50px;
+      height: 30px;
+      background-color: none;
+      margin-top: -13px;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 10px; }
+    #headBox #gnbLogo:before {
+      content: " ";
+      display: block;
+      width: 50px;
+      height: 5px;
+      background-color: #00a0e9;
+      position: absolute;
+      top: 10px; }
+    #headBox #gnbLogo:after {
+      content: " ";
+      display: block;
+      width: 50px;
+      height: 5px;
+      background-color: #00a0e9;
+      position: absolute;
+      top: -10px; }
+  #headBox #gnbBox {
+    width: 100vw;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba(5, 5, 5, 0.5);
+    position: fixed;
+    z-index: 100; }
 
 #adBanner {
   width: 100%;
   height: 100%;
-  background-color: #c52;
+  background-color: none;
   margin-bottom: 20em; }
   #adBanner > #musicVideo {
     width: 100%;
     height: 100%;
-    background-color: none;
-    overflow: hidden; }
-  #adBanner > #musicVideo > video {
-    width: 100%;
-    height: auto;
-    background-color: #514; }
+    background-color: #00b4e7;
+    overflow: hidden;
+    position: relative; }
+    #adBanner > #musicVideo video {
+      width: 100%;
+      height: 100%;
+      background-color: #00b4e7;
+      -webkit-object-fit: cover;
+      -moz-object-fit: cover;
+      -ms-object-fit: cover;
+      -o-object-fit: cover;
+      object-fit: cover; }
+    #adBanner > #musicVideo #moreMv {
+      width: 75px;
+      height: 24px;
+      background-color: none;
+      position: absolute;
+      z-index: 50;
+      bottom: 5em;
+      bottom: 50%;
+      right: 0;
+      margin-left: -25px;
+      color: #fff; }
+      #adBanner > #musicVideo #moreMv span {
+        text-transform: uppercase; }
+      #adBanner > #musicVideo #moreMv:hover {
+        font-size: 1.1em;
+        transition: all 400ms ease-in; }
+      #adBanner > #musicVideo #moreMv:before {
+        content: " ";
+        display: block;
+        margin-top: 25px;
+        border-top: dashed #fff 1px; }
+    #adBanner > #musicVideo #scroll {
+      width: 50px;
+      height: 24px;
+      background-color: none;
+      position: absolute;
+      z-index: 50;
+      bottom: 5em;
+      left: 50%;
+      margin-left: -25px;
+      color: #fff;
+      text-transform: uppercase; }
+      #adBanner > #musicVideo #scroll:after {
+        content: " ";
+        display: block;
+        margin-left: 25px;
+        width: 1px;
+        height: 5.2em;
+        background-color: #fff; }
 
 #newsWrap {
   width: 100%;
@@ -133,10 +242,6 @@ h2:first-letter {
     width: 100%;
     height: 15%;
     background-color: none; }
-  #newsWrap .plus {
-    width: 80px;
-    height: 80px;
-    background-color: #c4a; }
   #newsWrap #newsBox {
     width: 65%;
     height: 85%;
@@ -151,7 +256,8 @@ h2:first-letter {
       width: 100%;
       height: 90%;
       background-color: none;
-      background-size: cover; }
+      background-size: cover;
+      transition: all 400ms ease-out; }
     #newsWrap #newsBox li > button {
       width: 100%;
       height: 10%;
@@ -203,69 +309,222 @@ h2:first-letter {
     #artistWrap #artistBox #artistBoxT {
       width: 100%;
       height: 50%;
-      background-color: #dad; }
+      background-color: none; }
       #artistWrap #artistBox #artistBoxT li {
         width: 25%;
         height: 100%;
         background-color: none;
-        float: left; }
+        float: left;
+        transition: all 200ms ease-in; }
+        #artistWrap #artistBox #artistBoxT li p {
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 2.5em;
+          word-spacing: 0.3em;
+          font-weight: bold;
+          line-height: 10em;
+          text-align: center; }
       #artistWrap #artistBox #artistBoxT .artist_01 {
         background-image: url("../../img/Full/mainPage/artist/jypB.png");
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden; }
+        #artistWrap #artistBox #artistBoxT .artist_01:hover {
+          background-image: url("../../img/Full/mainPage/artist/jyp.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          overflow: hidden; }
       #artistWrap #artistBox #artistBoxT .artist_02 {
         background-image: url("../../img/Full/mainPage/artist/suziB.png");
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden; }
+        #artistWrap #artistBox #artistBoxT .artist_02:hover {
+          background-image: url("../../img/Full/mainPage/artist/suzi.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          overflow: hidden; }
       #artistWrap #artistBox #artistBoxT .artist_03 {
         background-image: url("../../img/Full/mainPage/artist/got7B.png");
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden; }
+        #artistWrap #artistBox #artistBoxT .artist_03:hover {
+          background-image: url("../../img/Full/mainPage/artist/got7.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          overflow: hidden; }
       #artistWrap #artistBox #artistBoxT .artist_04 {
         background-image: url("../../img/Full/mainPage/artist/backB.png");
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden; }
+        #artistWrap #artistBox #artistBoxT .artist_04:hover {
+          background-image: url("../../img/Full/mainPage/artist/back.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          overflow: hidden; }
     #artistWrap #artistBox #artistBoxB {
       width: 100%;
       height: 50%;
-      background-color: #ada; }
+      background-color: none; }
       #artistWrap #artistBox #artistBoxB li {
         width: 25%;
         height: 100%;
         background-color: none;
-        float: left; }
+        float: left;
+        transition: all 200ms ease-in; }
+        #artistWrap #artistBox #artistBoxB li p {
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 2.5em;
+          word-spacing: 0.3em;
+          font-weight: bold;
+          line-height: 10em;
+          text-align: center; }
       #artistWrap #artistBox #artistBoxB .artist_05 {
         background-image: url("../../img/Full/mainPage/artist/twiceB.png");
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden; }
+        #artistWrap #artistBox #artistBoxB .artist_05:hover {
+          background-image: url("../../img/Full/mainPage/artist/twice.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          overflow: hidden; }
       #artistWrap #artistBox #artistBoxB .artist_06 {
         background-image: url("../../img/Full/mainPage/artist/2pmB.png");
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden; }
+        #artistWrap #artistBox #artistBoxB .artist_06:hover {
+          background-image: url("../../img/Full/mainPage/artist/2pm.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          overflow: hidden; }
       #artistWrap #artistBox #artistBoxB .artist_07 {
         background-image: url("../../img/Full/mainPage/artist/day6B.png");
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden; }
+        #artistWrap #artistBox #artistBoxB .artist_07:hover {
+          background-image: url("../../img/Full/mainPage/artist/day6.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          overflow: hidden; }
       #artistWrap #artistBox #artistBoxB .artist_08 {
         background-image: url("../../img/Full/mainPage/artist/jjprojectB.png");
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden; }
+        #artistWrap #artistBox #artistBoxB .artist_08:hover {
+          background-image: url("../../img/Full/mainPage/artist/jjproject.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          overflow: hidden; }
 
 #snsWrap {
   width: 100%;
-  height: 50%;
-  background-color: #a18;
-  margin-bottom: 25em; }
+  height: 60%;
+  background-color: none;
+  margin-bottom: 10em; }
+  #snsWrap div.h2Box {
+    width: 100%;
+    height: 15%;
+    background-color: none; }
+  #snsWrap #snsBox {
+    width: 100%;
+    height: 85%;
+    background-color: none; }
+    #snsWrap #snsBox #snsList {
+      width: 100%;
+      height: 100%;
+      background-color: none; }
+      #snsWrap #snsBox #snsList li {
+        width: 20%;
+        height: 100%;
+        background-color: none;
+        float: left; }
+      #snsWrap #snsBox #snsList .snsP_01 {
+        background-image: url("../../img/Full/mainPage/sns/jinyeong.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden; }
+      #snsWrap #snsBox #snsList .snsP_02 {
+        background-image: url("../../img/Full/mainPage/sns/suzi.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden; }
+      #snsWrap #snsBox #snsList .snsP_03 {
+        background-image: url("../../img/Full/mainPage/sns/day6.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden; }
+      #snsWrap #snsBox #snsList .snsP_04 {
+        background-image: url("../../img/Full/mainPage/sns/nayeon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden; }
+      #snsWrap #snsBox #snsList .snsP_05 {
+        background-image: url("../../img/Full/mainPage/sns/jackson.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden; }
+
+#topButton {
+  width: 100%;
+  height: 9%;
+  background-color: none;
+  margin-bottom: 15em; }
+  #topButton button {
+    width: 80px;
+    height: 80px;
+    background-color: #00b4e7;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fff; }
+    #topButton button:hover {
+      background-color: #333; }
 
 footer {
   width: 100%;
   height: 5%;
   background-color: #171717; }
+  footer #footerBox {
+    width: 960px;
+    height: 100%;
+    background-color: none;
+    margin: 0 auto; }
+    footer #footerBox .copyright {
+      width: 50%;
+      height: auto;
+      background-color: none;
+      padding: 14px 10px;
+      box-sizing: border-box;
+      float: left; }
+      footer #footerBox .copyright > p {
+        width: 100%;
+        height: 100%;
+        background-color: none;
+        font-size: 1em;
+        color: #fff;
+        text-transform: uppercase; }
+    footer #footerBox .policy {
+      width: 50%;
+      height: 100%;
+      background-color: none;
+      float: right; }
+      footer #footerBox .policy > .policyL {
+        width: 60%;
+        height: 100%;
+        background-color: none;
+        float: right;
+        padding: 14px 10px;
+        box-sizing: border-box; }
+        footer #footerBox .policy > .policyL > li {
+          width: 50%;
+          height: auto;
+          background-color: none;
+          float: left;
+          color: #fff; }

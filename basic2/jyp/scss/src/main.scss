@@ -7,29 +7,50 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-#wrap{@include size($h:100%,$c:$gray); min-width:960px; margin:0 auto; position:relative;}//#wrap
-  h2{@include size($w:none, $h:100%); font-size:4em; float:left; margin-left:1.5em; color:$strong; float:left;}
+#wrap{@include size($h:100%); min-width:960px; margin:0 auto; position:relative;}//#wrap
+  h2{@include size($w:none, $h:100%); font-size:3.5em; float:left; margin-left:1.5em; color:$strong; float:left;}
   h2:first-letter{text-transform:uppercase;}
-  .plusBox{float:left; font-size:4em; font-weight:50; margin-left:1em; color:$gray;}
-  #headBox{@include size($h:100px,$c:transparent); position:absolute; top:0px; z-index:100;}
-  #adBanner{@include size($h:100%,$c:#c52); margin-bottom:20em;
-    >#musicVideo{@include size($w:100%, $h:100%); overflow:hidden;}
-    >#musicVideo>video{@include size($w:100%,$c:#514);}
+ .plusBox{display:inline-block; @include size($w:auto,$h:40px); color:$gray; margin-left:0.8em; font-size:3em;
+          &:hover{transform:scale(1.5); transition:all 300ms ease-in; color:$main;}}
+  #headBox{@include size($h:120px,$c:transparent); position:absolute; top:0px; z-index:100; padding:2.5em 3em 0; box-sizing:border-box;
+          h1{@include size($w:190px, $h:70px); @include link($f:"Full/jypLogo.png"); float:left;
+            >a{display:inline-block; @include size($w:100%, $h:100%); cursor:pointer;}}
+          #gnbLogo{@include size($w:50px, $h:5px, $c:$strong); float:right; right:3em; position:fixed; z-index:200; margin-top:10px;
+            a{@include size($w:50px, $h:30px); margin-top:-13px; cursor:pointer; display:inline-block; margin-bottom:10px;}
+            &:before{content:" "; display: block; @include size($w:50px, $h:5px, $c:$strong); position:absolute; top:10px;}
+            &:after{content:" "; display: block; @include size($w:50px, $h:5px, $c:$strong); position:absolute; top:-10px;}}//gnbLogo 
+          #gnbBox{width:100vw; left:0; top:0; height:100%; background-color:rgba(5,5,5,0.5); position:fixed; z-index:100;}
+        }//headBox
+
+  #adBanner{@include size($h:100%); margin-bottom:20em;
+    >#musicVideo{@include size($w:100%, $h:100%, $c:$main); overflow:hidden; position: relative;
+      video{@include size($w:100%, $h:100%, $c:$main);      
+            -webkit-object-fit:cover;
+            -moz-object-fit:cover;
+            -ms-object-fit:cover;
+            -o-object-fit:cover;
+            object-fit:cover;}
+      #moreMv{@include size($w:75px, $h:24px); position: absolute; z-index:50; bottom:5em; bottom:50%; right:0; margin-left:-25px; color:#fff; 
+       span{text-transform:uppercase;}
+            &:hover{font-size:1.1em; transition:all 400ms ease-in;}
+            &:before{content:" "; display:block; margin-top:25px; border-top:dashed #fff 1px;}}   
+      #scroll{@include size($w:50px, $h:24px); position: absolute; z-index:50; bottom:5em; left:50%; margin-left:-25px; color:#fff; text-transform:uppercase;
+            &:after{content:" "; display:block; margin-left:25px; @include size($w:1px, $h:5.2em, $c:#fff);}}
+      }//musicVideo
     }//adBanner
 
   #newsWrap{@include size($h:100%); margin-bottom:25em;
     div.h2Box{@include size($h:15%);}
-    .plus{@include size($w:80px,$h:80px,$c:#c4a);}
-    #newsBox{@include size($w:65%,$h:85%); margin:0 auto;
+       #newsBox{@include size($w:65%,$h:85%); margin:0 auto;
       li{@include size($w:33.3333%,$h:100%); float:left;}
-      li>div{@include size($h:90%); background-size:cover;}
+      li>div{@include size($h:90%); background-size:cover; transition:all 400ms ease-out;}
       li>button{@include size($h:10%, $c:#ac8);}
-        .newsP_01{@include link($f:"mainPage/news/jjprojectB.png");
-          &:hover{@include link($f:"mainPage/news/jjproject.png");}}
-        .newsP_02{@include link($f:"mainPage/news/suziB.png");
-          &:hover{@include link($f:"mainPage/news/suzi.png");}}
-        .newsP_03{@include link($f:"mainPage/news/day6B.png");
-          &:hover{@include link($f:"mainPage/news/day6.png");}}
+        .newsP_01{@include link($f:"Full/mainPage/news/jjprojectB.png");
+          &:hover{@include link($f:"Full/mainPage/news/jjproject.png");}}
+        .newsP_02{@include link($f:"Full/mainPage/news/suziB.png");
+          &:hover{@include link($f:"Full/mainPage/news/suzi.png");}}
+        .newsP_03{@include link($f:"Full/mainPage/news/day6B.png");
+          &:hover{@include link($f:"Full/mainPage/news/day6.png");}}
    
       }//newsBox
     }//newsWrap
@@ -37,21 +58,59 @@
   #artistWrap{@include size($h:100%);margin-bottom:25em;
     div.h2Box{@include size($h:15%);}
     #artistBox{@include size($h:85%);
-      #artistBoxT{@include size($h:50%, $c:#dad);
-        li{@include size($w:25%, $h:100%) float:left;}
-          .artist_01{@include link($f:"mainPage/artist/jypB.png");}
-          .artist_02{@include link($f:"mainPage/artist/suziB.png");}
-          .artist_03{@include link($f:"mainPage/artist/got7B.png");}
-          .artist_04{@include link($f:"mainPage/artist/backB.png");}
+      #artistBoxT{@include size($h:50%);
+        li{@include size($w:25%, $h:100%) float:left; transition:all 200ms ease-in; 
+          p{color:#fff; text-transform:uppercase; font-size:2.5em; word-spacing:0.3em; font-weight:bold; line-height:10em; text-align:center;}}
+          .artist_01{@include link($f:"Full/mainPage/artist/jypB.png");
+            &:hover{@include link($f:"Full/mainPage/artist/jyp.png");};}
+          .artist_02{@include link($f:"Full/mainPage/artist/suziB.png");
+            &:hover{@include link($f:"Full/mainPage/artist/suzi.png");}}
+          .artist_03{@include link($f:"Full/mainPage/artist/got7B.png");
+            &:hover{@include link($f:"Full/mainPage/artist/got7.png");}}
+          .artist_04{@include link($f:"Full/mainPage/artist/backB.png")
+            &:hover{@include link($f:"Full/mainPage/artist/back.png");};}
         }//BoxTop 
-      #artistBoxB{@include size($h:50%, $c:#ada);
-        li{@include size($w:25%, $h:100%) float:left;}
-          .artist_05{@include link($f:"mainPage/artist/twiceB.png");}
-          .artist_06{@include link($f:"mainPage/artist/2pmB.png");}
-          .artist_07{@include link($f:"mainPage/artist/day6B.png");}
-          .artist_08{@include link($f:"mainPage/artist/jjprojectB.png");}
+      #artistBoxB{@include size($h:50%);
+        li{@include size($w:25%, $h:100%) float:left; transition:all 200ms ease-in;
+          p{color:#fff; text-transform:uppercase; font-size:2.5em; word-spacing:0.3em; font-weight:bold; line-height:10em; text-align:center;}}
+          .artist_05{@include link($f:"Full/mainPage/artist/twiceB.png")
+            &:hover{@include link($f:"Full/mainPage/artist/twice.png");};}
+          .artist_06{@include link($f:"Full/mainPage/artist/2pmB.png");
+            &:hover{@include link($f:"Full/mainPage/artist/2pm.png");}}
+          .artist_07{@include link($f:"Full/mainPage/artist/day6B.png")
+            &:hover{@include link($f:"Full/mainPage/artist/day6.png");};}
+          .artist_08{@include link($f:"Full/mainPage/artist/jjprojectB.png")
+            &:hover{@include link($f:"Full/mainPage/artist/jjproject.png");};}
         }//BoxBottom
     }//artistBox
     }//artistWrap
-  #snsWrap{@include size($h:50%, $c:#a18); margin-bottom:25em;}
-  footer{@include size($h:5%, $c:$black);}
+
+  #snsWrap{@include size($h:60%); margin-bottom:10em;
+    div.h2Box{@include size($h:15%);}
+    #snsBox{@include size($h:85%);
+      #snsList{@include size($h:100%);
+        li{@include size($w:20%, $h:100%); float:left;}
+        .snsP_01{@include link($f:"Full/mainPage/sns/jinyeong.png");}
+        .snsP_02{@include link($f:"Full/mainPage/sns/suzi.png");}
+        .snsP_03{@include link($f:"Full/mainPage/sns/day6.png");}
+        .snsP_04{@include link($f:"Full/mainPage/sns/nayeon.png");}
+        .snsP_05{@include link($f:"Full/mainPage/sns/jackson.png");}
+        }//snsList(ul)
+    }//snsBox
+  }//snsWrap
+
+  #topButton{@include size($h:9%);margin-bottom:15em;
+    button{@include size($w:80px,$h:80px,$c:$main); text-transform:uppercase; font-weight:bold; font-size:1.2em; color:#fff; 
+      &:hover{background-color:#333;}}
+  }//topButton
+
+  footer{@include size($h:5%, $c:$black);
+    #footerBox{@include size($w:960px,$h:100%); margin:0 auto;
+      .copyright{@include size($w:50%); padding:14px 10px; box-sizing:border-box; float:left;
+        >p{@include size($w:100%,$h:100%); font-size:1em; color:#fff; text-transform:uppercase;}}//copyright
+      .policy{@include size($w:50%,$h:100%) float:right; 
+        >.policyL{@include size($w:60%,$h:100%); float:right; padding:14px 10px; box-sizing:border-box; 
+        >li{@include size($w:50%); float:left; color:#fff}}
+      }//policy
+    }//footerBox
+  }//footer

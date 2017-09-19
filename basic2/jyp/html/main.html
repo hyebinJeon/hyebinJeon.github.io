@@ -10,6 +10,7 @@
   <![endif]-->
   
 <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
 <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
 <link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
 <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
@@ -22,20 +23,27 @@
 <body>
   <div id="wrap">
     <header id="headBox">
-      <h1></h1>
+      <h1 id="logo"><a></a></h1>
+      <section id="gnbWrap">
+      <h2 class="hidden">menu</h2>
+      <div id="gnbLogo"><a></a></div>
+      <div id="gnbBox"></div>
+      </section>
     </header>
     
     <section id="adBanner">
       <h2 class="hidden">musicvideo</h2>
       <div id="musicVideo">
         <video muted preload autoplay>
-          <source src="../img/video.mp4" type="video/mp4" />
+          <!-- <source src="../img/video.mp4" type="video/mp4" /> -->
         </video>
+        <div id="moreMv"><a>more<span>mv</span></a></div>
+        <div id="scroll">scroll</div>
       </div>
     </section><!--adBanner-->
     
     <article id="newsWrap">
-      <div class="h2Box"><h2>news</h2><span class="plusBox">+</span></div>
+      <div class="h2Box"><h2>news</h2><a class="plusBox">+</a></div>
       <ul id="newsBox"><h3 class="hidden">newsBox</h3>
         <li class="news_01">
           <div class="newsP_01"></div>
@@ -54,28 +62,54 @@
     </article>
     
     <article id="artistWrap">
-    <div class="h2Box"><h2>artist</h2><span class="plusBox">+</span></div>
+    <div class="h2Box"><h2>artist</h2><a class="plusBox">+</a></div>
         <div id="artistBox">
         <ul id="artistBoxT">
-          <li class="artist_01"></li>
-          <li class="artist_02"></li>
-          <li class="artist_03"></li>
-          <li class="artist_04"></li>
+          <li class="artist_01"><p>jyp</p></li>
+          <li class="artist_02"><p>suzi</p></li>
+          <li class="artist_03"><p>got7</p></li>
+          <li class="artist_04"><p>backayeon</p></li>
         </ul>
         <ul id="artistBoxB">
-          <li class="artist_05"></li>
-          <li class="artist_06"></li>
-          <li class="artist_07"></li>
-          <li class="artist_08"></li>
+          <li class="artist_05"><p>twice</p></li>
+          <li class="artist_06"><p>2pm</p></li>
+          <li class="artist_07"><p>day6</p></li>
+          <li class="artist_08"><p>jjproject</p></li>
         </ul>
         </div><!--artistBox-->
     </article>
     
     <section id="snsWrap">
-    <div class="h2Box"><h2>sns</h2><span class="plusBox">+</span></div>
+    <div class="h2Box"><h2>sns</h2><a class="plusBox">+</a></div>
+      <div id="snsBox">
+        <ul id="snsList">
+          <li class="snsP_01"></li>
+          <li class="snsP_02"></li>
+          <li class="snsP_03"></li>
+          <li class="snsP_04"></li>
+          <li class="snsP_05"></li>
+        </ul>
+      </div>
     </section>
-    
-    <footer></footer>
+
+    <div id="topButton">
+      <center><button type="button">top</button></center>
+    </div><!--topButton-->
+    <footer>
+      <div id="footerBox">
+        <div class="copyright">
+          <p>2017 copyright ⓒ jyp corp. all right reserved</p>
+        </div><!--copy-->
+        <div class="policy">
+        <ul class="policyL">
+          <li class="personalP"><a>개인정보처리방침</a></li>
+          <li class="officeP"><a>내부정보관리규정</a></li>
+        </ul>
+      </div><!--policy-->
+      </div><!--footerBox-->
+    </footer>
   </div><!--wrap-->
+<script src="../js/src/gnb.js"></script>
+<script src="../js/src/artist.js"></script>
 </body>
 </html>
