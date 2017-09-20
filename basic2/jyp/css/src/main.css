@@ -169,9 +169,44 @@ h2:first-letter {
     left: 0;
     top: 0;
     height: 100%;
-    background-color: rgba(5, 5, 5, 0.5);
+    background-image: linear-gradient(to right, #00b4e7, white);
+    opacity: 0.9;
     position: fixed;
     z-index: 100; }
+    #headBox #gnbBox .photoWrap {
+      width: 50%;
+      height: 100%;
+      background-color: #ccc;
+      float: left; }
+      #headBox #gnbBox .photoWrap .gnbpBox {
+        width: 80%;
+        height: 40%;
+        background-color: #ca8;
+        margin-bottom: 3%; }
+      #headBox #gnbBox .photoWrap .fLBox {
+        width: 40%;
+        height: 4%;
+        background-color: none; }
+        #headBox #gnbBox .photoWrap .fLBox .flList {
+          width: 100%;
+          height: 100%;
+          background-color: #1ca; }
+          #headBox #gnbBox .photoWrap .fLBox .flList > li {
+            width: 100%;
+            height: 100%;
+            background-color: none;
+            float: left; }
+          #headBox #gnbBox .photoWrap .fLBox .flList .familysite {
+            width: 60%;
+            background-color: #471; }
+          #headBox #gnbBox .photoWrap .fLBox .flList .language {
+            width: 40%;
+            background-color: #715; }
+      #headBox #gnbBox .photoWrap .listWrap {
+        width: 50%;
+        height: 100%;
+        background-color: #c45;
+        float: right; }
 
 #adBanner {
   width: 100%;
@@ -241,57 +276,84 @@ h2:first-letter {
   #newsWrap div.h2Box {
     width: 100%;
     height: 15%;
-    background-color: none; }
-  #newsWrap #newsBox {
+    background-color: none;
+    transition: all 800ms;
+    transform: translateY(70%);
+    opacity: 0; }
+  #newsWrap .h2Box.addView {
+    transform: translateY(0);
+    opacity: 1; }
+  #newsWrap .newsBox {
     width: 65%;
     height: 85%;
     background-color: none;
-    margin: 0 auto; }
-    #newsWrap #newsBox li {
-      width: 33.3333%;
+    margin: 0 auto;
+    transition: all 800ms ease-out; }
+  #newsWrap .newsBox.default {
+    transform: translateY(60%);
+    opacity: 0; }
+  #newsWrap .newsBox.addview {
+    transform: translateY(0);
+    opacity: 1; }
+  #newsWrap li {
+    width: 33.3333%;
+    height: 100%;
+    background-color: none;
+    float: left; }
+  #newsWrap li > div {
+    width: 100%;
+    height: 90%;
+    background-color: none;
+    background-size: cover;
+    transition: all 400ms ease-out;
+    background-size: cover; }
+    #newsWrap li > div a {
+      display: inline-block;
+      width: inherit;
       height: 100%;
-      background-color: none;
-      float: left; }
-    #newsWrap #newsBox li > div {
-      width: 100%;
-      height: 90%;
-      background-color: none;
-      background-size: cover;
-      transition: all 400ms ease-out; }
-    #newsWrap #newsBox li > button {
-      width: 100%;
-      height: 10%;
-      background-color: #ac8; }
-    #newsWrap #newsBox .newsP_01 {
-      background-image: url("../../img/Full/mainPage/news/jjprojectB.png");
+      background-color: none; }
+  #newsWrap li > button {
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+    color: #fff;
+    border: solid #000 1px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    text-transform: uppercase; }
+    #newsWrap li > button:hover, #newsWrap li > button.hover {
+      background-color: #fff;
+      color: #000; }
+  #newsWrap .newsP_01 {
+    background-image: url("../../img/Full/mainPage/news/jjprojectB.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden; }
+    #newsWrap .newsP_01:hover, #newsWrap .newsP_01.hover {
+      background-image: url("../../img/Full/mainPage/news/jjproject.png");
       background-repeat: no-repeat;
       background-position: center;
       overflow: hidden; }
-      #newsWrap #newsBox .newsP_01:hover {
-        background-image: url("../../img/Full/mainPage/news/jjproject.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-    #newsWrap #newsBox .newsP_02 {
-      background-image: url("../../img/Full/mainPage/news/suziB.png");
+  #newsWrap .newsP_02 {
+    background-image: url("../../img/Full/mainPage/news/suziB.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden; }
+    #newsWrap .newsP_02:hover, #newsWrap .newsP_02.hover {
+      background-image: url("../../img/Full/mainPage/news/suzi.png");
       background-repeat: no-repeat;
       background-position: center;
       overflow: hidden; }
-      #newsWrap #newsBox .newsP_02:hover {
-        background-image: url("../../img/Full/mainPage/news/suzi.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-    #newsWrap #newsBox .newsP_03 {
-      background-image: url("../../img/Full/mainPage/news/day6B.png");
+  #newsWrap .newsP_03 {
+    background-image: url("../../img/Full/mainPage/news/day6B.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden; }
+    #newsWrap .newsP_03:hover, #newsWrap .newsP_03.hover {
+      background-image: url("../../img/Full/mainPage/news/day6.png");
       background-repeat: no-repeat;
       background-position: center;
       overflow: hidden; }
-      #newsWrap #newsBox .newsP_03:hover {
-        background-image: url("../../img/Full/mainPage/news/day6.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
 
 #artistWrap {
   width: 100%;
@@ -301,11 +363,24 @@ h2:first-letter {
   #artistWrap div.h2Box {
     width: 100%;
     height: 15%;
-    background-color: none; }
+    background-color: none;
+    transition: all 800ms;
+    transform: translateY(70%);
+    opacity: 0; }
+  #artistWrap .h2Box.addView {
+    transform: translateY(0);
+    opacity: 1; }
   #artistWrap #artistBox {
     width: 100%;
     height: 85%;
-    background-color: none; }
+    background-color: none;
+    transition: all 800ms ease-out; }
+    #artistWrap #artistBox.default {
+      transform: translateY(60%);
+      opacity: 0; }
+    #artistWrap #artistBox.addView {
+      transform: translateY(0);
+      opacity: 1; }
     #artistWrap #artistBox #artistBoxT {
       width: 100%;
       height: 50%;
@@ -313,17 +388,26 @@ h2:first-letter {
       #artistWrap #artistBox #artistBoxT li {
         width: 25%;
         height: 100%;
-        background-color: none;
+        background-color: #ccc;
         float: left;
-        transition: all 200ms ease-in; }
+        transition: all 200ms ease-in;
+        background-size: cover; }
+        #artistWrap #artistBox #artistBoxT li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: none; }
         #artistWrap #artistBox #artistBoxT li p {
           color: #fff;
+          width: 100%;
+          height: 100%;
+          background-color: none;
           text-transform: uppercase;
           font-size: 2.5em;
-          word-spacing: 0.3em;
+          letter-spacing: 4px;
           font-weight: bold;
-          line-height: 10em;
-          text-align: center; }
+          text-align: center;
+          letter-spacing: 2; }
       #artistWrap #artistBox #artistBoxT .artist_01 {
         background-image: url("../../img/Full/mainPage/artist/jypB.png");
         background-repeat: no-repeat;
@@ -371,16 +455,24 @@ h2:first-letter {
       #artistWrap #artistBox #artistBoxB li {
         width: 25%;
         height: 100%;
-        background-color: none;
+        background-color: #ccc;
         float: left;
-        transition: all 200ms ease-in; }
+        transition: all 200ms ease-in;
+        background-size: cover; }
+        #artistWrap #artistBox #artistBoxB li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: none; }
         #artistWrap #artistBox #artistBoxB li p {
           color: #fff;
+          width: 100%;
+          height: 100%;
+          background-color: none;
           text-transform: uppercase;
           font-size: 2.5em;
-          word-spacing: 0.3em;
+          letter-spacing: 4px;
           font-weight: bold;
-          line-height: 10em;
           text-align: center; }
       #artistWrap #artistBox #artistBoxB .artist_05 {
         background-image: url("../../img/Full/mainPage/artist/twiceB.png");
@@ -431,20 +523,35 @@ h2:first-letter {
   #snsWrap div.h2Box {
     width: 100%;
     height: 15%;
-    background-color: none; }
+    background-color: none;
+    margin-bottom: 3em;
+    transition: all 800ms;
+    transform: translateY(70%);
+    opacity: 0; }
+  #snsWrap .h2Box.addView {
+    transform: translateY(0);
+    opacity: 1; }
   #snsWrap #snsBox {
     width: 100%;
     height: 85%;
-    background-color: none; }
+    background-color: none;
+    transition: all 800ms ease-out; }
+    #snsWrap #snsBox.default {
+      transform: translateY(40%);
+      opacity: 0; }
+    #snsWrap #snsBox.addView {
+      transform: translateY(0);
+      opacity: 1; }
     #snsWrap #snsBox #snsList {
       width: 100%;
       height: 100%;
       background-color: none; }
       #snsWrap #snsBox #snsList li {
         width: 20%;
-        height: 100%;
+        height: 77%;
         background-color: none;
-        float: left; }
+        float: left;
+        background-size: cover; }
       #snsWrap #snsBox #snsList .snsP_01 {
         background-image: url("../../img/Full/mainPage/sns/jinyeong.png");
         background-repeat: no-repeat;
@@ -489,38 +596,42 @@ h2:first-letter {
 
 footer {
   width: 100%;
-  height: 5%;
+  height: auto;
   background-color: #171717; }
+  footer::after {
+    content: " ";
+    display: block;
+    clear: both; }
   footer #footerBox {
     width: 960px;
-    height: 100%;
+    height: auto;
     background-color: none;
     margin: 0 auto; }
     footer #footerBox .copyright {
       width: 50%;
       height: auto;
       background-color: none;
-      padding: 14px 10px;
+      padding: 1.5%;
       box-sizing: border-box;
       float: left; }
       footer #footerBox .copyright > p {
         width: 100%;
-        height: 100%;
+        height: auto;
         background-color: none;
         font-size: 1em;
         color: #fff;
         text-transform: uppercase; }
     footer #footerBox .policy {
       width: 50%;
-      height: 100%;
+      height: auto;
       background-color: none;
       float: right; }
       footer #footerBox .policy > .policyL {
         width: 60%;
-        height: 100%;
+        height: auto;
         background-color: none;
         float: right;
-        padding: 14px 10px;
+        padding: 2.8% 0;
         box-sizing: border-box; }
         footer #footerBox .policy > .policyL > li {
           width: 50%;
