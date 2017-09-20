@@ -3,7 +3,7 @@
   var gnb = $("#gnbLogo").children('a');
   var gnbBox = $("#gnbBox")
 
-  gnbBox.show();
+  gnbBox.hide();
 
   gnb.on('click',function(e){
     e.preventDefault(); 
