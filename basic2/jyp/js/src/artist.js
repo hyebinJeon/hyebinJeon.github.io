@@ -10,14 +10,14 @@ liT.on('mouseenter',function(e){
   e.preventDefault();
   var $this = $(this);
   var i = $this.index();
-  liT.eq(i).children('p').hide();
+  liT.eq(i).find('p').hide();
 });//on
 
 liB.on('mouseenter',function(e){
   e.preventDefault();
   var $this = $(this);
   var i = $this.index();
-  liB.eq(i).children('p').hide();
+  liB.eq(i).find('p').hide();
 });//on
 
 liT.on('mouseleave',function(e){
@@ -29,5 +29,15 @@ liB.on('mouseleave',function(e){
   e.preventDefault();
   p.show();
 });
+
+var artist = $('#artistBox').find('li');
+var artistH = artist.height();
+var artistP = artist.find('p');
+console.log(artistH);
+
+artistP.css({'lineHeight':artistH + 'px'});
+
+
+
 
 })(this.jQuery);

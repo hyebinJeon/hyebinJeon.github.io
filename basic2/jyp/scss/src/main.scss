@@ -8,7 +8,7 @@
 
 
 #wrap{@include size($h:100%); min-width:960px; margin:0 auto; position:relative;}//#wrap
-  h2{@include size($w:none, $h:100%); font-size:3.5em; float:left; margin-left:1.5em; color:$strong; float:left;}
+  h2{@include size($w:none, $h:100%); font-size:3.5em; float:left; margin-left:1.5em; color:$strong; float:left; }
   h2:first-letter{text-transform:uppercase;}
  .plusBox{display:inline-block; @include size($w:auto,$h:40px); color:$gray; margin-left:0.8em; font-size:3em;
           &:hover{transform:scale(1.5); transition:all 300ms ease-in; color:$main;}}
@@ -19,7 +19,20 @@
             a{@include size($w:50px, $h:30px); margin-top:-13px; cursor:pointer; display:inline-block; margin-bottom:10px;}
             &:before{content:" "; display: block; @include size($w:50px, $h:5px, $c:$strong); position:absolute; top:10px;}
             &:after{content:" "; display: block; @include size($w:50px, $h:5px, $c:$strong); position:absolute; top:-10px;}}//gnbLogo 
-          #gnbBox{width:100vw; left:0; top:0; height:100%; background-color:rgba(5,5,5,0.5); position:fixed; z-index:100;}
+
+          #gnbBox{width:100vw; left:0; top:0; height:100%; background-image:linear-gradient(to right,$main,white); opacity:0.9; position:fixed; z-index:100;
+            .photoWrap{@include size($w:50%, $h:100%, $c:#ccc); float:left;
+              .gnbpBox{@include size($w:80%, $h:40%, $c:#ca8); margin-bottom:3%;}
+              .fLBox{@include size($w:40%, $h:4%);
+                .flList{@include size($w:100%, $h:100%, $c:#1ca);
+                  >li{@include size($h:100%); float:left;}
+                    .familysite{width:60%; background-color: #471;}
+                    .language{width:40%; background-color: #715;}
+                }//familyBOx
+              .gsnsBox{}}//photoWrap
+            .listWrap{@include size($w:50%, $h:100%, $c:#c45); float:right;}
+          }//photoWrap
+        }//gnbBox
         }//headBox
 
   #adBanner{@include size($h:100%); margin-bottom:20em;
@@ -40,27 +53,34 @@
     }//adBanner
 
   #newsWrap{@include size($h:100%); margin-bottom:25em;
-    div.h2Box{@include size($h:15%);}
-       #newsBox{@include size($w:65%,$h:85%); margin:0 auto;
+    div.h2Box{@include size($h:15%); transition:all 800ms; transform:translateY(70%); opacity:0;}
+        .h2Box.addView{transform:translateY(0); opacity:1;}
+        .newsBox{@include size($w:65%,$h:85%); margin:0 auto; transition:all 800ms ease-out;} 
+        .newsBox.default{transform:translateY(60%); opacity: 0;}
+        .newsBox.addview{transform:translateY(0); opacity: 1;}
       li{@include size($w:33.3333%,$h:100%); float:left;}
-      li>div{@include size($h:90%); background-size:cover; transition:all 400ms ease-out;}
-      li>button{@include size($h:10%, $c:#ac8);}
+      li>div{@include size($h:90%); background-size:cover; transition:all 400ms ease-out; background-size:cover;
+          a{display:inline-block; @include size($w:inherit, $h:100%);}}
+      li>button{@include size($h:10%, $c:#000); color:#fff; border:solid #000 1px; box-sizing:border-box; font-size:1.2em; text-transform:uppercase;
+          &:hover, &.hover{background-color:#fff; color:#000;}}
         .newsP_01{@include link($f:"Full/mainPage/news/jjprojectB.png");
-          &:hover{@include link($f:"Full/mainPage/news/jjproject.png");}}
+          &:hover, &.hover{@include link($f:"Full/mainPage/news/jjproject.png");}}
         .newsP_02{@include link($f:"Full/mainPage/news/suziB.png");
-          &:hover{@include link($f:"Full/mainPage/news/suzi.png");}}
+          &:hover, &.hover{@include link($f:"Full/mainPage/news/suzi.png");}}
         .newsP_03{@include link($f:"Full/mainPage/news/day6B.png");
-          &:hover{@include link($f:"Full/mainPage/news/day6.png");}}
-   
-      }//newsBox
+          &:hover, &.hover{@include link($f:"Full/mainPage/news/day6.png");}}
     }//newsWrap
 
   #artistWrap{@include size($h:100%);margin-bottom:25em;
-    div.h2Box{@include size($h:15%);}
-    #artistBox{@include size($h:85%);
+    div.h2Box{@include size($h:15%); transition:all 800ms; transform:translateY(70%); opacity:0;}
+       .h2Box.addView{transform:translateY(0); opacity:1;}
+    #artistBox{@include size($h:85%); transition:all 800ms ease-out; 
+      &.default{transform:translateY(60%); opacity: 0;}
+      &.addView{transform:translateY(0); opacity:1;}
       #artistBoxT{@include size($h:50%);
-        li{@include size($w:25%, $h:100%) float:left; transition:all 200ms ease-in; 
-          p{color:#fff; text-transform:uppercase; font-size:2.5em; word-spacing:0.3em; font-weight:bold; line-height:10em; text-align:center;}}
+        li{@include size($w:25%, $h:100%, $c:#ccc); float:left; transition:all 200ms ease-in; background-size:cover;
+            a{display:block; @include size($w:100%, $h:100%);}
+          p{color:#fff; @include size($w:100%, $h:100%) text-transform:uppercase; font-size:2.5em; letter-spacing:4px; font-weight:bold; text-align:center; letter-spacing:2}}
           .artist_01{@include link($f:"Full/mainPage/artist/jypB.png");
             &:hover{@include link($f:"Full/mainPage/artist/jyp.png");};}
           .artist_02{@include link($f:"Full/mainPage/artist/suziB.png");
@@ -71,8 +91,9 @@
             &:hover{@include link($f:"Full/mainPage/artist/back.png");};}
         }//BoxTop 
       #artistBoxB{@include size($h:50%);
-        li{@include size($w:25%, $h:100%) float:left; transition:all 200ms ease-in;
-          p{color:#fff; text-transform:uppercase; font-size:2.5em; word-spacing:0.3em; font-weight:bold; line-height:10em; text-align:center;}}
+        li{@include size($w:25%, $h:100%, $c:#ccc); float:left; transition:all 200ms ease-in; background-size:cover;
+            a{display:block; @include size($w:100%, $h:100%);}
+          p{color:#fff; @include size($w:100%, $h:100%); text-transform:uppercase; font-size:2.5em; letter-spacing:4px; font-weight:bold; text-align:center;}}
           .artist_05{@include link($f:"Full/mainPage/artist/twiceB.png")
             &:hover{@include link($f:"Full/mainPage/artist/twice.png");};}
           .artist_06{@include link($f:"Full/mainPage/artist/2pmB.png");
@@ -86,11 +107,14 @@
     }//artistWrap
 
   #snsWrap{@include size($h:60%); margin-bottom:10em;
-    div.h2Box{@include size($h:15%);}
-    #snsBox{@include size($h:85%);
+    div.h2Box{@include size($h:15%); margin-bottom:3em; transition:all 800ms; transform:translateY(70%); opacity:0;}
+       .h2Box.addView{transform:translateY(0); opacity:1;}
+    #snsBox{@include size($h:85%); transition:all 800ms ease-out;
+        &.default{transform:translateY(40%); opacity:0;}
+        &.addView{transform:translateY(0); opacity:1;}
       #snsList{@include size($h:100%);
-        li{@include size($w:20%, $h:100%); float:left;}
-        .snsP_01{@include link($f:"Full/mainPage/sns/jinyeong.png");}
+        li{@include size($w:20%, $h:77%); float:left; background-size:cover;}
+        .snsP_01{@include link($f:"Full/mainPage/sns/jinyeong.png"); }
         .snsP_02{@include link($f:"Full/mainPage/sns/suzi.png");}
         .snsP_03{@include link($f:"Full/mainPage/sns/day6.png");}
         .snsP_04{@include link($f:"Full/mainPage/sns/nayeon.png");}
@@ -104,12 +128,13 @@
       &:hover{background-color:#333;}}
   }//topButton
 
-  footer{@include size($h:5%, $c:$black);
-    #footerBox{@include size($w:960px,$h:100%); margin:0 auto;
-      .copyright{@include size($w:50%); padding:14px 10px; box-sizing:border-box; float:left;
-        >p{@include size($w:100%,$h:100%); font-size:1em; color:#fff; text-transform:uppercase;}}//copyright
-      .policy{@include size($w:50%,$h:100%) float:right; 
-        >.policyL{@include size($w:60%,$h:100%); float:right; padding:14px 10px; box-sizing:border-box; 
+  footer{@include size($h:auto, $c:$black);
+    &::after{content:" "; display: block; clear: both;}
+    #footerBox{@include size($w:960px,$h:auto); margin:0 auto;
+      .copyright{@include size($w:50%,$h:auto); padding:1.5%; box-sizing:border-box; float:left;
+        >p{@include size($w:100%,$h:auto); font-size:1em; color:#fff; text-transform:uppercase;}}//copyright
+      .policy{@include size($w:50%,$h:auto) float:right; 
+        >.policyL{@include size($w:60%,$h:auto); float:right; padding:2.8% 0; box-sizing:border-box; 
         >li{@include size($w:50%); float:left; color:#fff}}
       }//policy
     }//footerBox
