@@ -1,0 +1,34 @@
+#artistWrap{@include size($h:100%);margin-bottom:25em;
+    div.h2Box{@include size($h:15%); transition:all 800ms; transform:translateY(70%); opacity:0;}
+       .h2Box.addView{transform:translateY(0); opacity:1;}
+    #artistBox{@include size($h:85%); transition:all 800ms ease-out; 
+      &.default{transform:translateY(60%); opacity: 0;}
+      &.addView{transform:translateY(0); opacity:1;}
+      #artistBoxT{@include size($h:50%);
+        li{@include size($w:25%, $h:100%, $c:#ccc); float:left; transition:all 200ms ease-in; background-size:cover;
+            a{display:block; @include size($w:100%, $h:100%);}
+          p{color:#fff; @include size($w:100%, $h:100%) text-transform:uppercase; font-size:2.5em; letter-spacing:4px; font-weight:bold; text-align:center; letter-spacing:2}}
+          .artist_01{@include link($f:"Full/mainPage/artist/jypB.png");
+            &:hover{@include link($f:"Full/mainPage/artist/jyp.png");};}
+          .artist_02{@include link($f:"Full/mainPage/artist/suziB.png");
+            &:hover{@include link($f:"Full/mainPage/artist/suzi.png");}}
+          .artist_03{@include link($f:"Full/mainPage/artist/got7B.png");
+            &:hover{@include link($f:"Full/mainPage/artist/got7.png");}}
+          .artist_04{@include link($f:"Full/mainPage/artist/backB.png")
+            &:hover{@include link($f:"Full/mainPage/artist/back.png");};}
+        }//BoxTop 
+      #artistBoxB{@include size($h:50%);
+        li{@include size($w:25%, $h:100%, $c:#ccc); float:left; transition:all 200ms ease-in; background-size:cover;
+            a{display:block; @include size($w:100%, $h:100%);}
+          p{color:#fff; @include size($w:100%, $h:100%); text-transform:uppercase; font-size:2.5em; letter-spacing:4px; font-weight:bold; text-align:center;}}
+          .artist_05{@include link($f:"Full/mainPage/artist/twiceB.png")
+            &:hover{@include link($f:"Full/mainPage/artist/twice.png");};}
+          .artist_06{@include link($f:"Full/mainPage/artist/2pmB.png");
+            &:hover{@include link($f:"Full/mainPage/artist/2pm.png");}}
+          .artist_07{@include link($f:"Full/mainPage/artist/day6B.png")
+            &:hover{@include link($f:"Full/mainPage/artist/day6.png");};}
+          .artist_08{@include link($f:"Full/mainPage/artist/jjprojectB.png")
+            &:hover{@include link($f:"Full/mainPage/artist/jjproject.png");};}
+        }//BoxBottom
+    }//artistBox
+    }//artistWrap

@@ -10,6 +10,7 @@
   <![endif]-->
   
 <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
 <link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
@@ -22,6 +23,7 @@
 </head>
 <body>
   <div id="wrap">
+ 
     <header id="headBox">
       <h1 id="logo"><a></a></h1>
       <section id="gnbWrap">
@@ -29,17 +31,66 @@
       <div id="gnbLogo"><a></a></div>
       <div id="gnbBox">
         <div class="photoWrap">
-          <div class="gnbpBox"></div>
-          <div class="fLBox"><h3 class="hidden">familysite,language</h3>
+          <div class="gnbpBox">
+          </div>
+          <div class="fLBox">
+          <h3 class="hidden">familysite,language</h3>
+          <form action="#" method="post">
+          <fieldset class="facebookLanguage">
+            <legend class="hidden">패밀리이트이동,언어 선택</legend>
             <ul class="flList">
-              <li class="familysite">familysite</li>
-              <li class="language">language</li>
-            </ul>  
+              <li class="familysite">
+                <label for="familysite" class="hidden">jyp 패밀리사이트로 이동하신다면 선택하세요.</label>
+                <select name="familysite" id="familysite">
+                  <option>familysite</option>
+                  <option>jyp store</option>
+                  <option>jyp fan's</option>
+                </select></li>
+              <li class="language">
+                <label for="language" class="hidden">언어를 선택하세요.</label>
+                <select name="languageSelect" id="language">
+                  <option>language</option>
+                  <option>korea</option>
+                  <option>english</option>
+                  <option>china</option>
+                  <option>japan</option>
+                </select>
+              </li>
+            </ul>
+          </fieldset>
+          </form>
           </div>
           <div class="gsnsBox"><h3 class="hidden">jypsns</h3>
+            <ul class="gsnsList">
+              <li class="twitter"><a href="#"></a></li>
+              <li class="facebook"><a href="#"></a></li>
+              <li class="instagram last_li_right"><a href="#"></a></li>
+            </ul><!--gnbSnsu_ul-->
           </div>
         </div><!--photoWrap-->
-        <div class="listWrap"></div>
+        <div class="listWrap">
+          <div class="listBox">
+            <ul class="gnblist">
+              <li class="company"><a href="#">company</a>
+                  <ul class="companyMore">
+                    <li class="aboutJyp"><a href="#">aboutjyp</a></li>
+                    <li class="history"><a href="#">history</a></li>
+                    <li class="notice"><a href="#">notice</a></li>
+                    <li class="recruit"><a href="#">recruit</a></li>
+                    <li class="ir"><a href="#">ir</a></li>
+                  </ul>
+              </li><!--company-->
+              <li class="artist"><a href="#">artist</a></li>
+              <li class="actor"><a href="#">actor</a></li>
+              <li class="audition"><a href="#">audition</a>
+                <ul class="auditionMore">
+                    <li class="audition"><a href="#">audition</a></li>
+                    <li class="news"><a href="#">news</a></li>
+                    <li class="faq"><a href="#">faq</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
       </div>
       </section>
     </header>
@@ -47,7 +98,7 @@
     <section id="adBanner">
       <h2 class="hidden">musicvideo</h2>
       <div id="musicVideo">
-        <video preload autoplay>
+        <video preload replay autoplay>
           <source src="../img/got7.mp4" type="video/mp4" />
         </video>
         <div id="moreMv"><a>more<span>mv</span></a></div>
@@ -108,7 +159,7 @@
     <div id="topButton">
       <center><button type="button">top</button></center>
     </div><!--topButton-->
-    <footer>
+    <footer id="footBox">
       <div id="footerBox">
         <div class="copyright">
           <p>2017 copyright ⓒ jyp corp. all right reserved</p>
@@ -121,6 +172,7 @@
       </div><!--policy-->
       </div><!--footerBox-->
     </footer>
+  
   </div><!--wrap-->
 <script src="../js/src/gnb.js"></script>
 <script src="../js/src/artist.js"></script>

@@ -1,0 +1,18 @@
+
+
+  #snsWrap{@include size($h:60%); margin-bottom:10em;
+    div.h2Box{@include size($h:15%); margin-bottom:3em; transition:all 800ms; transform:translateY(70%); opacity:0;}
+       .h2Box.addView{transform:translateY(0); opacity:1;}
+    #snsBox{@include size($h:85%); transition:all 800ms ease-out;
+        &.default{transform:translateY(40%); opacity:0;}
+        &.addView{transform:translateY(0); opacity:1;}
+      #snsList{@include size($h:100%);
+        li{@include size($w:20%, $h:77%); float:left; background-size:cover;}
+        .snsP_01{@include link($f:"Full/mainPage/sns/jinyeong.png"); }
+        .snsP_02{@include link($f:"Full/mainPage/sns/suzi.png");}
+        .snsP_03{@include link($f:"Full/mainPage/sns/day6.png");}
+        .snsP_04{@include link($f:"Full/mainPage/sns/nayeon.png");}
+        .snsP_05{@include link($f:"Full/mainPage/sns/jackson.png");}
+        }//snsList(ul)
+    }//snsBox
+  }//snsWrap

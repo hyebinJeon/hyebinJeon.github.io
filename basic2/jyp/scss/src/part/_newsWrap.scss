@@ -1,0 +1,20 @@
+
+
+  #newsWrap{@include size($h:100%); margin-bottom:25em;
+    div.h2Box{@include size($h:15%); transition:all 800ms; transform:translateY(70%); opacity:0;}
+        .h2Box.addView{transform:translateY(0); opacity:1;}
+        .newsBox{@include size($w:65%,$h:85%); margin:0 auto; transition:all 800ms ease-out;} 
+        .newsBox.default{transform:translateY(60%); opacity: 0;}
+        .newsBox.addview{transform:translateY(0); opacity: 1;}
+      li{@include size($w:33.3333%,$h:100%); float:left;}
+      li>div{@include size($h:90%); background-size:cover; transition:all 400ms ease-out; background-size:cover;
+          a{display:inline-block; @include size($w:inherit, $h:100%);}}
+      li>button{@include size($h:10%, $c:#000); color:#fff; border:solid #000 1px; box-sizing:border-box; font-size:1.2em; text-transform:uppercase;
+          &:hover, &.hover{background-color:#fff; color:#000;}}
+        .newsP_01{@include link($f:"Full/mainPage/news/jjprojectB.png");
+          &:hover, &.hover{@include link($f:"Full/mainPage/news/jjproject.png");}}
+        .newsP_02{@include link($f:"Full/mainPage/news/suziB.png");
+          &:hover, &.hover{@include link($f:"Full/mainPage/news/suzi.png");}}
+        .newsP_03{@include link($f:"Full/mainPage/news/day6B.png");
+          &:hover, &.hover{@include link($f:"Full/mainPage/news/day6.png");}}
+    }//newsWrap

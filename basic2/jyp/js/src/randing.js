@@ -1,5 +1,12 @@
 //randing.js
 (function($){
+
+  $(window).on('resize',function(){  
+    location.reload();
+    $(window).scrollTop(0);
+   });
+
+
   var newsOffset = $("#newsWrap").offset().top;
   console.log(newsOffset);
   var artistOffset = $("#artistWrap").offset().top;
@@ -10,7 +17,7 @@
     var winOffset = $(this).scrollTop();
     console.log(winOffset);
     
-    if(winOffset >= newsOffset-700){
+    if(winOffset >= newsOffset-400){
       $('.h2Box').addClass('addView');
       $('.newsBox').removeClass('default');
       $('.newsBox').addClass('addView');
@@ -20,7 +27,7 @@
       $('.newsBox').addClass('default');
     };
 
-    if(winOffset >= artistOffset-700){
+    if(winOffset >= artistOffset-400){
       $('#artistWrap').find('.h2Box').addClass('addView');
       $('#artistBox').removeClass('default');
       $('#artistBox').addClass('addView');
@@ -30,7 +37,7 @@
       $('#artistBox').addClass('default');
     };
 
-    if(winOffset >= snsOffset-600){
+    if(winOffset >= snsOffset-400){
       $('#snsWrap').find('.h2Box').addClass('addView');
       $('#snsBox').removeClass('default');
       $('#snsBox').addClass('addView');

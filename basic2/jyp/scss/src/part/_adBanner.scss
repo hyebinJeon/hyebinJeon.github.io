@@ -1,0 +1,18 @@
+//  _adBanner.scss
+
+  #adBanner{@include size($h:100%); margin-bottom:20em;
+    >#musicVideo{@include size($w:100%, $h:100%, $c:$main); overflow:hidden; position: relative;
+      video{@include size($w:100%, $h:100%, $c:$main);      
+            -webkit-object-fit:cover;
+            -moz-object-fit:cover;
+            -ms-object-fit:cover;
+            -o-object-fit:cover;
+            object-fit:cover;}
+      #moreMv{@include size($w:75px, $h:24px); position: absolute; z-index:50; bottom:5em; bottom:50%; right:0; margin-left:-25px; color:#fff; 
+       span{text-transform:uppercase;}
+            &:hover{font-size:1.1em; transition:all 400ms ease-in;}
+            &:before{content:" "; display:block; margin-top:25px; border-top:dashed #fff 1px;}}   
+      #scroll{@include size($w:50px, $h:24px); position: absolute; z-index:50; bottom:5em; left:50%; margin-left:-25px; color:#fff; text-transform:uppercase;
+            &:after{content:" "; display:block; margin-left:25px; @include size($w:1px, $h:5.2em, $c:#fff);}}
+      }//musicVideo
+    }//adBanner

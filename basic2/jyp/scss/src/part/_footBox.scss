@@ -1,0 +1,17 @@
+
+  #topButton{@include size($h:9%);margin-bottom:15em;
+    button{@include size($w:80px,$h:80px,$c:$main); text-transform:uppercase; font-weight:bold; font-size:1.2em; color:#fff; 
+      &:hover{background-color:#333;}}
+  }//topButton
+
+  #footBox{@include size($h:auto, $c:$black);
+    &::after{content:" "; display: block; clear: both;}
+    #footerBox{@include size($w:960px,$h:auto); margin:0 auto;
+      .copyright{@include size($w:50%,$h:auto); padding:1.5%; box-sizing:border-box; float:left;
+        >p{@include size($w:100%,$h:auto); font-size:1em; color:#fff; text-transform:uppercase;}}//copyright
+      .policy{@include size($w:50%,$h:auto) float:right; 
+        >.policyL{@include size($w:60%,$h:auto); float:right; padding:2.8% 0; box-sizing:border-box; 
+        >li{@include size($w:50%); float:left; color:#fff}}
+      }//policy
+    }//footerBox
+  }//footer

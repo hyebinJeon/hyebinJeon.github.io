@@ -22,7 +22,7 @@
   margin-bottom: 0; }
 
 #wrap .last_li_right {
-  margin-right: 0; }
+  margin-right: 0 !important; }
 
 .hidden_wrap a > span {
   width: 0;

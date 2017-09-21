@@ -1,641 +1,261 @@
-@charset "UTF-8";
-/*! nomalize.scss */
-/*namalize 일반적으로 자주 사용하는 기법을 내가 필요할 때 꺼내쓰는거*/
-.clearfix::after {
-  content: " ";
-  display: block;
-  width: 0;
-  height: 0;
-  clear: both; }
+#wrap { width: 100%; height: 100%; background-color: none; min-width: 960px; margin: 0 auto; position: relative; }
 
-.hidden {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  float: left;
-  overflow: hidden; }
+form { width: 100%; height: 100%; background-color: none; }
 
-#wrap .first_li {
-  margin-left: 0; }
+fieldset { border-style: none; }
 
-#wrap .last_li {
-  margin-bottom: 0; }
+h2 { width: none; height: 100%; background-color: none; font-size: 3.5em; float: left; margin-left: 1.5em; color: #00a0e9; float: left; }
 
-#wrap .last_li_right {
-  margin-right: 0; }
+h2:first-letter { text-transform: uppercase; }
 
-.hidden_wrap a > span {
-  width: 0;
-  height: 0;
-  display: block;
-  overflow: hidden; }
+.plusBox { display: inline-block; width: auto; height: 40px; background-color: none; color: #CCCCCC; margin-left: 0.8em; font-size: 3em; }
 
-/*! reset.scss*/
-html, body {
-  width: 100%;
-  height: 100%; }
+.plusBox:hover { transform: scale(1.5); transition: all 300ms ease-in; color: #00b4e7; }
 
-html, body, h1, h2, h3, h4, h5, h6,
-p, div, pre, form, fieldset, hr,
-ul, ol, li, dl, dt, dd {
-  margin: 0;
-  padding: 0; }
+#headBox { width: 100%; height: 120px; background-color: transparent; position: absolute; top: 0px; z-index: 100; padding: 2.5em 3em 0; box-sizing: border-box; }
 
-ul, ol, li {
-  list-style: none; }
+#headBox h1 { width: 190px; height: 70px; background-color: none; background-image: url("../../img/Full/jypLogo.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; float: left; }
 
-input[type="text"], input[type="password"] {
-  border: none; }
+#headBox h1 > a { display: inline-block; width: 100%; height: 100%; background-color: none; cursor: pointer; }
 
-button, input {
-  background-color: transparent;
-  padding: 0;
-  border: 0; }
+#headBox #gnbLogo { width: 50px; height: 5px; background-color: #00a0e9; float: right; right: 3em; position: fixed; z-index: 200; margin-top: 10px; }
 
-input[type="text"], input[type="password"],
-input[type="search"], input[type="email"], input[type="tel"] {
-  border: 1px solid #777;
-  text-indent: 5px; }
+#headBox #gnbLogo a { width: 50px; height: 30px; background-color: none; margin-top: -13px; cursor: pointer; display: inline-block; margin-bottom: 10px; }
 
-button, input[type="submit"], input[type="reset"], input[type="button"] {
-  cursor: pointer; }
+#headBox #gnbLogo:before { content: " "; display: block; width: 50px; height: 5px; background-color: #00a0e9; position: absolute; top: 10px; }
 
-a {
-  text-decoration: none;
-  color: inherit; }
+#headBox #gnbLogo:after { content: " "; display: block; width: 50px; height: 5px; background-color: #00a0e9; position: absolute; top: -10px; }
 
-a:hover {
-  color: #a00; }
+#headBox #gnbBox { width: 100vw; min-width: 960px; left: 0; top: 0; height: 100%; background-image: linear-gradient(to right, #00b4e7, #fff); opacity: 1; position: fixed; z-index: 100; }
 
-/*html5 reset*/
-header, nav, aside, article, section, footer, main, figure {
-  display: block;
-  margin: 0;
-  padding: 0; }
+#headBox #gnbBox .photoWrap { width: 50%; height: 100%; background-color: none; float: left; }
 
-#wrap {
-  width: 100%;
-  height: 100%;
-  background-color: none;
-  min-width: 960px;
-  margin: 0 auto;
-  position: relative; }
+#headBox #gnbBox .photoWrap .gnbpBox { width: 83%; height: 40%; background-color: #ca8; background-size: cover; margin-top: 23%; margin-bottom: 3%; }
 
-h2 {
-  width: none;
-  height: 100%;
-  background-color: none;
-  font-size: 3.5em;
-  float: left;
-  margin-left: 1.5em;
-  color: #00a0e9;
-  float: left; }
+#headBox #gnbBox .photoWrap .companyP { background-image: url("../../img/Full/gnb/aboutjyp_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; transition: all 300ms ease-in; }
 
-h2:first-letter {
-  text-transform: uppercase; }
+#headBox #gnbBox .photoWrap .artistP { background-image: url("../../img/Full/gnb/artist_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; transition: all 300ms ease-in; }
 
-.plusBox {
-  display: inline-block;
-  width: auto;
-  height: 40px;
-  background-color: none;
-  color: #CCCCCC;
-  margin-left: 0.8em;
-  font-size: 3em; }
-  .plusBox:hover {
-    transform: scale(1.5);
-    transition: all 300ms ease-in;
-    color: #00b4e7; }
+#headBox #gnbBox .photoWrap .actorP { background-image: url("../../img/Full/gnb/actor_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; transition: all 300ms ease-in; }
 
-#headBox {
-  width: 100%;
-  height: 120px;
-  background-color: transparent;
-  position: absolute;
-  top: 0px;
-  z-index: 100;
-  padding: 2.5em 3em 0;
-  box-sizing: border-box; }
-  #headBox h1 {
-    width: 190px;
-    height: 70px;
-    background-color: none;
-    background-image: url("../../img/Full/jypLogo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
-    float: left; }
-    #headBox h1 > a {
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      background-color: none;
-      cursor: pointer; }
-  #headBox #gnbLogo {
-    width: 50px;
-    height: 5px;
-    background-color: #00a0e9;
-    float: right;
-    right: 3em;
-    position: fixed;
-    z-index: 200;
-    margin-top: 10px; }
-    #headBox #gnbLogo a {
-      width: 50px;
-      height: 30px;
-      background-color: none;
-      margin-top: -13px;
-      cursor: pointer;
-      display: inline-block;
-      margin-bottom: 10px; }
-    #headBox #gnbLogo:before {
-      content: " ";
-      display: block;
-      width: 50px;
-      height: 5px;
-      background-color: #00a0e9;
-      position: absolute;
-      top: 10px; }
-    #headBox #gnbLogo:after {
-      content: " ";
-      display: block;
-      width: 50px;
-      height: 5px;
-      background-color: #00a0e9;
-      position: absolute;
-      top: -10px; }
-  #headBox #gnbBox {
-    width: 100vw;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background-image: linear-gradient(to right, #00b4e7, white);
-    opacity: 0.9;
-    position: fixed;
-    z-index: 100; }
-    #headBox #gnbBox .photoWrap {
-      width: 50%;
-      height: 100%;
-      background-color: #ccc;
-      float: left; }
-      #headBox #gnbBox .photoWrap .gnbpBox {
-        width: 80%;
-        height: 40%;
-        background-color: #ca8;
-        margin-bottom: 3%; }
-      #headBox #gnbBox .photoWrap .fLBox {
-        width: 40%;
-        height: 4%;
-        background-color: none; }
-        #headBox #gnbBox .photoWrap .fLBox .flList {
-          width: 100%;
-          height: 100%;
-          background-color: #1ca; }
-          #headBox #gnbBox .photoWrap .fLBox .flList > li {
-            width: 100%;
-            height: 100%;
-            background-color: none;
-            float: left; }
-          #headBox #gnbBox .photoWrap .fLBox .flList .familysite {
-            width: 60%;
-            background-color: #471; }
-          #headBox #gnbBox .photoWrap .fLBox .flList .language {
-            width: 40%;
-            background-color: #715; }
-      #headBox #gnbBox .photoWrap .listWrap {
-        width: 50%;
-        height: 100%;
-        background-color: #c45;
-        float: right; }
+#headBox #gnbBox .photoWrap .auditionP { background-image: url("../../img/Full/gnb/audition_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; transition: all 300ms ease-in; }
 
-#adBanner {
-  width: 100%;
-  height: 100%;
-  background-color: none;
-  margin-bottom: 20em; }
-  #adBanner > #musicVideo {
-    width: 100%;
-    height: 100%;
-    background-color: #00b4e7;
-    overflow: hidden;
-    position: relative; }
-    #adBanner > #musicVideo video {
-      width: 100%;
-      height: 100%;
-      background-color: #00b4e7;
-      -webkit-object-fit: cover;
-      -moz-object-fit: cover;
-      -ms-object-fit: cover;
-      -o-object-fit: cover;
-      object-fit: cover; }
-    #adBanner > #musicVideo #moreMv {
-      width: 75px;
-      height: 24px;
-      background-color: none;
-      position: absolute;
-      z-index: 50;
-      bottom: 5em;
-      bottom: 50%;
-      right: 0;
-      margin-left: -25px;
-      color: #fff; }
-      #adBanner > #musicVideo #moreMv span {
-        text-transform: uppercase; }
-      #adBanner > #musicVideo #moreMv:hover {
-        font-size: 1.1em;
-        transition: all 400ms ease-in; }
-      #adBanner > #musicVideo #moreMv:before {
-        content: " ";
-        display: block;
-        margin-top: 25px;
-        border-top: dashed #fff 1px; }
-    #adBanner > #musicVideo #scroll {
-      width: 50px;
-      height: 24px;
-      background-color: none;
-      position: absolute;
-      z-index: 50;
-      bottom: 5em;
-      left: 50%;
-      margin-left: -25px;
-      color: #fff;
-      text-transform: uppercase; }
-      #adBanner > #musicVideo #scroll:after {
-        content: " ";
-        display: block;
-        margin-left: 25px;
-        width: 1px;
-        height: 5.2em;
-        background-color: #fff; }
+#headBox #gnbBox .photoWrap .fLBox { width: 40%; height: 30px; background-color: none; margin: 0 18%; margin-bottom: 2%; }
 
-#newsWrap {
-  width: 100%;
-  height: 100%;
-  background-color: none;
-  margin-bottom: 25em; }
-  #newsWrap div.h2Box {
-    width: 100%;
-    height: 15%;
-    background-color: none;
-    transition: all 800ms;
-    transform: translateY(70%);
-    opacity: 0; }
-  #newsWrap .h2Box.addView {
-    transform: translateY(0);
-    opacity: 1; }
-  #newsWrap .newsBox {
-    width: 65%;
-    height: 85%;
-    background-color: none;
-    margin: 0 auto;
-    transition: all 800ms ease-out; }
-  #newsWrap .newsBox.default {
-    transform: translateY(60%);
-    opacity: 0; }
-  #newsWrap .newsBox.addview {
-    transform: translateY(0);
-    opacity: 1; }
-  #newsWrap li {
-    width: 33.3333%;
-    height: 100%;
-    background-color: none;
-    float: left; }
-  #newsWrap li > div {
-    width: 100%;
-    height: 90%;
-    background-color: none;
-    background-size: cover;
-    transition: all 400ms ease-out;
-    background-size: cover; }
-    #newsWrap li > div a {
-      display: inline-block;
-      width: inherit;
-      height: 100%;
-      background-color: none; }
-  #newsWrap li > button {
-    width: 100%;
-    height: 10%;
-    background-color: #000;
-    color: #fff;
-    border: solid #000 1px;
-    box-sizing: border-box;
-    font-size: 1.2em;
-    text-transform: uppercase; }
-    #newsWrap li > button:hover, #newsWrap li > button.hover {
-      background-color: #fff;
-      color: #000; }
-  #newsWrap .newsP_01 {
-    background-image: url("../../img/Full/mainPage/news/jjprojectB.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden; }
-    #newsWrap .newsP_01:hover, #newsWrap .newsP_01.hover {
-      background-image: url("../../img/Full/mainPage/news/jjproject.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      overflow: hidden; }
-  #newsWrap .newsP_02 {
-    background-image: url("../../img/Full/mainPage/news/suziB.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden; }
-    #newsWrap .newsP_02:hover, #newsWrap .newsP_02.hover {
-      background-image: url("../../img/Full/mainPage/news/suzi.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      overflow: hidden; }
-  #newsWrap .newsP_03 {
-    background-image: url("../../img/Full/mainPage/news/day6B.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden; }
-    #newsWrap .newsP_03:hover, #newsWrap .newsP_03.hover {
-      background-image: url("../../img/Full/mainPage/news/day6.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      overflow: hidden; }
+#headBox #gnbBox .photoWrap .fLBox .flList { width: 100%; height: 30px; background-color: none; }
 
-#artistWrap {
-  width: 100%;
-  height: 100%;
-  background-color: none;
-  margin-bottom: 25em; }
-  #artistWrap div.h2Box {
-    width: 100%;
-    height: 15%;
-    background-color: none;
-    transition: all 800ms;
-    transform: translateY(70%);
-    opacity: 0; }
-  #artistWrap .h2Box.addView {
-    transform: translateY(0);
-    opacity: 1; }
-  #artistWrap #artistBox {
-    width: 100%;
-    height: 85%;
-    background-color: none;
-    transition: all 800ms ease-out; }
-    #artistWrap #artistBox.default {
-      transform: translateY(60%);
-      opacity: 0; }
-    #artistWrap #artistBox.addView {
-      transform: translateY(0);
-      opacity: 1; }
-    #artistWrap #artistBox #artistBoxT {
-      width: 100%;
-      height: 50%;
-      background-color: none; }
-      #artistWrap #artistBox #artistBoxT li {
-        width: 25%;
-        height: 100%;
-        background-color: #ccc;
-        float: left;
-        transition: all 200ms ease-in;
-        background-size: cover; }
-        #artistWrap #artistBox #artistBoxT li a {
-          display: block;
-          width: 100%;
-          height: 100%;
-          background-color: none; }
-        #artistWrap #artistBox #artistBoxT li p {
-          color: #fff;
-          width: 100%;
-          height: 100%;
-          background-color: none;
-          text-transform: uppercase;
-          font-size: 2.5em;
-          letter-spacing: 4px;
-          font-weight: bold;
-          text-align: center;
-          letter-spacing: 2; }
-      #artistWrap #artistBox #artistBoxT .artist_01 {
-        background-image: url("../../img/Full/mainPage/artist/jypB.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-        #artistWrap #artistBox #artistBoxT .artist_01:hover {
-          background-image: url("../../img/Full/mainPage/artist/jyp.png");
-          background-repeat: no-repeat;
-          background-position: center;
-          overflow: hidden; }
-      #artistWrap #artistBox #artistBoxT .artist_02 {
-        background-image: url("../../img/Full/mainPage/artist/suziB.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-        #artistWrap #artistBox #artistBoxT .artist_02:hover {
-          background-image: url("../../img/Full/mainPage/artist/suzi.png");
-          background-repeat: no-repeat;
-          background-position: center;
-          overflow: hidden; }
-      #artistWrap #artistBox #artistBoxT .artist_03 {
-        background-image: url("../../img/Full/mainPage/artist/got7B.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-        #artistWrap #artistBox #artistBoxT .artist_03:hover {
-          background-image: url("../../img/Full/mainPage/artist/got7.png");
-          background-repeat: no-repeat;
-          background-position: center;
-          overflow: hidden; }
-      #artistWrap #artistBox #artistBoxT .artist_04 {
-        background-image: url("../../img/Full/mainPage/artist/backB.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-        #artistWrap #artistBox #artistBoxT .artist_04:hover {
-          background-image: url("../../img/Full/mainPage/artist/back.png");
-          background-repeat: no-repeat;
-          background-position: center;
-          overflow: hidden; }
-    #artistWrap #artistBox #artistBoxB {
-      width: 100%;
-      height: 50%;
-      background-color: none; }
-      #artistWrap #artistBox #artistBoxB li {
-        width: 25%;
-        height: 100%;
-        background-color: #ccc;
-        float: left;
-        transition: all 200ms ease-in;
-        background-size: cover; }
-        #artistWrap #artistBox #artistBoxB li a {
-          display: block;
-          width: 100%;
-          height: 100%;
-          background-color: none; }
-        #artistWrap #artistBox #artistBoxB li p {
-          color: #fff;
-          width: 100%;
-          height: 100%;
-          background-color: none;
-          text-transform: uppercase;
-          font-size: 2.5em;
-          letter-spacing: 4px;
-          font-weight: bold;
-          text-align: center; }
-      #artistWrap #artistBox #artistBoxB .artist_05 {
-        background-image: url("../../img/Full/mainPage/artist/twiceB.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-        #artistWrap #artistBox #artistBoxB .artist_05:hover {
-          background-image: url("../../img/Full/mainPage/artist/twice.png");
-          background-repeat: no-repeat;
-          background-position: center;
-          overflow: hidden; }
-      #artistWrap #artistBox #artistBoxB .artist_06 {
-        background-image: url("../../img/Full/mainPage/artist/2pmB.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-        #artistWrap #artistBox #artistBoxB .artist_06:hover {
-          background-image: url("../../img/Full/mainPage/artist/2pm.png");
-          background-repeat: no-repeat;
-          background-position: center;
-          overflow: hidden; }
-      #artistWrap #artistBox #artistBoxB .artist_07 {
-        background-image: url("../../img/Full/mainPage/artist/day6B.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-        #artistWrap #artistBox #artistBoxB .artist_07:hover {
-          background-image: url("../../img/Full/mainPage/artist/day6.png");
-          background-repeat: no-repeat;
-          background-position: center;
-          overflow: hidden; }
-      #artistWrap #artistBox #artistBoxB .artist_08 {
-        background-image: url("../../img/Full/mainPage/artist/jjprojectB.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-        #artistWrap #artistBox #artistBoxB .artist_08:hover {
-          background-image: url("../../img/Full/mainPage/artist/jjproject.png");
-          background-repeat: no-repeat;
-          background-position: center;
-          overflow: hidden; }
+#headBox #gnbBox .photoWrap .fLBox .flList > li { width: 100%; height: 100%; background-color: none; float: left; }
 
-#snsWrap {
-  width: 100%;
-  height: 60%;
-  background-color: none;
-  margin-bottom: 10em; }
-  #snsWrap div.h2Box {
-    width: 100%;
-    height: 15%;
-    background-color: none;
-    margin-bottom: 3em;
-    transition: all 800ms;
-    transform: translateY(70%);
-    opacity: 0; }
-  #snsWrap .h2Box.addView {
-    transform: translateY(0);
-    opacity: 1; }
-  #snsWrap #snsBox {
-    width: 100%;
-    height: 85%;
-    background-color: none;
-    transition: all 800ms ease-out; }
-    #snsWrap #snsBox.default {
-      transform: translateY(40%);
-      opacity: 0; }
-    #snsWrap #snsBox.addView {
-      transform: translateY(0);
-      opacity: 1; }
-    #snsWrap #snsBox #snsList {
-      width: 100%;
-      height: 100%;
-      background-color: none; }
-      #snsWrap #snsBox #snsList li {
-        width: 20%;
-        height: 77%;
-        background-color: none;
-        float: left;
-        background-size: cover; }
-      #snsWrap #snsBox #snsList .snsP_01 {
-        background-image: url("../../img/Full/mainPage/sns/jinyeong.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-      #snsWrap #snsBox #snsList .snsP_02 {
-        background-image: url("../../img/Full/mainPage/sns/suzi.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-      #snsWrap #snsBox #snsList .snsP_03 {
-        background-image: url("../../img/Full/mainPage/sns/day6.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-      #snsWrap #snsBox #snsList .snsP_04 {
-        background-image: url("../../img/Full/mainPage/sns/nayeon.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
-      #snsWrap #snsBox #snsList .snsP_05 {
-        background-image: url("../../img/Full/mainPage/sns/jackson.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden; }
+#headBox #gnbBox .photoWrap .fLBox .flList .familysite { width: 57%; margin-right: 3%; }
 
-#topButton {
-  width: 100%;
-  height: 9%;
-  background-color: none;
-  margin-bottom: 15em; }
-  #topButton button {
-    width: 80px;
-    height: 80px;
-    background-color: #00b4e7;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #fff; }
-    #topButton button:hover {
-      background-color: #333; }
+#headBox #gnbBox .photoWrap .fLBox .flList .familysite select { width: 100%; height: 100%; text-transform: uppercase; }
 
-footer {
-  width: 100%;
-  height: auto;
-  background-color: #171717; }
-  footer::after {
-    content: " ";
-    display: block;
-    clear: both; }
-  footer #footerBox {
-    width: 960px;
-    height: auto;
-    background-color: none;
-    margin: 0 auto; }
-    footer #footerBox .copyright {
-      width: 50%;
-      height: auto;
-      background-color: none;
-      padding: 1.5%;
-      box-sizing: border-box;
-      float: left; }
-      footer #footerBox .copyright > p {
-        width: 100%;
-        height: auto;
-        background-color: none;
-        font-size: 1em;
-        color: #fff;
-        text-transform: uppercase; }
-    footer #footerBox .policy {
-      width: 50%;
-      height: auto;
-      background-color: none;
-      float: right; }
-      footer #footerBox .policy > .policyL {
-        width: 60%;
-        height: auto;
-        background-color: none;
-        float: right;
-        padding: 2.8% 0;
-        box-sizing: border-box; }
-        footer #footerBox .policy > .policyL > li {
-          width: 50%;
-          height: auto;
-          background-color: none;
-          float: left;
-          color: #fff; }
+#headBox #gnbBox .photoWrap .fLBox .flList .language { width: 40%; background-color: #715; }
+
+#headBox #gnbBox .photoWrap .fLBox .flList .language select { width: 100%; height: 100%; text-transform: uppercase; }
+
+#headBox #gnbBox .photoWrap .gsnsBox { width: 110px; height: 30px; background-color: none; margin: 0 30%; }
+
+#headBox #gnbBox .photoWrap .gsnsBox .gsnsList { width: 100%; height: 100%; background-color: none; }
+
+#headBox #gnbBox .photoWrap .gsnsBox .gsnsList > li { width: 30px; height: 100%; background-color: none; margin-right: 10px; float: left; background-size: cover; }
+
+#headBox #gnbBox .photoWrap .gsnsBox .gsnsList > li a { width: 100%; height: 100%; background-color: none; display: block; }
+
+#headBox #gnbBox .photoWrap .gsnsBox .gsnsList .twitter { background-image: url("../../img/Full/gnb/twitter.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#headBox #gnbBox .photoWrap .gsnsBox .gsnsList .facebook { background-image: url("../../img/Full/gnb/facebook.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#headBox #gnbBox .photoWrap .gsnsBox .gsnsList .instagram { background-image: url("../../img/Full/gnb/instagram.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#headBox #gnbBox .listWrap { width: 50%; height: 100%; background-color: none; float: right; }
+
+#headBox #gnbBox .listWrap .listBox { width: 65%; height: 75%; background-color: none; margin: 13% 13%; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist { width: 100%; height: 100%; background-color: none; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li { width: 100%; height: 25%; background-color: none; color: #333; text-align: center; font-family: 'Poiret One'; font-size: 96px; font-size: 6rem; font-size: 5.05263vw; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li:first-letter { text-transform: uppercase; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li.company:hover > .companyMore { display: block; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li .companyMore { width: 25vw; height: 25%; background-color: none; display: none; margin-left: 0.8em; padding: 1.5% 0; box-sizing: border-box; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li .companyMore > li { width: 21%; height: 100%; background-color: none; margin-right: 0.3em; font-size: 1.2vw; float: left; font-family: 'nanumGothic'; text-align: center; text-transform: uppercase; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li .companyMore .notice { width: 18%; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li .companyMore .aboutJyp { width: 26%; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li .companyMore .ir { width: 6%; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li.audition:hover > .auditionMore { display: block; transition: all 900ms; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li .auditionMore { width: 25vw; height: 25%; background-color: none; display: none; margin-left: 0.8em; padding: 1.5% 3%; box-sizing: border-box; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li .auditionMore > li { width: 15%; height: 100%; background-color: none; margin-right: 0.5em; font-size: 1.2vw; float: left; font-family: 'nanumGothic'; text-align: center; text-transform: uppercase; }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li .auditionMore .audition { width: 25%; margin-left: calc(24% - 0.3em); }
+
+#headBox #gnbBox .listWrap .listBox .gnblist > li .auditionMore .faq { width: 12%; }
+
+#adBanner { width: 100%; height: 100%; background-color: none; margin-bottom: 20em; }
+
+#adBanner > #musicVideo { width: 100%; height: 100%; background-color: #00b4e7; overflow: hidden; position: relative; }
+
+#adBanner > #musicVideo video { width: 100%; height: 100%; background-color: #00b4e7; -webkit-object-fit: cover; -moz-object-fit: cover; -ms-object-fit: cover; -o-object-fit: cover; object-fit: cover; }
+
+#adBanner > #musicVideo #moreMv { width: 75px; height: 24px; background-color: none; position: absolute; z-index: 50; bottom: 5em; bottom: 50%; right: 0; margin-left: -25px; color: #fff; }
+
+#adBanner > #musicVideo #moreMv span { text-transform: uppercase; }
+
+#adBanner > #musicVideo #moreMv:hover { font-size: 1.1em; transition: all 400ms ease-in; }
+
+#adBanner > #musicVideo #moreMv:before { content: " "; display: block; margin-top: 25px; border-top: dashed #fff 1px; }
+
+#adBanner > #musicVideo #scroll { width: 50px; height: 24px; background-color: none; position: absolute; z-index: 50; bottom: 5em; left: 50%; margin-left: -25px; color: #fff; text-transform: uppercase; }
+
+#adBanner > #musicVideo #scroll:after { content: " "; display: block; margin-left: 25px; width: 1px; height: 5.2em; background-color: #fff; }
+
+#newsWrap { width: 100%; height: 100%; background-color: none; margin-bottom: 25em; }
+
+#newsWrap div.h2Box { width: 100%; height: 15%; background-color: none; transition: all 800ms; transform: translateY(70%); opacity: 0; }
+
+#newsWrap .h2Box.addView { transform: translateY(0); opacity: 1; }
+
+#newsWrap .newsBox { width: 65%; height: 85%; background-color: none; margin: 0 auto; transition: all 800ms ease-out; }
+
+#newsWrap .newsBox.default { transform: translateY(60%); opacity: 0; }
+
+#newsWrap .newsBox.addview { transform: translateY(0); opacity: 1; }
+
+#newsWrap li { width: 33.3333%; height: 100%; background-color: none; float: left; }
+
+#newsWrap li > div { width: 100%; height: 90%; background-color: none; background-size: cover; transition: all 400ms ease-out; background-size: cover; }
+
+#newsWrap li > div a { display: inline-block; width: inherit; height: 100%; background-color: none; }
+
+#newsWrap li > button { width: 100%; height: 10%; background-color: #000; color: #fff; border: solid #000 1px; box-sizing: border-box; font-size: 1.2em; text-transform: uppercase; }
+
+#newsWrap li > button:hover, #newsWrap li > button.hover { background-color: #fff; color: #000; }
+
+#newsWrap .newsP_01 { background-image: url("../../img/Full/mainPage/news/jjprojectB.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#newsWrap .newsP_01:hover, #newsWrap .newsP_01.hover { background-image: url("../../img/Full/mainPage/news/jjproject.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#newsWrap .newsP_02 { background-image: url("../../img/Full/mainPage/news/suziB.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#newsWrap .newsP_02:hover, #newsWrap .newsP_02.hover { background-image: url("../../img/Full/mainPage/news/suzi.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#newsWrap .newsP_03 { background-image: url("../../img/Full/mainPage/news/day6B.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#newsWrap .newsP_03:hover, #newsWrap .newsP_03.hover { background-image: url("../../img/Full/mainPage/news/day6.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap { width: 100%; height: 100%; background-color: none; margin-bottom: 25em; }
+
+#artistWrap div.h2Box { width: 100%; height: 15%; background-color: none; transition: all 800ms; transform: translateY(70%); opacity: 0; }
+
+#artistWrap .h2Box.addView { transform: translateY(0); opacity: 1; }
+
+#artistWrap #artistBox { width: 100%; height: 85%; background-color: none; transition: all 800ms ease-out; }
+
+#artistWrap #artistBox.default { transform: translateY(60%); opacity: 0; }
+
+#artistWrap #artistBox.addView { transform: translateY(0); opacity: 1; }
+
+#artistWrap #artistBox #artistBoxT { width: 100%; height: 50%; background-color: none; }
+
+#artistWrap #artistBox #artistBoxT li { width: 25%; height: 100%; background-color: #ccc; float: left; transition: all 200ms ease-in; background-size: cover; }
+
+#artistWrap #artistBox #artistBoxT li a { display: block; width: 100%; height: 100%; background-color: none; }
+
+#artistWrap #artistBox #artistBoxT li p { color: #fff; width: 100%; height: 100%; background-color: none; text-transform: uppercase; font-size: 2.5em; letter-spacing: 4px; font-weight: bold; text-align: center; letter-spacing: 2; }
+
+#artistWrap #artistBox #artistBoxT .artist_01 { background-image: url("../../img/Full/mainPage/artist/jypB.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxT .artist_01:hover { background-image: url("../../img/Full/mainPage/artist/jyp.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxT .artist_02 { background-image: url("../../img/Full/mainPage/artist/suziB.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxT .artist_02:hover { background-image: url("../../img/Full/mainPage/artist/suzi.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxT .artist_03 { background-image: url("../../img/Full/mainPage/artist/got7B.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxT .artist_03:hover { background-image: url("../../img/Full/mainPage/artist/got7.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxT .artist_04 { background-image: url("../../img/Full/mainPage/artist/backB.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxT .artist_04:hover { background-image: url("../../img/Full/mainPage/artist/back.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxB { width: 100%; height: 50%; background-color: none; }
+
+#artistWrap #artistBox #artistBoxB li { width: 25%; height: 100%; background-color: #ccc; float: left; transition: all 200ms ease-in; background-size: cover; }
+
+#artistWrap #artistBox #artistBoxB li a { display: block; width: 100%; height: 100%; background-color: none; }
+
+#artistWrap #artistBox #artistBoxB li p { color: #fff; width: 100%; height: 100%; background-color: none; text-transform: uppercase; font-size: 2.5em; letter-spacing: 4px; font-weight: bold; text-align: center; }
+
+#artistWrap #artistBox #artistBoxB .artist_05 { background-image: url("../../img/Full/mainPage/artist/twiceB.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxB .artist_05:hover { background-image: url("../../img/Full/mainPage/artist/twice.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxB .artist_06 { background-image: url("../../img/Full/mainPage/artist/2pmB.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxB .artist_06:hover { background-image: url("../../img/Full/mainPage/artist/2pm.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxB .artist_07 { background-image: url("../../img/Full/mainPage/artist/day6B.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxB .artist_07:hover { background-image: url("../../img/Full/mainPage/artist/day6.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxB .artist_08 { background-image: url("../../img/Full/mainPage/artist/jjprojectB.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#artistWrap #artistBox #artistBoxB .artist_08:hover { background-image: url("../../img/Full/mainPage/artist/jjproject.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap { width: 100%; height: 60%; background-color: none; margin-bottom: 10em; }
+
+#snsWrap div.h2Box { width: 100%; height: 15%; background-color: none; margin-bottom: 3em; transition: all 800ms; transform: translateY(70%); opacity: 0; }
+
+#snsWrap .h2Box.addView { transform: translateY(0); opacity: 1; }
+
+#snsWrap #snsBox { width: 100%; height: 85%; background-color: none; transition: all 800ms ease-out; }
+
+#snsWrap #snsBox.default { transform: translateY(40%); opacity: 0; }
+
+#snsWrap #snsBox.addView { transform: translateY(0); opacity: 1; }
+
+#snsWrap #snsBox #snsList { width: 100%; height: 100%; background-color: none; }
+
+#snsWrap #snsBox #snsList li { width: 20%; height: 77%; background-color: none; float: left; background-size: cover; }
+
+#snsWrap #snsBox #snsList .snsP_01 { background-image: url("../../img/Full/mainPage/sns/jinyeong.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_02 { background-image: url("../../img/Full/mainPage/sns/suzi.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_03 { background-image: url("../../img/Full/mainPage/sns/day6.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_04 { background-image: url("../../img/Full/mainPage/sns/nayeon.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_05 { background-image: url("../../img/Full/mainPage/sns/jackson.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#topButton { width: 100%; height: 9%; background-color: none; margin-bottom: 15em; }
+
+#topButton button { width: 80px; height: 80px; background-color: #00b4e7; text-transform: uppercase; font-weight: bold; font-size: 1.2em; color: #fff; }
+
+#topButton button:hover { background-color: #333; }
+
+#footBox { width: 100%; height: auto; background-color: #171717; }
+
+#footBox::after { content: " "; display: block; clear: both; }
+
+#footBox #footerBox { width: 960px; height: auto; background-color: none; margin: 0 auto; }
+
+#footBox #footerBox .copyright { width: 50%; height: auto; background-color: none; padding: 1.5%; box-sizing: border-box; float: left; }
+
+#footBox #footerBox .copyright > p { width: 100%; height: auto; background-color: none; font-size: 1em; color: #fff; text-transform: uppercase; }
+
+#footBox #footerBox .policy { width: 50%; height: auto; background-color: none; float: right; }
+
+#footBox #footerBox .policy > .policyL { width: 60%; height: auto; background-color: none; float: right; padding: 2.8% 0; box-sizing: border-box; }
+
+#footBox #footerBox .policy > .policyL > li { width: 50%; height: auto; background-color: none; float: left; color: #fff; }
