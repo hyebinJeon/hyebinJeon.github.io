@@ -1,3 +1,4 @@
+<!--artist.html-->
 <!DOCTYPE html>
 <html lang="ko-KR">
 <head>
@@ -8,23 +9,20 @@
   <script src="../ie/ie7/IE9.js"></script>
   <script src="../ie/PIE/PIE_IE9.js"></script>
   <![endif]-->
-  
-<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
 <link rel="stylesheet" type="text/css" href="../css/base/nomalize.css" />
 <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="../css/src/main.css" />
+<link rel="stylesheet" type="text/css" href="../css/src/artist.css" />
 
 <script src="../js/jquery/jquery-3.2.1.min.js"></script>
 <script src="../js/jquery/jquery-ui.min.js"></script>
-  <title>jyp main page</title>  
+  <title>artistPage</title>  
 </head>
 <body>
-  <div id="wrap">
- 
-    <header id="headBox">
+  <div id="wrap"> 
+  <!--header-->
+  <header id="headBox">
       <h1 id="logo"><a href="#"><span class="hidden">jyp entertainment</span></a></h1>
       <section id="gnbWrap">
       <h2 class="hidden">menu</h2>
@@ -94,80 +92,20 @@
       </div>
       </section>
     </header>
-    
-    <section id="adBanner">
-      <h2 class="hidden">musicvideo</h2>
-      <div id="musicVideo">
-        <video preload loop autoplay>
-          <source src="../img/got7.mp4" type="video/mp4" />
-        </video>
-        <div id="moreMv"><a href="https://www.youtube.com/watch?v=KMDfR_PJ7ss">more<span>mv</span></a></div>
-        <div id="scroll">scroll</div>
-      </div>
-    </section><!--adBanner-->
-    
-    <article id="newsWrap">
-      <div class="h2Box"><h2>news</h2><a class="plusBox">+</a></div>
-      <ul class="newsBox"><h3 class="hidden">newsBox</h3>
-        <li class="news_01">
-          <div class="newsP_01"><a href="#"></a></div>
-          <button type="button">jjproject 2st album comback</button>
-        </li>
-        <li class="news_02">
-          <div class="newsP_02"><a href="#"></a></div>
-          <button type="button">수지 2st album solo comback</button>
-        </li>
-        <li class="news_03">
-          <div class="newsP_03"><a href="#"></a></div>
-          <button type="button">Day6 september album</button>
-        </li>
-      </ul><!--newsBox-->
-
-    </article>
-    
-    <article id="artistWrap">
-    <div class="h2Box"><h2><a href="#">artist</a></h2><a class="plusBox">+</a></div>
-        <div id="artistBox">
-        <ul id="artistBoxT">
-          <li class="artist_01"><a href="#"><p>jyp</p></a></li>
-          <li class="artist_02"><a href="#"><p>suzi</p></a></li>
-          <li class="artist_03"><a href="#"><p>got7</p></a></li>
-          <li class="artist_04"><a href="#"><p>backayeon</p></a></li>
-        </ul>
-        <ul id="artistBoxB">
-          <li class="artist_05"><a href="#"><p>twice</p></a></li>
-          <li class="artist_06"><a href="#"><p>2pm</p></a></li>
-          <li class="artist_07"><a href="#"><p>day6</p></a></li>
-          <li class="artist_08"><a href="#"><p>jjproject</p></a></li>
-        </ul>
-        </div><!--artistBox-->
-    </article>
-    
-    <section id="fixedBanner">
-    <h2 class="hidden">audition Banner</h2>
-      <p>the new paradigm of music <span>jyp</span></p>
-      <div class="lettry"><a href="#">
-      <p class="try">Let's try audition</p>
-      <div class="go"></div></a>
-      </div>
+<!--innerBox________________________________________________________________-->
+    <section id="innerBox">
+      <h2 class="artist"><a href="#">artist</a></h2>
     </section>
+<!--content_________________________________________________________________-->   
+    <article id="contentWrap">
+      <h2 class="hidden">artist</h2>
+    </article> 
 
-    <section id="snsWrap">
-    <div class="h2Box"><h2>sns</h2><a class="plusBox">+</a></div>
-      <div id="snsBox">
-        <ul id="snsList">
-          <li class="snsP_01"><a href="#"><p>#jinyeong</p></a></li>
-          <li class="snsP_02"><a href="#"><p>#suzi</p></a></li>
-          <li class="snsP_03"><a href="#"><p>#day6</p></a></li>
-          <li class="snsP_04"><a href="#"><p>#twice</p></a></li>
-          <li class="snsP_05"><a href="#"><p>#jackson</p></a></li>
-        </ul>
-      </div>
-    </section>
-
+<!--footer__________________________________________________________________________________-->
     <div id="topButton">
       <center><button type="button">top</button></center>
     </div><!--topButton-->
+
     <footer id="footBox">
       <div id="footerBox">
         <div class="copyright">
@@ -181,14 +119,11 @@
       </div><!--policy-->
       </div><!--footerBox-->
     </footer>
-  
+<!--footer________________________________________________________________________________-->
   </div><!--wrap-->
+
+</body>
 <script src="../js/src/gnb.js"></script>
-<script src="../js/src/artist.js"></script>
-<script src="../js/src/newsButton.js"></script>
-<script src="../js/src/randing.js"></script>
 <script src="../js/src/topButton.js"></script>
 <script src="../js/src/height.js"></script>
-<script src="../js/src/select.js"></script>
-</body>
 </html>

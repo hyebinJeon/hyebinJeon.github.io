@@ -1,4 +1,4 @@
-#artistWrap{@include size($h:100%);margin-bottom:25em;
+#artistWrap{@include size($h:100%);margin-bottom:30em;
     div.h2Box{@include size($h:15%); transition:all 800ms; transform:translateY(70%); opacity:0;}
        .h2Box.addView{transform:translateY(0); opacity:1;}
     #artistBox{@include size($h:85%); transition:all 800ms ease-out; 

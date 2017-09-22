@@ -1,0 +1,13 @@
+@import "../base/mixin";
+@import "../base/var";
+//++++++++++++++++++++++++++++++++++++++++++++++++++
+form{@include size($h:100%);}
+fieldset{border-style:none;}
+
+#wrap{@include size($w:100%, $h:auto); background-image:linear-gradient(#fff,90%,$main); min-width:960px; overflow-x:auto;}
+#innerBox{@include size($w:100%, $h:850px, $c:#698); @include link($f:"Full/artistPage/banner_02.png"); background-size:cover;
+          .artist{font-size:3em; text-align:center; text-transform:uppercase; letter-spacing:10px; color:#fff; font-family:'nanumGothic';}}//innerBox
+#contentWrap{@include size($w:95%, $h:3000px, $c:#fff); margin:0 auto;}
+//layout++++++++++++++++++++++++++++++++++++++++++++
+@import "./part/headBox";
+@import "./part/footBox";

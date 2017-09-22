@@ -9,6 +9,9 @@ p, div, pre, form, fieldset, hr,
 ul, ol, li, dl, dt, dd {
   margin: 0;
   padding: 0; }
+html, body, h1, h2, h3, h4, h5, h6,
+p, div, pre, form, fieldset, hr,
+ul, ol, li, dl, dt, dd:focus{outline-color:#fa0;}
 
 ul, ol, li {
   list-style: none; }
@@ -27,7 +30,8 @@ input[type="search"], input[type="email"], input[type="tel"] {
   text-indent: 5px; }
 
 button, input[type="submit"], input[type="reset"], input[type="button"] {
-  cursor: pointer; }
+  cursor: pointer;}
+  button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus{outline-color:#fa0;}
 
 a {
 
@@ -42,3 +46,4 @@ header, nav, aside, article, section, footer, main, figure {
   display: block;
   margin: 0;
   padding: 0; }
+

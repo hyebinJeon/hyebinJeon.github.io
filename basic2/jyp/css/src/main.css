@@ -1,3 +1,5 @@
+body { overflow-x: hidden; }
+
 #wrap { width: 100%; height: 100%; background-color: none; min-width: 960px; margin: 0 auto; position: relative; }
 
 form { width: 100%; height: 100%; background-color: none; }
@@ -26,7 +28,7 @@ h2:first-letter { text-transform: uppercase; }
 
 #headBox #gnbLogo:after { content: " "; display: block; width: 50px; height: 5px; background-color: #00a0e9; position: absolute; top: -10px; }
 
-#headBox #gnbBox { width: 100vw; min-width: 960px; left: 0; top: 0; height: 100%; background-image: linear-gradient(to right, #00b4e7, #fff); opacity: 1; position: fixed; z-index: 100; }
+#headBox #gnbBox { width: 100vw; display: none; min-width: 960px; left: 0; top: 0; height: 100%; background-image: linear-gradient(to right, #00b4e7, #fff); opacity: 0.9; position: fixed; z-index: 100; }
 
 #headBox #gnbBox .photoWrap { width: 50%; height: 100%; background-color: none; float: left; }
 
@@ -39,6 +41,8 @@ h2:first-letter { text-transform: uppercase; }
 #headBox #gnbBox .photoWrap .actorP { background-image: url("../../img/Full/gnb/actor_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; transition: all 300ms ease-in; }
 
 #headBox #gnbBox .photoWrap .auditionP { background-image: url("../../img/Full/gnb/audition_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; transition: all 300ms ease-in; }
+
+#headBox #gnbBox .photoWrap .nomal { background-image: url("../../img/Full/gnb/nomal.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; transition: all 300ms ease-in; }
 
 #headBox #gnbBox .photoWrap .fLBox { width: 40%; height: 30px; background-color: none; margin: 0 18%; margin-bottom: 2%; }
 
@@ -118,6 +122,26 @@ h2:first-letter { text-transform: uppercase; }
 
 #adBanner > #musicVideo #scroll:after { content: " "; display: block; margin-left: 25px; width: 1px; height: 5.2em; background-color: #fff; }
 
+#fixedBanner { width: 100vw; height: 60%; margin-bottom: 20em; position: relative; left: 50%; top: 0%; margin-left: -50vw; background-attachment: fixed; box-sizing: border-box; background-image: url("../../img/fixed.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; background-size: cover; padding-top: 12%; box-sizing: border-box; }
+
+#fixedBanner:first-letter { text-transform: uppercase; }
+
+#fixedBanner p { color: #fff; font-size: 3vw; font-size: 58.8px; text-align: center; font-family: 'Poiret One'; opacity: 0; transition: all 300ms ease-out; }
+
+#fixedBanner .lettry:hover .try { color: #00b4e7; font-weight: bold; }
+
+#fixedBanner .lettry:hover .go { background-image: url("../../img/Full/go_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#fixedBanner .lettry a { width: 100%; height: 100%; display: block; }
+
+#fixedBanner .try { font-size: 1.4vw; display: inline-block; float: left; margin-left: 40%; }
+
+#fixedBanner .go { width: 6vw; height: 1.6em; background-size: contain; opacity: 0; transition: all 300ms ease-out; background-image: url("../../img/Full/go.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; margin-left: 1em; float: left; }
+
+#fixedBanner .addview { opacity: 1; }
+
+#fixedBanner span { text-transform: uppercase; }
+
 #newsWrap { width: 100%; height: 100%; background-color: none; margin-bottom: 25em; }
 
 #newsWrap div.h2Box { width: 100%; height: 15%; background-color: none; transition: all 800ms; transform: translateY(70%); opacity: 0; }
@@ -152,7 +176,7 @@ h2:first-letter { text-transform: uppercase; }
 
 #newsWrap .newsP_03:hover, #newsWrap .newsP_03.hover { background-image: url("../../img/Full/mainPage/news/day6.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
 
-#artistWrap { width: 100%; height: 100%; background-color: none; margin-bottom: 25em; }
+#artistWrap { width: 100%; height: 100%; background-color: none; margin-bottom: 30em; }
 
 #artistWrap div.h2Box { width: 100%; height: 15%; background-color: none; transition: all 800ms; transform: translateY(70%); opacity: 0; }
 
@@ -226,17 +250,43 @@ h2:first-letter { text-transform: uppercase; }
 
 #snsWrap #snsBox #snsList { width: 100%; height: 100%; background-color: none; }
 
-#snsWrap #snsBox #snsList li { width: 20%; height: 77%; background-color: none; float: left; background-size: cover; }
+#snsWrap #snsBox #snsList li { width: 20%; height: 77%; background-color: none; float: left; background-size: cover; transition: all 300ms ease-out; }
+
+#snsWrap #snsBox #snsList li a { width: 100%; height: 100%; background-color: none; display: block; }
+
+#snsWrap #snsBox #snsList p { display: none; font-size: 2em; text-align: center; }
+
+#snsWrap #snsBox #snsList p:first-letter { text-transform: uppercase; }
 
 #snsWrap #snsBox #snsList .snsP_01 { background-image: url("../../img/Full/mainPage/sns/jinyeong.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
 
+#snsWrap #snsBox #snsList .snsP_01:hover { background-image: url("../../img/Full/mainPage/sns/jinyeong_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_01:hover:hover p { display: block; color: #fff; }
+
 #snsWrap #snsBox #snsList .snsP_02 { background-image: url("../../img/Full/mainPage/sns/suzi.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_02:hover { background-image: url("../../img/Full/mainPage/sns/suzi_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_02:hover:hover p { display: block; color: #fff; }
 
 #snsWrap #snsBox #snsList .snsP_03 { background-image: url("../../img/Full/mainPage/sns/day6.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
 
+#snsWrap #snsBox #snsList .snsP_03:hover { background-image: url("../../img/Full/mainPage/sns/day6_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_03:hover:hover p { display: block; color: #fff; }
+
 #snsWrap #snsBox #snsList .snsP_04 { background-image: url("../../img/Full/mainPage/sns/nayeon.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
 
+#snsWrap #snsBox #snsList .snsP_04:hover { background-image: url("../../img/Full/mainPage/sns/nayeon_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_04:hover:hover p { display: block; color: #fff; }
+
 #snsWrap #snsBox #snsList .snsP_05 { background-image: url("../../img/Full/mainPage/sns/jackson.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_05:hover { background-image: url("../../img/Full/mainPage/sns/jackson_hover.png"); background-repeat: no-repeat; background-position: center; overflow: hidden; }
+
+#snsWrap #snsBox #snsList .snsP_05:hover:hover p { display: block; color: #fff; }
 
 #topButton { width: 100%; height: 9%; background-color: none; margin-bottom: 15em; }
 

@@ -16,3 +16,15 @@
             &:after{content:" "; display:block; margin-left:25px; @include size($w:1px, $h:5.2em, $c:#fff);}}
       }//musicVideo
     }//adBanner
+
+  #fixedBanner{width: 100vw; height: 60%; margin-bottom:20em; position:relative; left:50%; top:0%; margin-left:-50vw; background-attachment:fixed;
+              box-sizing:border-box; @include link($f:"fixed.png"); background-size:cover; padding-top:12%; box-sizing:border-box;
+              &:first-letter{text-transform:uppercase;}
+              p{color:#fff; font-size:3vw; font-size:58.8px; text-align:center; font-family:'Poiret One'; opacity:0; transition:all 300ms ease-out;}
+              .lettry:hover .try{color:$main; font-weight:bold;}
+              .lettry:hover .go{@include link($f:"Full/go_hover.png");}
+              .lettry a{width:100%; height:100%; display:block;}
+              .try{font-size:1.4vw; display:inline-block; float:left; margin-left:40%;}//try
+              .go{width: 6vw; height:1.6em; background-size:contain; opacity:0; transition:all 300ms ease-out; @include link($f:"Full/go.png"); margin-left:1em; float:left;}//go
+              .addview{opacity:1;}
+              span{text-transform:uppercase;}}//fixedBanner

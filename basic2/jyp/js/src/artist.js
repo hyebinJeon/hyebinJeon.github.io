@@ -37,7 +37,4 @@ console.log(artistH);
 
 artistP.css({'lineHeight':artistH + 'px'});
 
-
-
-
 })(this.jQuery);

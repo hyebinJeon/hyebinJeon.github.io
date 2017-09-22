@@ -3,7 +3,7 @@
 // @import "../base/nomalize.scss";
 @import "../base/mixin";
 @import "../base/var";
-  
+  body{overflow-x:hidden;}
 //  wrap
 #wrap{@include size($h:100%); min-width:960px; margin:0 auto; position:relative;}//#wrap 
 form{@include size($h:100%);}

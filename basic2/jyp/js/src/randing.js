@@ -10,6 +10,7 @@
   var newsOffset = $("#newsWrap").offset().top;
   console.log(newsOffset);
   var artistOffset = $("#artistWrap").offset().top;
+  var fixedOffset = $("#fixedBanner").offset().top;
   var snsOffset = $("#snsWrap").offset().top;
  
   $(window).on('scroll',function(e){
@@ -47,5 +48,13 @@
       $('#snsBox').addClass('default');
     };
 
+//---------------------------fixedBanner
+    if(winOffset >= fixedOffset-400){
+      $('#fixedBanner').find('p').addClass('addview');
+      $('#fixedBanner').find('div').addClass('addview');
+    }else{
+      $('#fixedBanner').find('p').removeClass('addview');
+      $('#fixedBanner').find('div').removeClass('addview');
+    };
   })//on
 })(this.jQuery);
